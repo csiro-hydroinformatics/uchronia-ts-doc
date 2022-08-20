@@ -1,0 +1,69 @@
+# Uchronia - time series handling for ensembles simulations and forecasts in C++
+
+This site is an attempt to host jointly several generated API documentations.
+
+## Overview
+
+Uchronia is a C++ library designed to handle multidimensional time series and ensemble thereof. [Uchronia](https://en.wikipedia.org/wiki/Uchronia) is a literary neologism for a hypothetical or fictional time-period of our world. This seems a suitable name for a library primarily designed notably to handle retrospective ensemble forecast time series.
+
+## Draft notes
+
+`sudo apt install doxygen`
+
+### Installing doxybook2
+
+```sh
+git clone --depth=1 https://github.com/matusnovak/doxybook2.git
+ls
+cd doxybook2/
+```
+
+```sh
+git clone https://github.com/microsoft/vcpkg
+./vcpkg/bootstrap-vcpkg.sh
+```
+
+A bit of adjustment for compiling doxygen2, compared to what the github repo readme says:
+
+```sh
+cmake -B ./build -G "Unix Makefiles"     -DCMAKE_BUILD_TYPE=MinSizeRel     -DCMAKE_TOOLCHAIN_FILE=${HOME}/src/vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake --build ./build --config MinSizeRel  # could do with a -j4 perhaps
+${HOME}/src/doxybook2/build/src/DoxybookCli/doxybook2 --help
+```
+
+```sh
+DX2=${HOME}/src/doxybook2/build/src/DoxybookCli/doxybook2
+```
+
+MkDocs + Material theme - example/mkdocs-material/.doxybook/config.json adapted.
+
+cpp relative url because we aim to host not only cpp. Try, at least.
+
+config-doxybook2.json has `  "baseUrl": "/cpp/",`
+
+Doxyfile:
+
+don't want full machine-specific paths shown:
+
+```text
+FULL_PATH_NAMES        = NO
+```
+
+Note: perhaps `STRIP_FROM_PATH` instead?
+
+```sh
+doxygen Doxyfile
+
+mkdir -p docs/cpp
+$DX2 --input ./doxyoutput/xml --output ./docs/cpp --config config-doxybook2.json
+```
+
+```sh
+. ~/config/baseconda
+conda activate poetry
+mkdocs build --clean --site-dir _build/html --config-file mkdocs.yml
+```
+
+```sh
+mkdocs gh-deploy --clean --site-dir _build/html --config-file mkdocs.yml
+```
