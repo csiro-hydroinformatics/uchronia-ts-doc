@@ -3,16 +3,15 @@
 # for ideas.
 
 # Project information
-site_name: uchronia C++
+site_name: uchronia API documentation
 
 site_author: "Jean-Michel Perraud"
 site_description: >-
-  This package is primarily for managing resources, for instance from 
-  native libraries written for instance in C++, from Python.
+  Draft API doc for Uchronia - time series handling for ensembles simulations and forecasts in C++
 
 # Repository
-repo_name: csiro-hydroinformatics/pyrefcount
-repo_url: https://github.com/csiro-hydroinformatics/pyrefcount
+repo_name: csiro-hydroinformatics/uchronia-time-series
+repo_url: https://github.com/csiro-hydroinformatics/uchronia-time-series
 
 docs_dir: './docs'
 
@@ -107,7 +106,8 @@ markdown_extensions:
   # - pymdownx.magiclink:
   #    repo_url_shorthand: true
   #    user: csiro-hydroinformatics
-  #    repo: pyrefcount
+  #    repo: uchronia-time-series
+
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.tabbed:
