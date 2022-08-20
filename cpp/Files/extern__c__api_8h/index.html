@@ -1,0 +1,1646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This package is primarily for managing resources, for instance from  native libraries written for instance in C++, from Python.">
+      
+      
+        <meta name="author" content="Jean-Michel Perraud">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>datatypes/extern_c_api.h - uchronia C++</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datatypesextern_c_apih" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="uchronia C++" class="md-header__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uchronia C++
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datatypes/extern_c_api.h
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        C++
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uchronia C++" class="md-nav__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    uchronia C++
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">C++</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="C++" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Namespaces/" class="md-nav__link">
+        Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pages/" class="md-nav__link">
+        Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defines" class="md-nav__link">
+    Defines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    Detailed Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-getlaststdexceptionmessage" class="md-nav__link">
+    function GetLastStdExceptionMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-registerexceptioncallback" class="md-nav__link">
+    function RegisterExceptionCallback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-disposesharedpointer" class="md-nav__link">
+    function DisposeSharedPointer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-deleteansistringarray" class="md-nav__link">
+    function DeleteAnsiStringArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-deleteansistring" class="md-nav__link">
+    function DeleteAnsiString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-deletedoublearray" class="md-nav__link">
+    function DeleteDoubleArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settimeseriesmissingvaluevalue" class="md-nav__link">
+    function SetTimeSeriesMissingValueValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-loadensembledataset" class="md-nav__link">
+    function LoadEnsembleDataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createensembledataset" class="md-nav__link">
+    function CreateEnsembleDataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensembledatasetdataidentifiers" class="md-nav__link">
+    function GetEnsembleDatasetDataIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensembledatasetdatasubidentifiers" class="md-nav__link">
+    function GetEnsembleDatasetDataSubIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensembledatasetdatasummaries" class="md-nav__link">
+    function GetEnsembleDatasetDataSummaries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getdatadimensionsdescription" class="md-nav__link">
+    function GetDataDimensionsDescription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ensemblesizeensembletimeseries" class="md-nav__link">
+    function EnsembleSizeEnsembleTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-disposedatadimensionsdescriptions" class="md-nav__link">
+    function DisposeDataDimensionsDescriptions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createensembleforecasttimeseries" class="md-nav__link">
+    function CreateEnsembleForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getdatasetsingletimeseries" class="md-nav__link">
+    function GetDatasetSingleTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getdatasetensembletimeseries" class="md-nav__link">
+    function GetDatasetEnsembleTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getdatasetensembleforecasttimeseries" class="md-nav__link">
+    function GetDatasetEnsembleForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-savesingletimeseriestonetcdf" class="md-nav__link">
+    function SaveSingleTimeSeriesToNetcdf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-saveensembletimeseriestonetcdf" class="md-nav__link">
+    function SaveEnsembleTimeSeriesToNetcdf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-saveensembleforecasttimeseriestonetcdf" class="md-nav__link">
+    function SaveEnsembleForecastTimeSeriesToNetcdf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-ismissingvalueitemensembleforecasttimeseries" class="md-nav__link">
+    function IsMissingValueItemEnsembleForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getitemensembleforecasttimeseries" class="md-nav__link">
+    function GetItemEnsembleForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-timeseriesfromensembleoftimeseries" class="md-nav__link">
+    function TimeSeriesFromEnsembleOfTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-timeseriesfromtimeseriesofensembleoftimeseries" class="md-nav__link">
+    function TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getvaluefromunivariatetimeseries" class="md-nav__link">
+    function GetValueFromUnivariateTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-transformeachitem" class="md-nav__link">
+    function TransformEachItem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setvaluetounivariatetimeseries" class="md-nav__link">
+    function SetValueToUnivariateTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getitemensembleforecasttimeseriesasstructure" class="md-nav__link">
+    function GetItemEnsembleForecastTimeSeriesAsStructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getitemensembletimeseriesasstructure" class="md-nav__link">
+    function GetItemEnsembleTimeSeriesAsStructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setitemensembleforecasttimeseriesasstructure" class="md-nav__link">
+    function SetItemEnsembleForecastTimeSeriesAsStructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setitemensembletimeseriesasstructure" class="md-nav__link">
+    function SetItemEnsembleTimeSeriesAsStructure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createperfectforecasttimeseries" class="md-nav__link">
+    function CreatePerfectForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-tostructensembletimeseriesdata" class="md-nav__link">
+    function ToStructEnsembleTimeSeriesData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-tostructsingletimeseriesdata" class="md-nav__link">
+    function ToStructSingleTimeSeriesData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createensembletimeseriesdatafromstruct" class="md-nav__link">
+    function CreateEnsembleTimeSeriesDataFromStruct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createsingletimeseriesdatafromstruct" class="md-nav__link">
+    function CreateSingleTimeSeriesDataFromStruct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-disposemultitimeseriesdata" class="md-nav__link">
+    function DisposeMultiTimeSeriesData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimeseriesgeometry" class="md-nav__link">
+    function GetTimeSeriesGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensembleforecasttimeseriesgeometry" class="md-nav__link">
+    function GetEnsembleForecastTimeSeriesGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimeseriesvalues" class="md-nav__link">
+    function GetTimeSeriesValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getnumtimeseries" class="md-nav__link">
+    function GetNumTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getprovidertsgeometry" class="md-nav__link">
+    function GetProviderTsGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getprovidertimeseriesvalues" class="md-nav__link">
+    function GetProviderTimeSeriesValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getprovidertimeseriesidentifiers" class="md-nav__link">
+    function GetProviderTimeSeriesIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-timeseriesfromproviderts" class="md-nav__link">
+    function TimeSeriesFromProviderTs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-documentation" class="md-nav__link">
+    Macros Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Macros Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-datatypes_use_cpp_pointers" class="md-nav__link">
+    define DATATYPES_USE_CPP_POINTERS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-datatypes_api" class="md-nav__link">
+    define DATATYPES_API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/csiro-hydroinformatics/pyrefcount/edit/master/docs/cpp/Files/extern__c__api_8h.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="datatypesextern_c_apih">datatypes/extern_c_api.h<a class="headerlink" href="#datatypesextern_c_apih" title="Permanent link">&para;</a></h1>
+<p><a href="#detailed-description">More...</a></p>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getlaststdexceptionmessage">GetLastStdExceptionMessage</a></strong>()<br>Gets the last message from an std::exception caught by the uchronia API.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-registerexceptioncallback">RegisterExceptionCallback</a></strong>(const void * callback)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposesharedpointer">DisposeSharedPointer</a></strong>(VOID_PTR_PROVIDER_PTR ptr)<br>Notifies uchronia that an object managed by an opaque pointer is not used by the caller anymore.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deleteansistringarray">DeleteAnsiStringArray</a></strong>(char ** values, int arrayLength)<br>Deletes the ANSI string array , which has been create by uchronia. Do not use for char** created outside libswift.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deleteansistring">DeleteAnsiString</a></strong>(const char * value)<br>Deletes the ANSI string which has been create by uchronia. Do not use for char* created outside libswift.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deletedoublearray">DeleteDoubleArray</a></strong>(double * value)<br>Dispose of an array of double created via this C API.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-settimeseriesmissingvaluevalue">SetTimeSeriesMissingValueValue</a></strong>(double missingValueValue)<br>Sets a value whoch should be considered as a missing value when data is passed to this C API.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-loadensembledataset">LoadEnsembleDataset</a></strong>(const char * libraryIdentifier, const char * dataPath)<br>Creates a time series library, defined (for now) by a YAML descriptor.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembledataset">CreateEnsembleDataset</a></strong>(const char * type)<br>Creates a time series library.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdataidentifiers">GetEnsembleDatasetDataIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)<br>Gets the highest level datasets' IDs known to this library.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasubidentifiers">GetEnsembleDatasetDataSubIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataCollectionId, int * size)<br>Gets sub identifiers, if any, in a hierarchical ID scheme (e.g. if a collection of streamflows is such that you can ID each series as "streamflow.gauge_id")</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasummaries">GetEnsembleDatasetDataSummaries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> time_series_dimensions_description *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatadimensionsdescription">GetDataDimensionsDescription</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)<br>Gets data dimensions description. This function is useful for wrappers to discover the dimensionality of a data set before trying to load it in memory.</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-ensemblesizeensembletimeseries">EnsembleSizeEnsembleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposedatadimensionsdescriptions">DisposeDataDimensionsDescriptions</a></strong>(time_series_dimensions_description * data)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembleforecasttimeseries">CreateEnsembleForecastTimeSeries</a></strong>(date_time_to_second start, int length, const char * timeStepName)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetsingletimeseries">GetDatasetSingleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetensembletimeseries">GetDatasetEnsembleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataEnsembleId)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetensembleforecasttimeseries">GetDatasetEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-savesingletimeseriestonetcdf">SaveSingleTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, const char * filename, bool overwrite)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-saveensembletimeseriestonetcdf">SaveEnsembleTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, const char * filename, bool overwrite)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-saveensembleforecasttimeseriestonetcdf">SaveEnsembleForecastTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * filename, bool overwrite)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> bool</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-ismissingvalueitemensembleforecasttimeseries">IsMissingValueItemEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseries">GetItemEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int i)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromensembleoftimeseries">TimeSeriesFromEnsembleOfTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collectionTs, int index)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromtimeseriesofensembleoftimeseries">TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int indexInIssueTime, int indexInForecastTime)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> double</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getvaluefromunivariatetimeseries">GetValueFromUnivariateTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-transformeachitem">TransformEachItem</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * method, const char * methodArgument)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setvaluetounivariatetimeseries">SetValueToUnivariateTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index, double value)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseriesasstructure">GetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembletimeseriesasstructure">GetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> series, int i)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setitemensembleforecasttimeseriesasstructure">SetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i, const multi_regular_time_series_data * values)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setitemensembletimeseriesasstructure">SetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, int i, const multi_regular_time_series_data * values)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createperfectforecasttimeseries">CreatePerfectForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> observations, date_time_to_second start, int length, const char * timeStepName, int offsetForecasts, int leadTime)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-tostructensembletimeseriesdata">ToStructEnsembleTimeSeriesData</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-tostructsingletimeseriesdata">ToStructSingleTimeSeriesData</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembletimeseriesdatafromstruct">CreateEnsembleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * ensSeries)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createsingletimeseriesdatafromstruct">CreateSingleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * timeSeries)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposemultitimeseriesdata">DisposeMultiTimeSeriesData</a></strong>(multi_regular_time_series_data * data)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-gettimeseriesgeometry">GetTimeSeriesGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembleforecasttimeseriesgeometry">GetEnsembleForecastTimeSeriesGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> timeSeries, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-gettimeseriesvalues">GetTimeSeriesValues</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, double * values, int arrayLength)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getnumtimeseries">GetNumTimeSeries</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertsgeometry">GetProviderTsGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesvalues">GetProviderTimeSeriesValues</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, double * values, int arrayLength)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesidentifiers">GetProviderTimeSeriesIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, int * size)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromproviderts">TimeSeriesFromProviderTs</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="defines">Defines<a class="headerlink" href="#defines" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-use-cpp-pointers">DATATYPES_USE_CPP_POINTERS</a></strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>API for libswift. This file exposes a common API for interacting with libswift from other tools. </p>
+<h2 id="functions-documentation">Functions Documentation<a class="headerlink" href="#functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-getlaststdexceptionmessage">function GetLastStdExceptionMessage<a class="headerlink" href="#function-getlaststdexceptionmessage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetLastStdExceptionMessage</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the last message from an std::exception caught by the uchronia API. </p>
+<p><strong>Return</strong>: the last standard exception message. </p>
+<h3 id="function-registerexceptioncallback">function RegisterExceptionCallback<a class="headerlink" href="#function-registerexceptioncallback" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">RegisterExceptionCallback</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">callback</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-disposesharedpointer">function DisposeSharedPointer<a class="headerlink" href="#function-disposesharedpointer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeSharedPointer</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">VOID_PTR_PROVIDER_PTR</span><span class="w"> </span><span class="n">ptr</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Notifies uchronia that an object managed by an opaque pointer is not used by the caller anymore. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>ptr</strong> pointer obtained via the API, such as a MODEL_SIMULATION_PTR. </li>
+</ul>
+<h3 id="function-deleteansistringarray">function DeleteAnsiStringArray<a class="headerlink" href="#function-deleteansistringarray" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteAnsiStringArray</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Deletes the ANSI string array , which has been create by uchronia. Do not use for char** created outside libswift. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>values</strong> pointer to the array to delete (its elements and the array itself). </li>
+<li><strong>arrayLength</strong> Length of the array. </li>
+</ul>
+<h3 id="function-deleteansistring">function DeleteAnsiString<a class="headerlink" href="#function-deleteansistring" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteAnsiString</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Deletes the ANSI string which has been create by uchronia. Do not use for char* created outside libswift. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>value</strong> a C-style string, which has been create by uchronia. Do not use for char* created elsewhere. </li>
+</ul>
+<h3 id="function-deletedoublearray">function DeleteDoubleArray<a class="headerlink" href="#function-deletedoublearray" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteDoubleArray</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Dispose of an array of double created via this C API. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>value</strong> If non-null, the value. </li>
+</ul>
+<h3 id="function-settimeseriesmissingvaluevalue">function SetTimeSeriesMissingValueValue<a class="headerlink" href="#function-settimeseriesmissingvaluevalue" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetTimeSeriesMissingValueValue</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">missingValueValue</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets a value whoch should be considered as a missing value when data is passed to this C API. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>missingValueValue</strong> The missing value. </li>
+</ul>
+<h3 id="function-loadensembledataset">function LoadEnsembleDataset<a class="headerlink" href="#function-loadensembledataset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">DATATYPES_APIENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">LoadEnsembleDataset</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">libraryIdentifier</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataPath</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Creates a time series library, defined (for now) by a YAML descriptor. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>libraryIdentifier</strong> an ID for the library (currently path to a YAML file) </li>
+<li><strong>dataPath</strong> optional root data path for on-disk data, if the YAML file uses relative paths.</li>
+</ul>
+<p><strong>Return</strong>: The ensemble dataset. </p>
+<h3 id="function-createensembledataset">function CreateEnsembleDataset<a class="headerlink" href="#function-createensembledataset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">DATATYPES_APIENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">CreateEnsembleDataset</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">type</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Creates a time series library. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>type</strong> The type of library to create. Currently supports cases for unit tests and time series libraries that can be "recorded to" by modelling engines.</li>
+</ul>
+<p><strong>Return</strong>: The new ensemble dataset. </p>
+<h3 id="function-getensembledatasetdataidentifiers">function GetEnsembleDatasetDataIdentifiers<a class="headerlink" href="#function-getensembledatasetdataidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataIdentifiers</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the highest level datasets' IDs known to this library. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>dataLibrary</strong> The data library. </li>
+<li><strong>size</strong> Size of the list of IDs</li>
+</ul>
+<p><strong>Return</strong>: Null if it fails, else the ensemble dataset data identifiers. </p>
+<h3 id="function-getensembledatasetdatasubidentifiers">function GetEnsembleDatasetDataSubIdentifiers<a class="headerlink" href="#function-getensembledatasetdatasubidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataSubIdentifiers</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataCollectionId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Gets sub identifiers, if any, in a hierarchical ID scheme (e.g. if a collection of streamflows is such that you can ID each series as "streamflow.gauge_id") </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>dataLibrary</strong> The data library. </li>
+<li><strong>dataCollectionId</strong> Main identifier within which to query for sub-identifgiers </li>
+<li><strong>size</strong> Size of the list of sub-IDs</li>
+</ul>
+<p><strong>Return</strong>: Null if it fails, else the dataset data sub identifiers. (e.g. the streamflow gauge idenfiers) </p>
+<h3 id="function-getensembledatasetdatasummaries">function GetEnsembleDatasetDataSummaries<a class="headerlink" href="#function-getensembledatasetdatasummaries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataSummaries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getdatadimensionsdescription">function GetDataDimensionsDescription<a class="headerlink" href="#function-getdatadimensionsdescription" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">time_series_dimensions_description</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetDataDimensionsDescription</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Gets data dimensions description. This function is useful for wrappers to discover the dimensionality of a data set before trying to load it in memory. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>dataLibrary</strong> The data library. </li>
+<li><strong>dataId</strong> Identifier for the data.</li>
+</ul>
+<p><strong>Return</strong>: A struct describing the dimensionality of the data set in the library. </p>
+<h3 id="function-ensemblesizeensembletimeseries">function EnsembleSizeEnsembleTimeSeries<a class="headerlink" href="#function-ensemblesizeensembletimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EnsembleSizeEnsembleTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ensSeries</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-disposedatadimensionsdescriptions">function DisposeDataDimensionsDescriptions<a class="headerlink" href="#function-disposedatadimensionsdescriptions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeDataDimensionsDescriptions</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">time_series_dimensions_description</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createensembleforecasttimeseries">function CreateEnsembleForecastTimeSeries<a class="headerlink" href="#function-createensembleforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">DATATYPES_APIENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateEnsembleForecastTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">date_time_to_second</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">timeStepName</span><span class="w"></span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getdatasetsingletimeseries">function GetDatasetSingleTimeSeries<a class="headerlink" href="#function-getdatasetsingletimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">DATATYPES_APITIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetSingleTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="w"></span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getdatasetensembletimeseries">function GetDatasetEnsembleTimeSeries<a class="headerlink" href="#function-getdatasetensembletimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">DATATYPES_APIENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetEnsembleTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataEnsembleId</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getdatasetensembleforecasttimeseries">function GetDatasetEnsembleForecastTimeSeries<a class="headerlink" href="#function-getdatasetensembleforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">DATATYPES_APIENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetEnsembleForecastTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-savesingletimeseriestonetcdf">function SaveSingleTimeSeriesToNetcdf<a class="headerlink" href="#function-savesingletimeseriestonetcdf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveSingleTimeSeriesToNetcdf</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-saveensembletimeseriestonetcdf">function SaveEnsembleTimeSeriesToNetcdf<a class="headerlink" href="#function-saveensembletimeseriestonetcdf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveEnsembleTimeSeriesToNetcdf</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-saveensembleforecasttimeseriestonetcdf">function SaveEnsembleForecastTimeSeriesToNetcdf<a class="headerlink" href="#function-saveensembleforecasttimeseriestonetcdf" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveEnsembleForecastTimeSeriesToNetcdf</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">tsEnsTs</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-ismissingvalueitemensembleforecasttimeseries">function IsMissingValueItemEnsembleForecastTimeSeries<a class="headerlink" href="#function-ismissingvalueitemensembleforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsMissingValueItemEnsembleForecastTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getitemensembleforecasttimeseries">function GetItemEnsembleForecastTimeSeries<a class="headerlink" href="#function-getitemensembleforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">DATATYPES_APIENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetItemEnsembleForecastTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">efts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-timeseriesfromensembleoftimeseries">function TimeSeriesFromEnsembleOfTimeSeries<a class="headerlink" href="#function-timeseriesfromensembleoftimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">DATATYPES_APITIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromEnsembleOfTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collectionTs</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"></span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-timeseriesfromtimeseriesofensembleoftimeseries">function TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries<a class="headerlink" href="#function-timeseriesfromtimeseriesofensembleoftimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">DATATYPES_APITIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">efts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">indexInIssueTime</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">indexInForecastTime</span><span class="w"></span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getvaluefromunivariatetimeseries">function GetValueFromUnivariateTimeSeries<a class="headerlink" href="#function-getvaluefromunivariatetimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GetValueFromUnivariateTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-transformeachitem">function TransformEachItem<a class="headerlink" href="#function-transformeachitem" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">TransformEachItem</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">tsEnsTs</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">method</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">methodArgument</span><span class="w"></span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setvaluetounivariatetimeseries">function SetValueToUnivariateTimeSeries<a class="headerlink" href="#function-setvaluetounivariatetimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValueToUnivariateTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getitemensembleforecasttimeseriesasstructure">function GetItemEnsembleForecastTimeSeriesAsStructure<a class="headerlink" href="#function-getitemensembleforecasttimeseriesasstructure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetItemEnsembleForecastTimeSeriesAsStructure</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getitemensembletimeseriesasstructure">function GetItemEnsembleTimeSeriesAsStructure<a class="headerlink" href="#function-getitemensembletimeseriesasstructure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetItemEnsembleTimeSeriesAsStructure</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setitemensembleforecasttimeseriesasstructure">function SetItemEnsembleForecastTimeSeriesAsStructure<a class="headerlink" href="#function-setitemensembleforecasttimeseriesasstructure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetItemEnsembleForecastTimeSeriesAsStructure</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setitemensembletimeseriesasstructure">function SetItemEnsembleTimeSeriesAsStructure<a class="headerlink" href="#function-setitemensembletimeseriesasstructure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetItemEnsembleTimeSeriesAsStructure</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createperfectforecasttimeseries">function CreatePerfectForecastTimeSeries<a class="headerlink" href="#function-createperfectforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">DATATYPES_APIENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreatePerfectForecastTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">observations</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="n">date_time_to_second</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">timeStepName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">offsetForecasts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">leadTime</span><span class="w"></span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-tostructensembletimeseriesdata">function ToStructEnsembleTimeSeriesData<a class="headerlink" href="#function-tostructensembletimeseriesdata" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ToStructEnsembleTimeSeriesData</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ensSeries</span><span class="w"></span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-tostructsingletimeseriesdata">function ToStructSingleTimeSeriesData<a class="headerlink" href="#function-tostructsingletimeseriesdata" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ToStructSingleTimeSeriesData</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="w"></span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createensembletimeseriesdatafromstruct">function CreateEnsembleTimeSeriesDataFromStruct<a class="headerlink" href="#function-createensembletimeseriesdatafromstruct" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">DATATYPES_APIENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateEnsembleTimeSeriesDataFromStruct</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ensSeries</span><span class="w"></span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createsingletimeseriesdatafromstruct">function CreateSingleTimeSeriesDataFromStruct<a class="headerlink" href="#function-createsingletimeseriesdatafromstruct" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">DATATYPES_APITIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateSingleTimeSeriesDataFromStruct</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">timeSeries</span><span class="w"></span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-disposemultitimeseriesdata">function DisposeMultiTimeSeriesData<a class="headerlink" href="#function-disposemultitimeseriesdata" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeMultiTimeSeriesData</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">multi_regular_time_series_data</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="w"></span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettimeseriesgeometry">function GetTimeSeriesGeometry<a class="headerlink" href="#function-gettimeseriesgeometry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetTimeSeriesGeometry</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">    </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="w"></span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getensembleforecasttimeseriesgeometry">function GetEnsembleForecastTimeSeriesGeometry<a class="headerlink" href="#function-getensembleforecasttimeseriesgeometry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetEnsembleForecastTimeSeriesGeometry</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="w"></span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettimeseriesvalues">function GetTimeSeriesValues<a class="headerlink" href="#function-gettimeseriesvalues" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetTimeSeriesValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="w"></span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getnumtimeseries">function GetNumTimeSeries<a class="headerlink" href="#function-getnumtimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">GetNumTimeSeries</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getprovidertsgeometry">function GetProviderTsGeometry<a class="headerlink" href="#function-getprovidertsgeometry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetProviderTsGeometry</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">    </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="w"></span>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getprovidertimeseriesvalues">function GetProviderTimeSeriesValues<a class="headerlink" href="#function-getprovidertimeseriesvalues" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetProviderTimeSeriesValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="w"></span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getprovidertimeseriesidentifiers">function GetProviderTimeSeriesIdentifiers<a class="headerlink" href="#function-getprovidertimeseriesidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="n">GetProviderTimeSeriesIdentifiers</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="w"></span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-timeseriesfromproviderts">function TimeSeriesFromProviderTs<a class="headerlink" href="#function-timeseriesfromproviderts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">DATATYPES_APITIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromProviderTs</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="w"></span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="macros-documentation">Macros Documentation<a class="headerlink" href="#macros-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="define-datatypes_use_cpp_pointers">define DATATYPES_USE_CPP_POINTERS<a class="headerlink" href="#define-datatypes_use_cpp_pointers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="cp">#define DATATYPES_USE_CPP_POINTERS </span>
+</code></pre></div>
+<h3 id="define-datatypes_api">define DATATYPES_API<a class="headerlink" href="#define-datatypes_api" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="cp">#define DATATYPES_API DATATYPES_DLL_LIB</span>
+</code></pre></div>
+<h2 id="source-code">Source code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="cp">#pragma once</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;setup_exports.h&quot;</span><span class="cp"></span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="cp">#ifndef DATATYPES_USE_OPAQUE_POINTERS</span>
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a><span class="cp">#ifndef DATATYPES_USE_CPP_POINTERS</span>
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="cp">#ifndef USING_DATATYPES_CORE</span>
+<a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a><span class="cp">#define DATATYPES_USE_CPP_POINTERS</span>
+<a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a><span class="cp">#endif</span>
+<a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a><span class="cp">#endif</span>
+<a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a><span class="cp">#endif</span>
+<a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>
+<a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;interop_struct.h&quot;</span><span class="cp"></span>
+<a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a>
+<a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a><span class="cp">#if defined(DATATYPES_USE_CPP_POINTERS)</span>
+<a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a>
+<a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;datatypes/extern_c_api_as_transparent.h&quot;</span><span class="cp"></span>
+<a id="__codelineno-49-18" name="__codelineno-49-18" href="#__codelineno-49-18"></a>
+<a id="__codelineno-49-19" name="__codelineno-49-19" href="#__codelineno-49-19"></a><span class="cp">#elif defined(DATATYPES_USE_OPAQUE_POINTERS)</span>
+<a id="__codelineno-49-20" name="__codelineno-49-20" href="#__codelineno-49-20"></a>
+<a id="__codelineno-49-21" name="__codelineno-49-21" href="#__codelineno-49-21"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;datatypes/extern_c_api_as_opaque.h&quot;</span><span class="cp"></span>
+<a id="__codelineno-49-22" name="__codelineno-49-22" href="#__codelineno-49-22"></a>
+<a id="__codelineno-49-23" name="__codelineno-49-23" href="#__codelineno-49-23"></a><span class="cp">#else</span>
+<a id="__codelineno-49-24" name="__codelineno-49-24" href="#__codelineno-49-24"></a><span class="cp">#error macro DATATYPES_USE_OPAQUE_POINTERS or DATATYPES_USE_CPP_POINTERS must be defined</span>
+<a id="__codelineno-49-25" name="__codelineno-49-25" href="#__codelineno-49-25"></a><span class="cp">#endif</span>
+<a id="__codelineno-49-26" name="__codelineno-49-26" href="#__codelineno-49-26"></a>
+<a id="__codelineno-49-27" name="__codelineno-49-27" href="#__codelineno-49-27"></a><span class="c1">// see http://msdn.microsoft.com/en-us/library/as6wyhwt.aspx, best practice</span>
+<a id="__codelineno-49-28" name="__codelineno-49-28" href="#__codelineno-49-28"></a><span class="cp">#define DATATYPES_API  DATATYPES_DLL_LIB </span>
+<a id="__codelineno-49-29" name="__codelineno-49-29" href="#__codelineno-49-29"></a>
+<a id="__codelineno-49-30" name="__codelineno-49-30" href="#__codelineno-49-30"></a><span class="cp">#ifdef __cplusplus</span>
+<a id="__codelineno-49-31" name="__codelineno-49-31" href="#__codelineno-49-31"></a><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-49-32" name="__codelineno-49-32" href="#__codelineno-49-32"></a><span class="cp">#endif</span>
+<a id="__codelineno-49-33" name="__codelineno-49-33" href="#__codelineno-49-33"></a>
+<a id="__codelineno-49-34" name="__codelineno-49-34" href="#__codelineno-49-34"></a><span class="w">    </span><span class="c1">// Error handling</span>
+<a id="__codelineno-49-35" name="__codelineno-49-35" href="#__codelineno-49-35"></a>
+<a id="__codelineno-49-36" name="__codelineno-49-36" href="#__codelineno-49-36"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">GetLastStdExceptionMessage</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-49-37" name="__codelineno-49-37" href="#__codelineno-49-37"></a>
+<a id="__codelineno-49-38" name="__codelineno-49-38" href="#__codelineno-49-38"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">RegisterExceptionCallback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">callback</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-39" name="__codelineno-49-39" href="#__codelineno-49-39"></a>
+<a id="__codelineno-49-40" name="__codelineno-49-40" href="#__codelineno-49-40"></a><span class="w">    </span><span class="c1">// Generic memory management.</span>
+<a id="__codelineno-49-41" name="__codelineno-49-41" href="#__codelineno-49-41"></a>
+<a id="__codelineno-49-42" name="__codelineno-49-42" href="#__codelineno-49-42"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeSharedPointer</span><span class="p">(</span><span class="n">VOID_PTR_PROVIDER_PTR</span><span class="w"> </span><span class="n">ptr</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-43" name="__codelineno-49-43" href="#__codelineno-49-43"></a>
+<a id="__codelineno-49-44" name="__codelineno-49-44" href="#__codelineno-49-44"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteAnsiStringArray</span><span class="p">(</span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-45" name="__codelineno-49-45" href="#__codelineno-49-45"></a>
+<a id="__codelineno-49-46" name="__codelineno-49-46" href="#__codelineno-49-46"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteAnsiString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-47" name="__codelineno-49-47" href="#__codelineno-49-47"></a>
+<a id="__codelineno-49-48" name="__codelineno-49-48" href="#__codelineno-49-48"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DeleteDoubleArray</span><span class="p">(</span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-49" name="__codelineno-49-49" href="#__codelineno-49-49"></a>
+<a id="__codelineno-49-50" name="__codelineno-49-50" href="#__codelineno-49-50"></a>
+<a id="__codelineno-49-51" name="__codelineno-49-51" href="#__codelineno-49-51"></a><span class="w">    </span><span class="c1">// Global settings for the C uchronia API</span>
+<a id="__codelineno-49-52" name="__codelineno-49-52" href="#__codelineno-49-52"></a>
+<a id="__codelineno-49-53" name="__codelineno-49-53" href="#__codelineno-49-53"></a>
+<a id="__codelineno-49-54" name="__codelineno-49-54" href="#__codelineno-49-54"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetTimeSeriesMissingValueValue</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">missingValueValue</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-55" name="__codelineno-49-55" href="#__codelineno-49-55"></a>
+<a id="__codelineno-49-56" name="__codelineno-49-56" href="#__codelineno-49-56"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">LoadEnsembleDataset</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">libraryIdentifier</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataPath</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-57" name="__codelineno-49-57" href="#__codelineno-49-57"></a>
+<a id="__codelineno-49-58" name="__codelineno-49-58" href="#__codelineno-49-58"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">CreateEnsembleDataset</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">type</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-59" name="__codelineno-49-59" href="#__codelineno-49-59"></a>
+<a id="__codelineno-49-60" name="__codelineno-49-60" href="#__codelineno-49-60"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataIdentifiers</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-61" name="__codelineno-49-61" href="#__codelineno-49-61"></a>
+<a id="__codelineno-49-62" name="__codelineno-49-62" href="#__codelineno-49-62"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataSubIdentifiers</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataCollectionId</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-63" name="__codelineno-49-63" href="#__codelineno-49-63"></a>
+<a id="__codelineno-49-64" name="__codelineno-49-64" href="#__codelineno-49-64"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">GetEnsembleDatasetDataSummaries</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-65" name="__codelineno-49-65" href="#__codelineno-49-65"></a>
+<a id="__codelineno-49-66" name="__codelineno-49-66" href="#__codelineno-49-66"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">time_series_dimensions_description</span><span class="o">*</span><span class="w"> </span><span class="n">GetDataDimensionsDescription</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-67" name="__codelineno-49-67" href="#__codelineno-49-67"></a>
+<a id="__codelineno-49-68" name="__codelineno-49-68" href="#__codelineno-49-68"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EnsembleSizeEnsembleTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ensSeries</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-69" name="__codelineno-49-69" href="#__codelineno-49-69"></a>
+<a id="__codelineno-49-70" name="__codelineno-49-70" href="#__codelineno-49-70"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeDataDimensionsDescriptions</span><span class="p">(</span><span class="n">time_series_dimensions_description</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-71" name="__codelineno-49-71" href="#__codelineno-49-71"></a>
+<a id="__codelineno-49-72" name="__codelineno-49-72" href="#__codelineno-49-72"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateEnsembleForecastTimeSeries</span><span class="p">(</span><span class="n">date_time_to_second</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">timeStepName</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-73" name="__codelineno-49-73" href="#__codelineno-49-73"></a>
+<a id="__codelineno-49-74" name="__codelineno-49-74" href="#__codelineno-49-74"></a>
+<a id="__codelineno-49-75" name="__codelineno-49-75" href="#__codelineno-49-75"></a>
+<a id="__codelineno-49-76" name="__codelineno-49-76" href="#__codelineno-49-76"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetSingleTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-77" name="__codelineno-49-77" href="#__codelineno-49-77"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetEnsembleTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataEnsembleId</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-78" name="__codelineno-49-78" href="#__codelineno-49-78"></a><span class="w">    </span><span class="c1">// DATATYPES_API FORECAST_TIME_SERIES_DOUBLE_PTR GetDatasetForecastTimeSeries(ENSEMBLE_DATA_SET_PTR dataLibrary, char** identifiers, char** dataId, int size);</span>
+<a id="__codelineno-49-79" name="__codelineno-49-79" href="#__codelineno-49-79"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetDatasetEnsembleForecastTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_DATA_SET_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">dataId</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-80" name="__codelineno-49-80" href="#__codelineno-49-80"></a>
+<a id="__codelineno-49-81" name="__codelineno-49-81" href="#__codelineno-49-81"></a><span class="w">    </span><span class="c1">// These api entry points are TEMPORARY: they must be phased out.</span>
+<a id="__codelineno-49-82" name="__codelineno-49-82" href="#__codelineno-49-82"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveSingleTimeSeriesToNetcdf</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-83" name="__codelineno-49-83" href="#__codelineno-49-83"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveEnsembleTimeSeriesToNetcdf</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-84" name="__codelineno-49-84" href="#__codelineno-49-84"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SaveEnsembleForecastTimeSeriesToNetcdf</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">tsEnsTs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">overwrite</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-85" name="__codelineno-49-85" href="#__codelineno-49-85"></a>
+<a id="__codelineno-49-86" name="__codelineno-49-86" href="#__codelineno-49-86"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsMissingValueItemEnsembleForecastTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-87" name="__codelineno-49-87" href="#__codelineno-49-87"></a>
+<a id="__codelineno-49-88" name="__codelineno-49-88" href="#__codelineno-49-88"></a><span class="w">    </span><span class="c1">//Functions that reduce the dimensionality of data, forms of splicing</span>
+<a id="__codelineno-49-89" name="__codelineno-49-89" href="#__codelineno-49-89"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">GetItemEnsembleForecastTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">efts</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-90" name="__codelineno-49-90" href="#__codelineno-49-90"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromEnsembleOfTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collectionTs</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-91" name="__codelineno-49-91" href="#__codelineno-49-91"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">efts</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">indexInIssueTime</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">indexInForecastTime</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-92" name="__codelineno-49-92" href="#__codelineno-49-92"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GetValueFromUnivariateTimeSeries</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-93" name="__codelineno-49-93" href="#__codelineno-49-93"></a>
+<a id="__codelineno-49-94" name="__codelineno-49-94" href="#__codelineno-49-94"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">TransformEachItem</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">tsEnsTs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">method</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">methodArgument</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-95" name="__codelineno-49-95" href="#__codelineno-49-95"></a>
+<a id="__codelineno-49-96" name="__codelineno-49-96" href="#__codelineno-49-96"></a><span class="w">    </span><span class="c1">//Functions that set items in data (along the &#39;first&#39; dimension)</span>
+<a id="__codelineno-49-97" name="__codelineno-49-97" href="#__codelineno-49-97"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValueToUnivariateTimeSeries</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-98" name="__codelineno-49-98" href="#__codelineno-49-98"></a>
+<a id="__codelineno-49-99" name="__codelineno-49-99" href="#__codelineno-49-99"></a>
+<a id="__codelineno-49-100" name="__codelineno-49-100" href="#__codelineno-49-100"></a><span class="w">    </span><span class="c1">// Handling elements in ensemble time series forecasts.</span>
+<a id="__codelineno-49-101" name="__codelineno-49-101" href="#__codelineno-49-101"></a>
+<a id="__codelineno-49-102" name="__codelineno-49-102" href="#__codelineno-49-102"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">GetItemEnsembleForecastTimeSeriesAsStructure</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-103" name="__codelineno-49-103" href="#__codelineno-49-103"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">GetItemEnsembleTimeSeriesAsStructure</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-104" name="__codelineno-49-104" href="#__codelineno-49-104"></a><span class="w">    </span><span class="c1">//DATATYPES_API void SetItemEnsembleForecastTimeSeries(ENSEMBLE_FORECAST_TIME_SERIES_PTR series, int i, ENSEMBLE_FORECAST_TIME_SERIES_PTR data);</span>
+<a id="__codelineno-49-105" name="__codelineno-49-105" href="#__codelineno-49-105"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetItemEnsembleForecastTimeSeriesAsStructure</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w">  </span><span class="n">values</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-106" name="__codelineno-49-106" href="#__codelineno-49-106"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetItemEnsembleTimeSeriesAsStructure</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">collection</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w">  </span><span class="n">values</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-107" name="__codelineno-49-107" href="#__codelineno-49-107"></a>
+<a id="__codelineno-49-108" name="__codelineno-49-108" href="#__codelineno-49-108"></a><span class="w">    </span><span class="c1">// Functions that augment the dimensionality of data</span>
+<a id="__codelineno-49-109" name="__codelineno-49-109" href="#__codelineno-49-109"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreatePerfectForecastTimeSeries</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">observations</span><span class="p">,</span><span class="w"> </span><span class="n">date_time_to_second</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">timeStepName</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">offsetForecasts</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">leadTime</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-110" name="__codelineno-49-110" href="#__codelineno-49-110"></a>
+<a id="__codelineno-49-111" name="__codelineno-49-111" href="#__codelineno-49-111"></a><span class="w">    </span><span class="c1">// conversions to structures for conversions to other representations in the language using this C API</span>
+<a id="__codelineno-49-112" name="__codelineno-49-112" href="#__codelineno-49-112"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">ToStructEnsembleTimeSeriesData</span><span class="p">(</span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">ensSeries</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-113" name="__codelineno-49-113" href="#__codelineno-49-113"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">ToStructSingleTimeSeriesData</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-114" name="__codelineno-49-114" href="#__codelineno-49-114"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">ENSEMBLE_PTR_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateEnsembleTimeSeriesDataFromStruct</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">ensSeries</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-115" name="__codelineno-49-115" href="#__codelineno-49-115"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">CreateSingleTimeSeriesDataFromStruct</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-116" name="__codelineno-49-116" href="#__codelineno-49-116"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">DisposeMultiTimeSeriesData</span><span class="p">(</span><span class="n">multi_regular_time_series_data</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-117" name="__codelineno-49-117" href="#__codelineno-49-117"></a>
+<a id="__codelineno-49-118" name="__codelineno-49-118" href="#__codelineno-49-118"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetTimeSeriesGeometry</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"> </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-119" name="__codelineno-49-119" href="#__codelineno-49-119"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetEnsembleForecastTimeSeriesGeometry</span><span class="p">(</span><span class="n">ENSEMBLE_FORECAST_TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"> </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-120" name="__codelineno-49-120" href="#__codelineno-49-120"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetTimeSeriesValues</span><span class="p">(</span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">timeSeries</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-121" name="__codelineno-49-121" href="#__codelineno-49-121"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">GetNumTimeSeries</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-49-122" name="__codelineno-49-122" href="#__codelineno-49-122"></a><span class="w">    </span><span class="c1">// Backward compatibility with SWIFTv1, but functions that may be generic to other persistent data sources</span>
+<a id="__codelineno-49-123" name="__codelineno-49-123" href="#__codelineno-49-123"></a>
+<a id="__codelineno-49-124" name="__codelineno-49-124" href="#__codelineno-49-124"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetProviderTsGeometry</span><span class="p">(</span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="p">,</span><span class="w"> </span><span class="n">TS_GEOMETRY_PTR</span><span class="w"> </span><span class="n">geom</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-125" name="__codelineno-49-125" href="#__codelineno-49-125"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">GetProviderTimeSeriesValues</span><span class="p">(</span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arrayLength</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-126" name="__codelineno-49-126" href="#__codelineno-49-126"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">GetProviderTimeSeriesIdentifiers</span><span class="p">(</span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">size</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-127" name="__codelineno-49-127" href="#__codelineno-49-127"></a><span class="w">    </span><span class="n">DATATYPES_API</span><span class="w"> </span><span class="n">TIME_SERIES_PTR</span><span class="w"> </span><span class="n">TimeSeriesFromProviderTs</span><span class="p">(</span><span class="n">TIME_SERIES_PROVIDER_PTR</span><span class="w"> </span><span class="n">dataLibrary</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">variableIdentifier</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-49-128" name="__codelineno-49-128" href="#__codelineno-49-128"></a>
+<a id="__codelineno-49-129" name="__codelineno-49-129" href="#__codelineno-49-129"></a>
+<a id="__codelineno-49-130" name="__codelineno-49-130" href="#__codelineno-49-130"></a><span class="w">    </span><span class="c1">// Obsolete and deprecated functions</span>
+<a id="__codelineno-49-131" name="__codelineno-49-131" href="#__codelineno-49-131"></a>
+<a id="__codelineno-49-132" name="__codelineno-49-132" href="#__codelineno-49-132"></a><span class="cp">#ifdef __cplusplus</span>
+<a id="__codelineno-49-133" name="__codelineno-49-133" href="#__codelineno-49-133"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-49-134" name="__codelineno-49-134" href="#__codelineno-49-134"></a><span class="cp">#endif</span>
+</code></pre></div>
+<hr />
+<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CSIRO
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

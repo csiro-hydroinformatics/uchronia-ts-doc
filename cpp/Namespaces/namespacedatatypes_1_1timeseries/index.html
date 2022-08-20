@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This package is primarily for managing resources, for instance from  native libraries written for instance in C++, from Python.">
+      
+      
+        <meta name="author" content="Jean-Michel Perraud">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>datatypes::timeseries - uchronia C++</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datatypestimeseries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="uchronia C++" class="md-header__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uchronia C++
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datatypes::timeseries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        C++
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uchronia C++" class="md-nav__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    uchronia C++
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">C++</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="C++" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Classes/" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pages/" class="md-nav__link">
+        Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#namespaces" class="md-nav__link">
+    Namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-documentation" class="md-nav__link">
+    Types Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-timeseries" class="md-nav__link">
+    typedef TimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-pointertypetimeseries" class="md-nav__link">
+    using PointerTypeTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-multitimeseriesptr" class="md-nav__link">
+    using MultiTimeSeriesPtr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-forecasttimeseries" class="md-nav__link">
+    using ForecastTimeSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-timeseriesensemble" class="md-nav__link">
+    using TimeSeriesEnsemble
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-ensembleforecasttimeseries" class="md-nav__link">
+    using EnsembleForecastTimeSeries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-documentation" class="md-nav__link">
+    Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-defaultmissingvaluepolicy" class="md-nav__link">
+    function DefaultMissingValuePolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-defaultstoragepolicy" class="md-nav__link">
+    function DefaultStoragePolicy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator" class="md-nav__link">
+    function operator&lt;&lt;
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getmetadatafrom" class="md-nav__link">
+    function GetMetadataFrom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dimensionsfromseries" class="md-nav__link">
+    function DimensionsFromSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dimensionsfromseries_1" class="md-nav__link">
+    function DimensionsFromSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dimensionsfromseries_2" class="md-nav__link">
+    function DimensionsFromSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-dimensionsfrompointtimeseries" class="md-nav__link">
+    function DimensionsFromPointTimeSeries
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/csiro-hydroinformatics/pyrefcount/edit/master/docs/cpp/Namespaces/namespacedatatypes_1_1timeseries.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="datatypestimeseries">datatypes::timeseries<a class="headerlink" href="#datatypestimeseries" title="Permanent link">&para;</a></h1>
+<h2 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries_1_1io/">datatypes::timeseries::io</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>struct</td>
+<td><strong><a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/">datatypes::timeseries::DefaultMissingValuePolicyTypeFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">datatypes::timeseries::TTimeSeries</a></strong> <br>A template for univariate, single realisasion time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">datatypes::timeseries::MultiTimeSeries</a></strong> <br>Template for time series with multiple values at time point; e.g. to hold multiple realizations of time series in an ensemble.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/">datatypes::timeseries::time_series_of</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1ensemble__of/">datatypes::timeseries::ensemble_of</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/">datatypes::timeseries::item_type_of</a></strong></td>
+</tr>
+<tr>
+<td>struct</td>
+<td><strong><a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">datatypes::timeseries::CommonTypes</a></strong> <br>Typical ensemble and time series data types derived from a fundamental data type for each data item.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesOperations/">datatypes::timeseries::TimeSeriesOperations</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/">datatypes::timeseries::TimeWindow</a></strong> <br>An object that represents a time window, defining subset/trim operations on time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">datatypes::timeseries::GlobalAttributes</a></strong> <br>A class to hold the global attributes of a file stored in the SWIFT netCDF format.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/">datatypes::timeseries::VariableAttributes</a></strong> <br>A class to hold the attributes of a netCDF variable stored in the SWIFT netCDF format.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/">datatypes::timeseries::VariableDefinition</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">datatypes::timeseries::DimensionsDefinitions</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/">datatypes::timeseries::DataGeometryProvider</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesIOHelper/">datatypes::timeseries::TimeSeriesIOHelper</a></strong> <br>Representation of an univariate, ensemble time series with a SWIFT netCDF back end.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleNetCdfFileStore/">datatypes::timeseries::SingleNetCdfFileStore</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/">datatypes::timeseries::NetCdfSingleSeriesStore</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/">datatypes::timeseries::NetCdfEnsembleTimeSeriesStore</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/">datatypes::timeseries::EagerWriter</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong> <br>An implementation of <a href="">TimeSeriesEnsembleTimeSeriesStore</a> such that the content of a time series is spread amongst several files.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/">datatypes::timeseries::MultiFileTsStorage</a></strong> <br>An implementation of <a href="">StoragePolicy</a> such that the content of a time series is spread amongst several files.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryFactory/">datatypes::timeseries::TimeSeriesLibraryFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SwiftNetcdfStoreFactory/">datatypes::timeseries::SwiftNetcdfStoreFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a></strong> <br>An interface definition for objects that can provide hierarchical identification.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/">datatypes::timeseries::TimeSeriesProvider</a></strong> <br>Library of time series, for high level access to sources of univariate, single instance time series that may have varying on-disk representations.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/">datatypes::timeseries::DataDimensionDescriptor</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">datatypes::timeseries::DataDescriptor</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">datatypes::timeseries::SingleTimeSeriesStore</a></strong> <br>Interface definition for storages of single, univariate time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">datatypes::timeseries::EnsembleTimeSeriesStore</a></strong> <br>Interface definition for storages of ensembles of univariate time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore</a></strong> <br>Interface definition for storages of time series of ensembles of time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStoragePolicy/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStoragePolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/">datatypes::timeseries::TTimeSeriesLibrary</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/">datatypes::timeseries::TimeSeriesSourceInfoImpl</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/">datatypes::timeseries::TimeSeriesSourceInfo</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/">datatypes::timeseries::NetCdfSourceInfo</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/">datatypes::timeseries::TimeSeriesLibraryDescription</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/">datatypes::timeseries::TimeSeriesSourceInfoBuilder</a></strong> <br>An abstract class to allow callers to inject custom time series data sources into a time series library.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/">datatypes::timeseries::TimeSeriesStoreFactory</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/">datatypes::timeseries::TimeSeriesLibrary</a></strong> <br>Library of time series, for high level access to sources of time series that nmay have varying on-disk representations.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">datatypes::timeseries::StoragePolicy</a></strong> <br>An interface for classes that can handle the storage of data for time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/">datatypes::timeseries::MissingValuePolicy</a></strong> <br>An interface for classes that define missing values in time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/">datatypes::timeseries::DefaultMissingFloatingPointPolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/">datatypes::timeseries::NullPointerIsMissingPolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/">datatypes::timeseries::NegativeIsMissingFloadingPointPolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/">datatypes::timeseries::StlVectorStorage</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/">datatypes::timeseries::SharedVectorStorage</a></strong> <br>A storage strategy for time serie such that data is a shared state amongst several time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/">datatypes::timeseries::MemoryCachingStorageWriter</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/">datatypes::timeseries::EnsembleStoragePolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/">datatypes::timeseries::StdVectorEnsembleStoragePolicy</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">datatypes::timeseries::TimeStep</a></strong> <br>Time step handling for time series.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></strong> <br>An interface definition for classes that can provide essential time series temporal characteristics.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStepImplementation/">datatypes::timeseries::TimeStepImplementation</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1RegularTimeStepImplementation/">datatypes::timeseries::RegularTimeStepImplementation</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IrregularTimeStepImplementation/">datatypes::timeseries::IrregularTimeStepImplementation</a></strong></td>
+</tr>
+<tr>
+<td>class</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MonthlyQppTimeStepImplementation/">datatypes::timeseries::MonthlyQppTimeStepImplementation</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typedef <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; double &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries">TimeSeries</a></strong></td>
+</tr>
+<tr>
+<td>template &lt;typename ItemType &gt; <br>using <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ItemType * &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-pointertypetimeseries">PointerTypeTimeSeries</a></strong></td>
+</tr>
+<tr>
+<td>template &lt;typename Tts  =TimeSeries&gt; <br>using <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; Tts * &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-multitimeseriesptr">MultiTimeSeriesPtr</a></strong></td>
+</tr>
+<tr>
+<td>template &lt;typename Tts  =TimeSeries&gt; <br>using <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-pointertypetimeseries">PointerTypeTimeSeries</a>&lt; Tts &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-forecasttimeseries">ForecastTimeSeries</a></strong></td>
+</tr>
+<tr>
+<td>template &lt;typename Tts  =TimeSeries&gt; <br>using <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-multitimeseriesptr">MultiTimeSeriesPtr</a>&lt; Tts &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble">TimeSeriesEnsemble</a></strong></td>
+</tr>
+<tr>
+<td>template &lt;typename Tts  =TimeSeries&gt; <br>using <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-pointertypetimeseries">PointerTypeTimeSeries</a>&lt; <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-multitimeseriesptr">MultiTimeSeriesPtr</a>&lt; Tts &gt; &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries">EnsembleForecastTimeSeries</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template &lt;typename T &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/">MissingValuePolicy</a>&lt; T &gt; *</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-defaultmissingvaluepolicy">DefaultMissingValuePolicy</a></strong>()<br>Default missing value policy.</td>
+</tr>
+<tr>
+<td>template &lt;typename T &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a>&lt; T &gt; *</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-defaultstoragepolicy">DefaultStoragePolicy</a></strong>()<br>Default strategy for storing time series data.</td>
+</tr>
+<tr>
+<td>template &lt;typename T &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; T &gt;</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-operator&lt;&lt;">operator&lt;&lt;</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; T &gt; &amp; a, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; T &gt; &amp; b)</td>
+</tr>
+<tr>
+<td>template &lt;typename From ,typename To &gt; <br>To</td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-getmetadatafrom">GetMetadataFrom</a></strong>(const From &amp; ens)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a></td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-dimensionsfromseries">DimensionsFromSeries</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; &amp; ts, const size_t ensembleSize =1, const size_t leadTimeSize =1, const vector&lt; string &gt; &amp; stationIds =<a href="/cpp/Files/common_8h/#define-default-station-identifier">DEFAULT_STATION_IDENTIFIER</a>)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a></td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-dimensionsfromseries">DimensionsFromSeries</a></strong>(<a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries">EnsembleForecastTimeSeries</a>&lt;&gt; &amp; tsEns, const vector&lt; string &gt; &amp; stationIds =<a href="/cpp/Files/common_8h/#define-default-station-identifier">DEFAULT_STATION_IDENTIFIER</a>)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a></td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-dimensionsfromseries">DimensionsFromSeries</a></strong>(const vector&lt; <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries">EnsembleForecastTimeSeries</a>&lt;&gt;::ElementType &gt; &amp; values, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; tsEnsTstep =<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getunknown">TimeStep::GetUnknown</a>(), const ptime &amp; tsEnsStart =not_a_date_time, const vector&lt; string &gt; &amp; stationIds =<a href="/cpp/Files/common_8h/#define-default-station-identifier">DEFAULT_STATION_IDENTIFIER</a>, int fcastOffset =1)</td>
+</tr>
+<tr>
+<td>template &lt;typename TElement &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a></td>
+<td><strong><a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#function-dimensionsfrompointtimeseries">DimensionsFromPointTimeSeries</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; TElement &gt; &amp; ts)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types-documentation">Types Documentation<a class="headerlink" href="#types-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="typedef-timeseries">typedef TimeSeries<a class="headerlink" href="#typedef-timeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">TimeSeries</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-pointertypetimeseries">using PointerTypeTimeSeries<a class="headerlink" href="#using-pointertypetimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ItemType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">PointerTypeTimeSeries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ItemType</span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-multitimeseriesptr">using MultiTimeSeriesPtr<a class="headerlink" href="#using-multitimeseriesptr" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Tts</span><span class="w">  </span><span class="o">=</span><span class="n">TimeSeries</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">MultiTimeSeriesPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">MultiTimeSeries</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Tts</span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-forecasttimeseries">using ForecastTimeSeries<a class="headerlink" href="#using-forecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Tts</span><span class="w">  </span><span class="o">=</span><span class="n">TimeSeries</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">ForecastTimeSeries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">PointerTypeTimeSeries</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Tts</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-timeseriesensemble">using TimeSeriesEnsemble<a class="headerlink" href="#using-timeseriesensemble" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Tts</span><span class="w">  </span><span class="o">=</span><span class="n">TimeSeries</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">TimeSeriesEnsemble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">MultiTimeSeriesPtr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">Tts</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="using-ensembleforecasttimeseries">using EnsembleForecastTimeSeries<a class="headerlink" href="#using-ensembleforecasttimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Tts</span><span class="w">  </span><span class="o">=</span><span class="n">TimeSeries</span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">EnsembleForecastTimeSeries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typedef</span><span class="w"> </span><span class="n">PointerTypeTimeSeries</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MultiTimeSeriesPtr</span><span class="o">&lt;</span><span class="n">Tts</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h2 id="functions-documentation">Functions Documentation<a class="headerlink" href="#functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-defaultmissingvaluepolicy">function DefaultMissingValuePolicy<a class="headerlink" href="#function-defaultmissingvaluepolicy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">MissingValuePolicy</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DefaultMissingValuePolicy</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Default missing value policy. </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> Generic type parameter, the type of the elements of the time series</li>
+</ul>
+<p><strong>Return</strong>: A new object inheriting from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/">MissingValuePolicy</a><T>*&gt; </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    A function that returnes a suitable default object to handle 
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    time series behaviors with respect to missing values
+</code></pre></div>
+<h3 id="function-defaultstoragepolicy">function DefaultStoragePolicy<a class="headerlink" href="#function-defaultstoragepolicy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">StoragePolicy</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DefaultStoragePolicy</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Default strategy for storing time series data. </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> Generic type parameter, the type of the elements of the time series</li>
+</ul>
+<p><strong>Return</strong>: A new object inheriting from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a><T>*&gt; </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    A function that returnes a suitable default object to handle
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    the storage of time series data. The default is in memory vector.
+</code></pre></div>
+<h3 id="function-operator">function operator&lt;&lt;<a class="headerlink" href="#function-operator" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getmetadatafrom">function GetMetadataFrom<a class="headerlink" href="#function-getmetadatafrom" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">From</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">typename</span><span class="w"> </span><span class="nc">To</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">To</span><span class="w"> </span><span class="n">GetMetadataFrom</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">From</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ens</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dimensionsfromseries">function DimensionsFromSeries<a class="headerlink" href="#function-dimensionsfromseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">DimensionsDefinitions</span><span class="w"> </span><span class="n">DimensionsFromSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ts</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">ensembleSize</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">leadTimeSize</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stationIds</span><span class="w"> </span><span class="o">=</span><span class="n">DEFAULT_STATION_IDENTIFIER</span><span class="w"></span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dimensionsfromseries_1">function DimensionsFromSeries<a class="headerlink" href="#function-dimensionsfromseries_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">DimensionsDefinitions</span><span class="w"> </span><span class="n">DimensionsFromSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">EnsembleForecastTimeSeries</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tsEns</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stationIds</span><span class="w"> </span><span class="o">=</span><span class="n">DEFAULT_STATION_IDENTIFIER</span><span class="w"></span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dimensionsfromseries_2">function DimensionsFromSeries<a class="headerlink" href="#function-dimensionsfromseries_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">DimensionsDefinitions</span><span class="w"> </span><span class="n">DimensionsFromSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">EnsembleForecastTimeSeries</span><span class="o">&lt;&gt;::</span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tsEnsTstep</span><span class="w"> </span><span class="o">=</span><span class="n">TimeStep</span><span class="o">::</span><span class="n">GetUnknown</span><span class="p">(),</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tsEnsStart</span><span class="w"> </span><span class="o">=</span><span class="n">not_a_date_time</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stationIds</span><span class="w"> </span><span class="o">=</span><span class="n">DEFAULT_STATION_IDENTIFIER</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fcastOffset</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-dimensionsfrompointtimeseries">function DimensionsFromPointTimeSeries<a class="headerlink" href="#function-dimensionsfrompointtimeseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">TElement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">DimensionsDefinitions</span><span class="w"> </span><span class="n">DimensionsFromPointTimeSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TElement</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ts</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CSIRO
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

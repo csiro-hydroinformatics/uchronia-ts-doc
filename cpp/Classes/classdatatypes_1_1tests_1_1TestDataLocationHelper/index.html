@@ -1,0 +1,1022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This package is primarily for managing resources, for instance from  native libraries written for instance in C++, from Python.">
+      
+      
+        <meta name="author" content="Jean-Michel Perraud">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>datatypes::tests::TestDataLocationHelper - uchronia C++</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datatypesteststestdatalocationhelper" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="uchronia C++" class="md-header__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uchronia C++
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datatypes::tests::TestDataLocationHelper
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        C++
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uchronia C++" class="md-nav__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    uchronia C++
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">C++</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="C++" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Namespaces/" class="md-nav__link">
+        Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pages/" class="md-nav__link">
+        Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-readenvironmentvariable" class="md-nav__link">
+    function ReadEnvironmentVariable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-buildpath" class="md-nav__link">
+    function BuildPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createensembletimeserieslibrary" class="md-nav__link">
+    function CreateEnsembleTimeSeriesLibrary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettesttimeserieslibrary" class="md-nav__link">
+    function GetTestTimeSeriesLibrary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-testtslibraryidentifiers" class="md-nav__link">
+    function TestTsLibraryIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtesttimeserieslibrary" class="md-nav__link">
+    function CreateTestTimeSeriesLibrary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-maketesttimeserieslibrary" class="md-nav__link">
+    function MakeTestTimeSeriesLibrary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-teststationids" class="md-nav__link">
+    function TestStationIds
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvarsinglestation" class="md-nav__link">
+    variable kVarSingleStation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvarmultistations" class="md-nav__link">
+    variable kVarMultiStations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kfilesinglestation" class="md-nav__link">
+    variable kFileSingleStation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kfilemultistations" class="md-nav__link">
+    variable kFileMultiStations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kfilealldatacases" class="md-nav__link">
+    variable kFileAllDataCases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar1fcastens" class="md-nav__link">
+    variable kVar1FcastEns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar2fcastens" class="md-nav__link">
+    variable kVar2FcastEns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar1obs" class="md-nav__link">
+    variable kVar1Obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar2obs" class="md-nav__link">
+    variable kVar2Obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar1ens" class="md-nav__link">
+    variable kVar1Ens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kvar2ens" class="md-nav__link">
+    variable kVar2Ens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier1fcastens" class="md-nav__link">
+    variable kIdentifier1FcastEns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier2fcastens" class="md-nav__link">
+    variable kIdentifier2FcastEns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier1obs" class="md-nav__link">
+    variable kIdentifier1Obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier2obs" class="md-nav__link">
+    variable kIdentifier2Obs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier1ens" class="md-nav__link">
+    variable kIdentifier1Ens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kidentifier2ens" class="md-nav__link">
+    variable kIdentifier2Ens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-ksinglestationid" class="md-nav__link">
+    variable kSingleStationId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kstationidone" class="md-nav__link">
+    variable kStationIdOne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-kstationidtwo" class="md-nav__link">
+    variable kStationIdTwo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-ktimeserieslength" class="md-nav__link">
+    variable kTimeSeriesLength
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/csiro-hydroinformatics/pyrefcount/edit/master/docs/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="datatypesteststestdatalocationhelper">datatypes::tests::TestDataLocationHelper<a class="headerlink" href="#datatypesteststestdatalocationhelper" title="Permanent link">&para;</a></h1>
+<p><code>#include &lt;datatypes_test_helpers.h&gt;</code></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-readenvironmentvariable">ReadEnvironmentVariable</a></strong>(const string &amp; envVar)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-buildpath">BuildPath</a></strong>(const vector&lt; string &gt; &amp; folders)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/">TimeSeriesLibrary</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createensembletimeserieslibrary">CreateEnsembleTimeSeriesLibrary</a></strong>(string &amp; rainObsId, string &amp; petObsId, string &amp; rainFcastId, string &amp; petFcastId)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/">TimeSeriesLibrary</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-gettesttimeserieslibrary">GetTestTimeSeriesLibrary</a></strong>()</td>
+</tr>
+<tr>
+<td>vector&lt; string &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-testtslibraryidentifiers">TestTsLibraryIdentifiers</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/">TimeSeriesLibrary</a> *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createtesttimeserieslibrary">CreateTestTimeSeriesLibrary</a></strong>()</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-maketesttimeserieslibrary">MakeTestTimeSeriesLibrary</a></strong>(<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/">TimeSeriesLibrary</a> &amp; dataLibrary)</td>
+</tr>
+<tr>
+<td>vector&lt; string &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-teststationids">TestStationIds</a></strong>()</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarsinglestation">kVarSingleStation</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarmultistations">kVarMultiStations</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilesinglestation">kFileSingleStation</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilemultistations">kFileMultiStations</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilealldatacases">kFileAllDataCases</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1fcastens">kVar1FcastEns</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2fcastens">kVar2FcastEns</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1obs">kVar1Obs</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2obs">kVar2Obs</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1ens">kVar1Ens</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2ens">kVar2Ens</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1fcastens">kIdentifier1FcastEns</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2fcastens">kIdentifier2FcastEns</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1obs">kIdentifier1Obs</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2obs">kIdentifier2Obs</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1ens">kIdentifier1Ens</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2ens">kIdentifier2Ens</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ksinglestationid">kSingleStationId</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidone">kStationIdOne</a></strong></td>
+</tr>
+<tr>
+<td>const string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidtwo">kStationIdTwo</a></strong></td>
+</tr>
+<tr>
+<td>const size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ktimeserieslength">kTimeSeriesLength</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-readenvironmentvariable">function ReadEnvironmentVariable<a class="headerlink" href="#function-readenvironmentvariable" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">ReadEnvironmentVariable</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">envVar</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-buildpath">function BuildPath<a class="headerlink" href="#function-buildpath" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">BuildPath</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">folders</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createensembletimeserieslibrary">function CreateEnsembleTimeSeriesLibrary<a class="headerlink" href="#function-createensembletimeserieslibrary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="n">TimeSeriesLibrary</span><span class="w"> </span><span class="n">CreateEnsembleTimeSeriesLibrary</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rainObsId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">petObsId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">rainFcastId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">petFcastId</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettesttimeserieslibrary">function GetTestTimeSeriesLibrary<a class="headerlink" href="#function-gettesttimeserieslibrary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="n">TimeSeriesLibrary</span><span class="w"> </span><span class="n">GetTestTimeSeriesLibrary</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-testtslibraryidentifiers">function TestTsLibraryIdentifiers<a class="headerlink" href="#function-testtslibraryidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TestTsLibraryIdentifiers</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtesttimeserieslibrary">function CreateTestTimeSeriesLibrary<a class="headerlink" href="#function-createtesttimeserieslibrary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="n">TimeSeriesLibrary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">CreateTestTimeSeriesLibrary</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-maketesttimeserieslibrary">function MakeTestTimeSeriesLibrary<a class="headerlink" href="#function-maketesttimeserieslibrary" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">MakeTestTimeSeriesLibrary</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">TimeSeriesLibrary</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dataLibrary</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-teststationids">function TestStationIds<a class="headerlink" href="#function-teststationids" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TestStationIds</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-kvarsinglestation">variable kVarSingleStation<a class="headerlink" href="#variable-kvarsinglestation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVarSingleStation</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvarmultistations">variable kVarMultiStations<a class="headerlink" href="#variable-kvarmultistations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVarMultiStations</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kfilesinglestation">variable kFileSingleStation<a class="headerlink" href="#variable-kfilesinglestation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kFileSingleStation</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kfilemultistations">variable kFileMultiStations<a class="headerlink" href="#variable-kfilemultistations" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kFileMultiStations</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kfilealldatacases">variable kFileAllDataCases<a class="headerlink" href="#variable-kfilealldatacases" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kFileAllDataCases</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar1fcastens">variable kVar1FcastEns<a class="headerlink" href="#variable-kvar1fcastens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar1FcastEns</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar2fcastens">variable kVar2FcastEns<a class="headerlink" href="#variable-kvar2fcastens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar2FcastEns</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar1obs">variable kVar1Obs<a class="headerlink" href="#variable-kvar1obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar1Obs</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar2obs">variable kVar2Obs<a class="headerlink" href="#variable-kvar2obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar2Obs</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar1ens">variable kVar1Ens<a class="headerlink" href="#variable-kvar1ens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar1Ens</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kvar2ens">variable kVar2Ens<a class="headerlink" href="#variable-kvar2ens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kVar2Ens</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier1fcastens">variable kIdentifier1FcastEns<a class="headerlink" href="#variable-kidentifier1fcastens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier1FcastEns</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier2fcastens">variable kIdentifier2FcastEns<a class="headerlink" href="#variable-kidentifier2fcastens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier2FcastEns</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier1obs">variable kIdentifier1Obs<a class="headerlink" href="#variable-kidentifier1obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier1Obs</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier2obs">variable kIdentifier2Obs<a class="headerlink" href="#variable-kidentifier2obs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier2Obs</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier1ens">variable kIdentifier1Ens<a class="headerlink" href="#variable-kidentifier1ens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier1Ens</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kidentifier2ens">variable kIdentifier2Ens<a class="headerlink" href="#variable-kidentifier2ens" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kIdentifier2Ens</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-ksinglestationid">variable kSingleStationId<a class="headerlink" href="#variable-ksinglestationid" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kSingleStationId</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kstationidone">variable kStationIdOne<a class="headerlink" href="#variable-kstationidone" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kStationIdOne</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-kstationidtwo">variable kStationIdTwo<a class="headerlink" href="#variable-kstationidtwo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">kStationIdTwo</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-ktimeserieslength">variable kTimeSeriesLength<a class="headerlink" href="#variable-ktimeserieslength" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">kTimeSeriesLength</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CSIRO
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

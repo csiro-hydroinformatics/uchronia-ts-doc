@@ -1,0 +1,1761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This package is primarily for managing resources, for instance from  native libraries written for instance in C++, from Python.">
+      
+      
+        <meta name="author" content="Jean-Michel Perraud">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>datatypes::timeseries::io::SwiftNetCDFAccess - uchronia C++</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datatypestimeseriesioswiftnetcdfaccess" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="uchronia C++" class="md-header__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            uchronia C++
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datatypes::timeseries::io::SwiftNetCDFAccess
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        C++
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="uchronia C++" class="md-nav__button md-logo" aria-label="uchronia C++" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    uchronia C++
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/csiro-hydroinformatics/pyrefcount" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    csiro-hydroinformatics/pyrefcount
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">C++</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="C++" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Modules/" class="md-nav__link">
+        Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Namespaces/" class="md-nav__link">
+        Namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pages/" class="md-nav__link">
+        Pages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes" class="md-nav__link">
+    Public Attributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    Public Functions Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-swiftnetcdfaccess" class="md-nav__link">
+    function SwiftNetCDFAccess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-swiftnetcdfaccess_1" class="md-nav__link">
+    function SwiftNetCDFAccess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-swiftnetcdfaccess_2" class="md-nav__link">
+    function SwiftNetCDFAccess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-swiftnetcdfaccess_3" class="md-nav__link">
+    function ~SwiftNetCDFAccess
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensemblesize" class="md-nav__link">
+    function GetEnsembleSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensemblesize_1" class="md-nav__link">
+    function GetEnsembleSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getleadtimecount" class="md-nav__link">
+    function GetLeadTimeCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getleadtimecount_1" class="md-nav__link">
+    function GetLeadTimeCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimelength" class="md-nav__link">
+    function GetTimeLength
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimedim" class="md-nav__link">
+    function GetTimeDim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getstart" class="md-nav__link">
+    function GetStart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getend" class="md-nav__link">
+    function GetEnd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-indexforidentifier" class="md-nav__link">
+    function IndexForIdentifier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getnumidentifiers" class="md-nav__link">
+    function GetNumIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getidentifiers" class="md-nav__link">
+    function GetIdentifiers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-timeforindex" class="md-nav__link">
+    function TimeForIndex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getforecasts" class="md-nav__link">
+    function GetForecasts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensemble" class="md-nav__link">
+    function GetEnsemble
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getvalues" class="md-nav__link">
+    function GetValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getvalues_1" class="md-nav__link">
+    function GetValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getseries" class="md-nav__link">
+    function GetSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getseries_1" class="md-nav__link">
+    function GetSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getensembleseries" class="md-nav__link">
+    function GetEnsembleSeries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setforecasts" class="md-nav__link">
+    function SetForecasts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setensembles" class="md-nav__link">
+    function SetEnsembles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setvalues" class="md-nav__link">
+    function SetValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setvalues_1" class="md-nav__link">
+    function SetValues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getvardims" class="md-nav__link">
+    function GetVarDims
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getvardims_1" class="md-nav__link">
+    function GetVarDims
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readvariablenames" class="md-nav__link">
+    function ReadVariableNames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readattributenames" class="md-nav__link">
+    function ReadAttributeNames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readstringattribute" class="md-nav__link">
+    function ReadStringAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readstringattribute_1" class="md-nav__link">
+    function ReadStringAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readnumericattribute" class="md-nav__link">
+    function ReadNumericAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readnumericattribute_1" class="md-nav__link">
+    function ReadNumericAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readattributes" class="md-nav__link">
+    function ReadAttributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-readglobalattributes" class="md-nav__link">
+    function ReadGlobalAttributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimestep" class="md-nav__link">
+    function GetTimeStep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getleadtimestep" class="md-nav__link">
+    function GetLeadTimeStep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getleadtimegeometry" class="md-nav__link">
+    function GetLeadTimeGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getleadtimedim" class="md-nav__link">
+    function GetLeadTimeDim
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getglobalattributes" class="md-nav__link">
+    function GetGlobalAttributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-getattributes" class="md-nav__link">
+    function GetAttributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-checkcompliance" class="md-nav__link">
+    function CheckCompliance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimeunitsattribute" class="md-nav__link">
+    function CreateTimeUnitsAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevectors" class="md-nav__link">
+    function CreateTimeVectors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevector" class="md-nav__link">
+    function CreateTimeVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevector_1" class="md-nav__link">
+    function CreateTimeVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevector_2" class="md-nav__link">
+    function CreateTimeVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevector_3" class="md-nav__link">
+    function CreateTimeVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimevector_4" class="md-nav__link">
+    function CreateTimeVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-startcoordinate" class="md-nav__link">
+    function StartCoordinate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimegeometry" class="md-nav__link">
+    function CreateTimeGeometry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-gettimestepname" class="md-nav__link">
+    function GetTimeStepName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimeunitsattribute_1" class="md-nav__link">
+    function CreateTimeUnitsAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimeunitsattribute_2" class="md-nav__link">
+    function CreateTimeUnitsAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parsestartdate" class="md-nav__link">
+    function ParseStartDate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-parsetimeunits" class="md-nav__link">
+    function ParseTimeUnits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createleadtimeunitsattribute" class="md-nav__link">
+    function CreateLeadTimeUnitsAttribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-convert" class="md-nav__link">
+    function Convert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-createtimeunits" class="md-nav__link">
+    function CreateTimeUnits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settimeoffsetin" class="md-nav__link">
+    function SetTimeOffsetIn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settimeoffsetout" class="md-nav__link">
+    function SetTimeOffsetOut
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-attributes-documentation" class="md-nav__link">
+    Public Attributes Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Attributes Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variable-timeoffsetin" class="md-nav__link">
+    variable TimeOffsetIn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-timeoffsetout" class="md-nav__link">
+    variable TimeOffsetOut
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/csiro-hydroinformatics/pyrefcount/edit/master/docs/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="datatypestimeseriesioswiftnetcdfaccess">datatypes::timeseries::io::SwiftNetCDFAccess<a class="headerlink" href="#datatypestimeseriesioswiftnetcdfaccess" title="Permanent link">&para;</a></h1>
+<p>Class responsible for the low-level read/write operations from/to a SWIFT netCDF file. </p>
+<p><code>#include &lt;time_series_io.hpp&gt;</code></p>
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-swiftnetcdfaccess">SwiftNetCDFAccess</a></strong>(const string &amp; filename, bool lazyLoad =false)<br>Constructor to wrap an existing SWIFT netCDF file.</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-swiftnetcdfaccess">SwiftNetCDFAccess</a></strong>(const string &amp; filename, const size_t nEns, const vector&lt; double &gt; &amp; leadTimeVar, const string &amp; timeUnits, const vector&lt; double &gt; &amp; timeVar, const vector&lt; string &gt; &amp; stationIds, const std::map&lt; string, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/">VariableDefinition</a> &gt; &amp; varDefinitions, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">GlobalAttributes</a> &amp; globalAttributes, const string &amp; leadTimeUnits ="")<br>**</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-swiftnetcdfaccess">SwiftNetCDFAccess</a></strong>(const string &amp; filename, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a> &amp; dimDefinitions, const std::map&lt; string, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/">VariableDefinition</a> &gt; &amp; varDefinitions, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">GlobalAttributes</a> &amp; globalAttributes)</td>
+</tr>
+<tr>
+<td></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-~swiftnetcdfaccess">~SwiftNetCDFAccess</a></strong>()</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getensemblesize">GetEnsembleSize</a></strong>()<br>Gets ensemble size.</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getensemblesize">GetEnsembleSize</a></strong>(const string &amp; ncVarName)</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getleadtimecount">GetLeadTimeCount</a></strong>()<br>Gets the lengths of the lead time dimension.</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getleadtimecount">GetLeadTimeCount</a></strong>(const string &amp; ncVarName)</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-gettimelength">GetTimeLength</a></strong>() const<br>Gets the lengths of the main time dimension.</td>
+</tr>
+<tr>
+<td>vector&lt; ptime &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-gettimedim">GetTimeDim</a></strong>()<br>Gets the vector with the values of the main time dimension.</td>
+</tr>
+<tr>
+<td>ptime</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getstart">GetStart</a></strong>()<br>Gets the first time in the main time dimension of this netCDF data set.</td>
+</tr>
+<tr>
+<td>ptime</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getend">GetEnd</a></strong>()<br>Gets the last time in the main time dimension of this netCDF data set.</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-indexforidentifier">IndexForIdentifier</a></strong>(const string &amp; identifier) const<br>Corresponding index for a string identifier for a variable in this data set.</td>
+</tr>
+<tr>
+<td>size_t</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getnumidentifiers">GetNumIdentifiers</a></strong>() const</td>
+</tr>
+<tr>
+<td>vector&lt; string &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getidentifiers">GetIdentifiers</a></strong>() const</td>
+</tr>
+<tr>
+<td>ptime</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-timeforindex">TimeForIndex</a></strong>(size_t timeIndex)<br>Time value for an index of the time dimension.</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; ElementType * &gt; *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getforecasts">GetForecasts</a></strong>(const string &amp; varName, size_t stationIndex, size_t timeIndex)<br>Gets the values of an ensemble forecast for a variable, for a starting date in the main time dimension.</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; ElementType * &gt; *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getensemble">GetEnsemble</a></strong>(const string &amp; varName, size_t stationIndex)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; ElementType &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getvalues">GetValues</a></strong>(const string &amp; varName, size_t stationIndex)<br>Gets the values of a variable stored as an non-ensemble series.</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; ElementType &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getvalues">GetValues</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getseries">GetSeries</a></strong>(const string &amp; varName, size_t stationIndex)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; * &gt; *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getseries">GetSeries</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; * &gt; *</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getensembleseries">GetEnsembleSeries</a></strong>(const string &amp; varName, size_t stationIndex)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-setforecasts">SetForecasts</a></strong>(const string &amp; varName, size_t stationIndex, size_t timeIndex, vector&lt; ElementType * &gt; &amp; values)<br>Sets the values for an ensemble forecast, for a variable, for a starting date in the main time dimension.</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-setensembles">SetEnsembles</a></strong>(const string &amp; varName, size_t stationIndex, vector&lt; ElementType * &gt; &amp; values)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-setvalues">SetValues</a></strong>(const string &amp; varName, size_t stationIndex, const vector&lt; ElementType &gt; &amp; values)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-setvalues">SetValues</a></strong>(const string &amp; varName, const vector&lt; ElementType &gt; &amp; values)</td>
+</tr>
+<tr>
+<td>vector&lt; int &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getvardims">GetVarDims</a></strong>(int varNumDims)</td>
+</tr>
+<tr>
+<td>vector&lt; int &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getvardims">GetVarDims</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td>vector&lt; string &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readvariablenames">ReadVariableNames</a></strong>(bool removeDimVars =true)</td>
+</tr>
+<tr>
+<td>vector&lt; string &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readattributenames">ReadAttributeNames</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readstringattribute">ReadStringAttribute</a></strong>(int varId, const string &amp; attName, bool throwIfNotFound =false, string defaultValue ="")</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readstringattribute">ReadStringAttribute</a></strong>(const string &amp; varName, const string &amp; attName, bool throwIfNotFound =false, string defaultValue ="")</td>
+</tr>
+<tr>
+<td>double</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readnumericattribute">ReadNumericAttribute</a></strong>(int varId, const string &amp; attName, bool throwIfNotFound =false, double defaultValue =0.0)</td>
+</tr>
+<tr>
+<td>double</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readnumericattribute">ReadNumericAttribute</a></strong>(const string &amp; varName, const string &amp; attName, bool throwIfNotFound =false, double defaultValue =0.0)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/">VariableAttributes</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readattributes">ReadAttributes</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">GlobalAttributes</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-readglobalattributes">ReadGlobalAttributes</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-gettimestep">GetTimeStep</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getleadtimestep">GetLeadTimeStep</a></strong>()</td>
+</tr>
+<tr>
+<td>std::pair&lt; ptime, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getleadtimegeometry">GetLeadTimeGeometry</a></strong>(const ptime &amp; issueTime)</td>
+</tr>
+<tr>
+<td>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getleadtimedim">GetLeadTimeDim</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">GlobalAttributes</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getglobalattributes">GetGlobalAttributes</a></strong>()</td>
+</tr>
+<tr>
+<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/">VariableAttributes</a></td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-getattributes">GetAttributes</a></strong>(const string &amp; varName)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-checkcompliance">CheckCompliance</a></strong>(const string &amp; filename, int majorVersion, int minorVersion, vector&lt; string &gt; &amp; warnings, vector&lt; string &gt; &amp; errors)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimeunitsattribute">CreateTimeUnitsAttribute</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; &amp; tSeries)</td>
+</tr>
+<tr>
+<td>std::pair&lt; vector&lt; double &gt;, vector&lt; double &gt; &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevectors">CreateTimeVectors</a></strong>(const ptime &amp; start, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, size_t tsLength, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; leadTimeStep, size_t leadTimeSize, int fcastOffset =1)</td>
+</tr>
+<tr>
+<td>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevector">CreateTimeVector</a></strong>(const ptime &amp; start, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const ptime &amp; origin, const time_duration &amp; timeStepAxis, const size_t length)</td>
+</tr>
+<tr>
+<td>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevector">CreateTimeVector</a></strong>(const ptime &amp; start, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const ptime &amp; origin, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStepAxis, const size_t length)</td>
+</tr>
+<tr>
+<td>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevector">CreateTimeVector</a></strong>(const ptime &amp; start, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const size_t length)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevector">CreateTimeVector</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; &amp; tSeries)</td>
+</tr>
+<tr>
+<td>template &lt;typename ElementType &gt; <br>vector&lt; double &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimevector">CreateTimeVector</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a>&lt; ElementType &gt; &amp; tSeries, const ptime &amp; origin, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStepAxis)</td>
+</tr>
+<tr>
+<td>template &lt;typename T &gt; <br>ptime</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-startcoordinate">StartCoordinate</a></strong>(const ptime &amp; origin, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const vector&lt; T &gt; &amp; timeCoords)</td>
+</tr>
+<tr>
+<td>std::pair&lt; ptime, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimegeometry">CreateTimeGeometry</a></strong>(const string &amp; axisDefinition, const vector&lt; double &gt; &amp; timeCoords)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-gettimestepname">GetTimeStepName</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimeunitsattribute">CreateTimeUnitsAttribute</a></strong>(const ptime &amp; utcStart, const string &amp; units)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimeunitsattribute">CreateTimeUnitsAttribute</a></strong>(const ptime &amp; utcStart, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep)</td>
+</tr>
+<tr>
+<td>ptime</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-parsestartdate">ParseStartDate</a></strong>(const string &amp; unitsAttribute)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-parsetimeunits">ParseTimeUnits</a></strong>(const string &amp; unitsAttribute)</td>
+</tr>
+<tr>
+<td>string</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createleadtimeunitsattribute">CreateLeadTimeUnitsAttribute</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep)</td>
+</tr>
+<tr>
+<td>template &lt;class TFrom ,class TTo &gt; <br>vector&lt; TTo &gt;</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-convert">Convert</a></strong>(const vector&lt; TFrom &gt; &amp; from, const std::function&lt; TTo(const TFrom &amp;)&gt; &amp; f)</td>
+</tr>
+<tr>
+<td>time_duration</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-createtimeunits">CreateTimeUnits</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-settimeoffsetin">SetTimeOffsetIn</a></strong>(const time_duration &amp; td)</td>
+</tr>
+<tr>
+<td>void</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#function-settimeoffsetout">SetTimeOffsetOut</a></strong>(const time_duration &amp; td)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time_duration</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#variable-timeoffsetin">TimeOffsetIn</a></strong></td>
+</tr>
+<tr>
+<td>time_duration</td>
+<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/#variable-timeoffsetout">TimeOffsetOut</a></strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-swiftnetcdfaccess">function SwiftNetCDFAccess<a class="headerlink" href="#function-swiftnetcdfaccess" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SwiftNetCDFAccess</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">lazyLoad</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Constructor to wrap an existing SWIFT netCDF file. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>filename</strong> SWIFT netCDF file. </li>
+</ul>
+<h3 id="function-swiftnetcdfaccess_1">function SwiftNetCDFAccess<a class="headerlink" href="#function-swiftnetcdfaccess_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SwiftNetCDFAccess</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">nEns</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">leadTimeVar</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeUnits</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeVar</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">stationIds</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">VariableDefinition</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varDefinitions</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GlobalAttributes</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">globalAttributes</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">leadTimeUnits</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>** </p>
+<h3 id="function-swiftnetcdfaccess_2">function SwiftNetCDFAccess<a class="headerlink" href="#function-swiftnetcdfaccess_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">SwiftNetCDFAccess</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">DimensionsDefinitions</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dimDefinitions</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">VariableDefinition</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varDefinitions</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GlobalAttributes</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">globalAttributes</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-swiftnetcdfaccess_3">function ~SwiftNetCDFAccess<a class="headerlink" href="#function-swiftnetcdfaccess_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">~</span><span class="n">SwiftNetCDFAccess</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getensemblesize">function GetEnsembleSize<a class="headerlink" href="#function-getensemblesize" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetEnsembleSize</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets ensemble size. </p>
+<p><strong>Return</strong>: The ensemble size. </p>
+<h3 id="function-getensemblesize_1">function GetEnsembleSize<a class="headerlink" href="#function-getensemblesize_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetEnsembleSize</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ncVarName</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getleadtimecount">function GetLeadTimeCount<a class="headerlink" href="#function-getleadtimecount" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetLeadTimeCount</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the lengths of the lead time dimension. </p>
+<p><strong>Return</strong>: The lead time length. </p>
+<h3 id="function-getleadtimecount_1">function GetLeadTimeCount<a class="headerlink" href="#function-getleadtimecount_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetLeadTimeCount</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ncVarName</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettimelength">function GetTimeLength<a class="headerlink" href="#function-gettimelength" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetTimeLength</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the lengths of the main time dimension. </p>
+<p><strong>Return</strong>: The time length. </p>
+<h3 id="function-gettimedim">function GetTimeDim<a class="headerlink" href="#function-gettimedim" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetTimeDim</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the vector with the values of the main time dimension. </p>
+<p><strong>Return</strong>: the values of the main time dimension </p>
+<h3 id="function-getstart">function GetStart<a class="headerlink" href="#function-getstart" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">ptime</span><span class="w"> </span><span class="n">GetStart</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the first time in the main time dimension of this netCDF data set. </p>
+<p><strong>Return</strong>: The start date of the data set. </p>
+<h3 id="function-getend">function GetEnd<a class="headerlink" href="#function-getend" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">ptime</span><span class="w"> </span><span class="n">GetEnd</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the last time in the main time dimension of this netCDF data set. </p>
+<p><strong>Return</strong>: The end date of the data set. </p>
+<h3 id="function-indexforidentifier">function IndexForIdentifier<a class="headerlink" href="#function-indexforidentifier" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">IndexForIdentifier</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">identifier</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<p>Corresponding index for a string identifier for a variable in this data set. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>identifier</strong> The identifier.</li>
+</ul>
+<p><strong>Return</strong>: An int. </p>
+<h3 id="function-getnumidentifiers">function GetNumIdentifiers<a class="headerlink" href="#function-getnumidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">GetNumIdentifiers</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getidentifiers">function GetIdentifiers<a class="headerlink" href="#function-getidentifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetIdentifiers</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-timeforindex">function TimeForIndex<a class="headerlink" href="#function-timeforindex" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">ptime</span><span class="w"> </span><span class="n">TimeForIndex</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">timeIndex</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Time value for an index of the time dimension. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>timeIndex</strong> Zero-based index of the time.</li>
+</ul>
+<p><strong>Return</strong>: A ptime. </p>
+<h3 id="function-getforecasts">function GetForecasts<a class="headerlink" href="#function-getforecasts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetForecasts</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">timeIndex</span><span class="w"></span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the values of an ensemble forecast for a variable, for a starting date in the main time dimension. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>varName</strong> Name of the variable. </li>
+<li><strong>stationIndex</strong> The catchment number. </li>
+<li><strong>timeIndex</strong> Zero-based index of the time dimension.</li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>ElementType</strong> type of element expected for this variable. </li>
+</ul>
+<p><strong>Return</strong>: null if it fails, else the forecasts. </p>
+<h3 id="function-getensemble">function GetEnsemble<a class="headerlink" href="#function-getensemble" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetEnsemble</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getvalues">function GetValues<a class="headerlink" href="#function-getvalues" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Gets the values of a variable stored as an non-ensemble series. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>varName</strong> Name of the variable. </li>
+<li><strong>stationIndex</strong> The catchment number.</li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>ElementType</strong> type of element expected for this variable. </li>
+</ul>
+<p><strong>Return</strong>: All the values for the time series defined with this variable name. </p>
+<h3 id="function-getvalues_1">function GetValues<a class="headerlink" href="#function-getvalues_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getseries">function GetSeries<a class="headerlink" href="#function-getseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="w"></span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getseries_1">function GetSeries<a class="headerlink" href="#function-getseries_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">MultiTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getensembleseries">function GetEnsembleSeries<a class="headerlink" href="#function-getensembleseries" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">MultiTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">GetEnsembleSeries</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="w"></span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setforecasts">function SetForecasts<a class="headerlink" href="#function-setforecasts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetForecasts</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">timeIndex</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Sets the values for an ensemble forecast, for a variable, for a starting date in the main time dimension. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>varName</strong> Name of the variable. </li>
+<li><strong>stationIndex</strong> The catchment number. </li>
+<li><strong>timeIndex</strong> Zero-based index of the time. </li>
+<li><strong>values</strong> [in] the values to write to file. </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>ElementType</strong> type of element expected for this variable. </li>
+</ul>
+<h3 id="function-setensembles">function SetEnsembles<a class="headerlink" href="#function-setensembles" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetEnsembles</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setvalues">function SetValues<a class="headerlink" href="#function-setvalues" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stationIndex</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-setvalues_1">function SetValues<a class="headerlink" href="#function-setvalues_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValues</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getvardims">function GetVarDims<a class="headerlink" href="#function-getvardims" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetVarDims</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">varNumDims</span><span class="w"></span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getvardims_1">function GetVarDims<a class="headerlink" href="#function-getvardims_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetVarDims</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readvariablenames">function ReadVariableNames<a class="headerlink" href="#function-readvariablenames" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">ReadVariableNames</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">removeDimVars</span><span class="w"> </span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readattributenames">function ReadAttributeNames<a class="headerlink" href="#function-readattributenames" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">ReadAttributeNames</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readstringattribute">function ReadStringAttribute<a class="headerlink" href="#function-readstringattribute" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">string</span><span class="w"> </span><span class="n">ReadStringAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">varId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">attName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">throwIfNotFound</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="w"></span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readstringattribute_1">function ReadStringAttribute<a class="headerlink" href="#function-readstringattribute_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">string</span><span class="w"> </span><span class="n">ReadStringAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">attName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">throwIfNotFound</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="w"></span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readnumericattribute">function ReadNumericAttribute<a class="headerlink" href="#function-readnumericattribute" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">ReadNumericAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">varId</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">attName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">throwIfNotFound</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readnumericattribute_1">function ReadNumericAttribute<a class="headerlink" href="#function-readnumericattribute_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">ReadNumericAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">attName</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">throwIfNotFound</span><span class="w"> </span><span class="o">=</span><span class="nb">false</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="mf">0.0</span><span class="w"></span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readattributes">function ReadAttributes<a class="headerlink" href="#function-readattributes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">VariableAttributes</span><span class="w"> </span><span class="n">ReadAttributes</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-readglobalattributes">function ReadGlobalAttributes<a class="headerlink" href="#function-readglobalattributes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">GlobalAttributes</span><span class="w"> </span><span class="n">ReadGlobalAttributes</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettimestep">function GetTimeStep<a class="headerlink" href="#function-gettimestep" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">TimeStep</span><span class="w"> </span><span class="n">GetTimeStep</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getleadtimestep">function GetLeadTimeStep<a class="headerlink" href="#function-getleadtimestep" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">TimeStep</span><span class="w"> </span><span class="n">GetLeadTimeStep</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getleadtimegeometry">function GetLeadTimeGeometry<a class="headerlink" href="#function-getleadtimegeometry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ptime</span><span class="p">,</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetLeadTimeGeometry</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">issueTime</span><span class="w"></span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getleadtimedim">function GetLeadTimeDim<a class="headerlink" href="#function-getleadtimedim" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetLeadTimeDim</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getglobalattributes">function GetGlobalAttributes<a class="headerlink" href="#function-getglobalattributes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">GlobalAttributes</span><span class="w"> </span><span class="n">GetGlobalAttributes</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-getattributes">function GetAttributes<a class="headerlink" href="#function-getattributes" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">VariableAttributes</span><span class="w"> </span><span class="n">GetAttributes</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">varName</span><span class="w"></span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-checkcompliance">function CheckCompliance<a class="headerlink" href="#function-checkcompliance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">CheckCompliance</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">majorVersion</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">minorVersion</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">warnings</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">errors</span><span class="w"></span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimeunitsattribute">function CreateTimeUnitsAttribute<a class="headerlink" href="#function-createtimeunitsattribute" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">CreateTimeUnitsAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tSeries</span><span class="w"></span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevectors">function CreateTimeVectors<a class="headerlink" href="#function-createtimevectors" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVectors</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">tsLength</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">leadTimeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">leadTimeSize</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">fcastOffset</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevector">function CreateTimeVector<a class="headerlink" href="#function-createtimevector" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVector</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStepAxis</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="w"></span>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevector_1">function CreateTimeVector<a class="headerlink" href="#function-createtimevector_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVector</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStepAxis</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="w"></span>
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevector_2">function CreateTimeVector<a class="headerlink" href="#function-createtimevector_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVector</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="w"></span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevector_3">function CreateTimeVector<a class="headerlink" href="#function-createtimevector_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVector</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tSeries</span><span class="w"></span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimevector_4">function CreateTimeVector<a class="headerlink" href="#function-createtimevector_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeVector</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tSeries</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStepAxis</span><span class="w"></span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-startcoordinate">function StartCoordinate<a class="headerlink" href="#function-startcoordinate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="n">StartCoordinate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeCoords</span><span class="w"></span>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimegeometry">function CreateTimeGeometry<a class="headerlink" href="#function-createtimegeometry" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ptime</span><span class="p">,</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">CreateTimeGeometry</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">axisDefinition</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeCoords</span><span class="w"></span>
+<a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-gettimestepname">function GetTimeStepName<a class="headerlink" href="#function-gettimestepname" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetTimeStepName</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="w"></span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimeunitsattribute_1">function CreateTimeUnitsAttribute<a class="headerlink" href="#function-createtimeunitsattribute_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">CreateTimeUnitsAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">utcStart</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">units</span><span class="w"></span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimeunitsattribute_2">function CreateTimeUnitsAttribute<a class="headerlink" href="#function-createtimeunitsattribute_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">CreateTimeUnitsAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">utcStart</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="w"></span>
+<a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-parsestartdate">function ParseStartDate<a class="headerlink" href="#function-parsestartdate" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="n">ParseStartDate</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">unitsAttribute</span><span class="w"></span>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-parsetimeunits">function ParseTimeUnits<a class="headerlink" href="#function-parsetimeunits" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">ParseTimeUnits</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">unitsAttribute</span><span class="w"></span>
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createleadtimeunitsattribute">function CreateLeadTimeUnitsAttribute<a class="headerlink" href="#function-createleadtimeunitsattribute" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="k">static</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">CreateLeadTimeUnitsAttribute</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="w"></span>
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-convert">function Convert<a class="headerlink" href="#function-convert" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TFrom</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Convert</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TFrom</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TTo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">TFrom</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-createtimeunits">function CreateTimeUnits<a class="headerlink" href="#function-createtimeunits" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="k">static</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="n">CreateTimeUnits</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">timeStep</span><span class="w"></span>
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-settimeoffsetin">function SetTimeOffsetIn<a class="headerlink" href="#function-settimeoffsetin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetTimeOffsetIn</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">td</span><span class="w"></span>
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-settimeoffsetout">function SetTimeOffsetOut<a class="headerlink" href="#function-settimeoffsetout" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetTimeOffsetOut</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">td</span><span class="w"></span>
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="variable-timeoffsetin">variable TimeOffsetIn<a class="headerlink" href="#variable-timeoffsetin" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="k">static</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="n">TimeOffsetIn</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="variable-timeoffsetout">variable TimeOffsetOut<a class="headerlink" href="#variable-timeoffsetout" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">static</span><span class="w"> </span><span class="n">time_duration</span><span class="w"> </span><span class="n">TimeOffsetOut</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CSIRO
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
