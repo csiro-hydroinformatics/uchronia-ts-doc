@@ -12,6 +12,8 @@
         <meta name="author" content="Jean-Michel Perraud">
       
       
+        <link rel="canonical" href="https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
@@ -676,7 +678,7 @@
 <h1 id="datatypestimeseriesmultifiletimeseriesensembletimeseriesstore">datatypes::timeseries::MultiFileTimeSeriesEnsembleTimeSeriesStore<a class="headerlink" href="#datatypestimeseriesmultifiletimeseriesensembletimeseriesstore" title="Permanent link">&para;</a></h1>
 <p>An implementation of <a href="">TimeSeriesEnsembleTimeSeriesStore</a> such that the content of a time series is spread amongst several files.  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;time_series_io.hpp&gt;</code></p>
-<p>Inherits from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">datatypes::timeseries::DataDescriptor</a></p>
+<p>Inherits from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">datatypes::timeseries::DataDescriptor</a></p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -687,8 +689,8 @@
 </thead>
 <tbody>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a></strong></td>
 </tr>
 </tbody>
 </table>
@@ -703,55 +705,55 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-multifiletimeseriesensembletimeseriesstore">MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>()<br>Default constructor. Needed for class member properties; should otherwise not be used.</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-multifiletimeseriesensembletimeseriesstore">MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>()<br>Default constructor. Needed for class member properties; should otherwise not be used.</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-multifiletimeseriesensembletimeseriesstore">MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>(const string &amp; forecastDataFiles, const string &amp; varName, const string &amp; varIdentifier, int index, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const ptime &amp; start, int length, int ensembleSize, int ensembleLength, const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; ensembleTimeStep)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-multifiletimeseriesensembletimeseriesstore">MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>(const string &amp; forecastDataFiles, const string &amp; varName, const string &amp; varIdentifier, int index, const <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; timeStep, const ptime &amp; start, int length, int ensembleSize, int ensembleLength, const <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; ensembleTimeStep)</td>
 </tr>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-~multifiletimeseriesensembletimeseriesstore">~MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-~multifiletimeseriesensembletimeseriesstore">~MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong>()</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries">EnsembleForecastTimeSeries</a>&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> &gt; *</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getseries">GetSeries</a></strong>(const string &amp; dataId)</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries">EnsembleForecastTimeSeries</a>&lt; <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> &gt; *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getseries">GetSeries</a></strong>(const string &amp; dataId)</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> * &gt; *</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-read">Read</a></strong>(const string &amp; fileIdentifier) override</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> * &gt; *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-read">Read</a></strong>(const string &amp; fileIdentifier) override</td>
 </tr>
 <tr>
-<td><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> * &gt; *</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-readat">ReadAt</a></strong>(size_t index) const</td>
+<td><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a>&lt; <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#using-seriestype">SeriesType</a> * &gt; *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-readat">ReadAt</a></strong>(size_t index) const</td>
 </tr>
 <tr>
 <td>virtual size_t</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getlength">GetLength</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getlength">GetLength</a></strong>() const</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-gettimestep">GetTimeStep</a></strong>() const</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-gettimestep">GetTimeStep</a></strong>() const</td>
 </tr>
 <tr>
 <td>virtual ptime</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getstart">GetStart</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getstart">GetStart</a></strong>() const</td>
 </tr>
 <tr>
 <td>ptime</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getend">GetEnd</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getend">GetEnd</a></strong>() const</td>
 </tr>
 <tr>
 <td>string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-shortfilenamepattern">ShortFileNamePattern</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-shortfilenamepattern">ShortFileNamePattern</a></strong>() const</td>
 </tr>
 <tr>
 <td>virtual string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getdatasummary">GetDataSummary</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getdatasummary">GetDataSummary</a></strong>() const</td>
 </tr>
 <tr>
-<td>virtual vector&lt; <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/">DataDimensionDescriptor</a> &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getdatadimensionsdescription">GetDataDimensionsDescription</a></strong>() const</td>
+<td>virtual vector&lt; <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/">DataDimensionDescriptor</a> &gt;</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#function-getdatadimensionsdescription">GetDataDimensionsDescription</a></strong>() const</td>
 </tr>
 </tbody>
 </table>
@@ -766,16 +768,16 @@
 <tbody>
 <tr>
 <td>string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#variable-datepattern">DatePattern</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#variable-datepattern">DatePattern</a></strong></td>
 </tr>
 <tr>
 <td>string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#variable-filenamepattern">FileNamePattern</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/#variable-filenamepattern">FileNamePattern</a></strong></td>
 </tr>
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members<a class="headerlink" href="#additional-inherited-members" title="Permanent link">&para;</a></h2>
-<p><strong>Public Types inherited from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a></strong></p>
+<p><strong>Public Types inherited from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -785,28 +787,28 @@
 </thead>
 <tbody>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></strong></td>
 </tr>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ensembleptrtype">EnsemblePtrType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ensembleptrtype">EnsemblePtrType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ensembleptrtype">EnsemblePtrType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ensembleptrtype">EnsemblePtrType</a></strong></td>
 </tr>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></strong></td>
 </tr>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-tseriesensembleptrtype">TSeriesEnsemblePtrType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-tseriesensembleptrtype">TSeriesEnsemblePtrType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-tseriesensembleptrtype">TSeriesEnsemblePtrType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-tseriesensembleptrtype">TSeriesEnsemblePtrType</a></strong></td>
 </tr>
 <tr>
-<td>using typename <a href="/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrtseriesensembleptrtype">PtrTSeriesEnsemblePtrType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrtseriesensembleptrtype">PtrTSeriesEnsemblePtrType</a></strong></td>
+<td>using typename <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a>&lt; T &gt;::<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrtseriesensembleptrtype">PtrTSeriesEnsemblePtrType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrtseriesensembleptrtype">PtrTSeriesEnsemblePtrType</a></strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Public Functions inherited from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -817,27 +819,27 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-~timeseriesensembletimeseriesstore">~TimeSeriesEnsembleTimeSeriesStore</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-~timeseriesensembletimeseriesstore">~TimeSeriesEnsembleTimeSeriesStore</a></strong>()</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getitem">GetItem</a></strong>(const string &amp; dataId, size_t fcastIndex)</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrensembleptrtype">PtrEnsemblePtrType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getitem">GetItem</a></strong>(const string &amp; dataId, size_t fcastIndex)</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getitem">GetItem</a></strong>(const string &amp; dataId, size_t fcastIndex, size_t ensIndex)</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#using-ptrseriestype">PtrSeriesType</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getitem">GetItem</a></strong>(const string &amp; dataId, size_t fcastIndex, size_t ensIndex)</td>
 </tr>
 <tr>
 <td>virtual size_t</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getensemblesize">GetEnsembleSize</a></strong>(const string &amp; dataId, size_t fcastIndex) const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getensemblesize">GetEnsembleSize</a></strong>(const string &amp; dataId, size_t fcastIndex) const</td>
 </tr>
 <tr>
 <td>virtual vector&lt; string &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">GetIdentifiers</a></strong>() const</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">GetIdentifiers</a></strong>() const</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Public Functions inherited from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -848,27 +850,27 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider">~IdentifiersProvider</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider">~IdentifiersProvider</a></strong>()</td>
 </tr>
 <tr>
 <td>virtual vector&lt; string &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-getidentifiers">GetIdentifiers</a></strong>() const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-getidentifiers">GetIdentifiers</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>vector&lt; string &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier">SplitHierarchicalIdentifier</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier">SplitHierarchicalIdentifier</a></strong>(const string &amp; longId)</td>
 </tr>
 <tr>
 <td>string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier">GetTopmostIdentifier</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier">GetTopmostIdentifier</a></strong>(const string &amp; longId)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty">CheckNotEmpty</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty">CheckNotEmpty</a></strong>(const string &amp; longId)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Public Functions inherited from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -879,7 +881,7 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-~timeseriesinfoprovider">~TimeSeriesInfoProvider</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-~timeseriesinfoprovider">~TimeSeriesInfoProvider</a></strong>()</td>
 </tr>
 </tbody>
 </table>
@@ -923,13 +925,13 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dataId</span><span class="w"></span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getseries">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetSeries</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getseries">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetSeries</a></p>
 <h3 id="function-read">function Read<a class="headerlink" href="#function-read" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">MultiTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">SeriesType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Read</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">fileIdentifier</span><span class="w"></span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-read">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::Read</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-read">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::Read</a></p>
 <h3 id="function-readat">function ReadAt<a class="headerlink" href="#function-readat" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">MultiTimeSeries</span><span class="o">&lt;</span><span class="w"> </span><span class="n">SeriesType</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ReadAt</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="w"></span>
@@ -938,15 +940,15 @@
 <h3 id="function-getlength">function GetLength<a class="headerlink" href="#function-getlength" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">GetLength</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getlength">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetLength</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getlength">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetLength</a></p>
 <h3 id="function-gettimestep">function GetTimeStep<a class="headerlink" href="#function-gettimestep" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="n">GetTimeStep</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-gettimestep">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetTimeStep</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-gettimestep">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetTimeStep</a></p>
 <h3 id="function-getstart">function GetStart<a class="headerlink" href="#function-getstart" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="n">GetStart</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getstart">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetStart</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getstart">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetStart</a></p>
 <h3 id="function-getend">function GetEnd<a class="headerlink" href="#function-getend" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="n">GetEnd</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
@@ -956,11 +958,11 @@
 <h3 id="function-getdatasummary">function GetDataSummary<a class="headerlink" href="#function-getdatasummary" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">GetDataSummary</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/#function-getdatasummary">datatypes::timeseries::DataDescriptor::GetDataSummary</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/#function-getdatasummary">datatypes::timeseries::DataDescriptor::GetDataSummary</a></p>
 <h3 id="function-getdatadimensionsdescription">function GetDataDimensionsDescription<a class="headerlink" href="#function-getdatadimensionsdescription" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">DataDimensionDescriptor</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetDataDimensionsDescription</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/#function-getdatadimensionsdescription">datatypes::timeseries::DataDescriptor::GetDataDimensionsDescription</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/#function-getdatadimensionsdescription">datatypes::timeseries::DataDescriptor::GetDataDimensionsDescription</a></p>
 <h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="variable-datepattern">variable DatePattern<a class="headerlink" href="#variable-datepattern" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">string</span><span class="w"> </span><span class="n">DatePattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;YYYYMMDD&quot;</span><span class="p">;</span><span class="w"></span>
@@ -969,7 +971,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">string</span><span class="w"> </span><span class="n">FileNamePattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">io</span><span class="o">::</span><span class="n">IoHelper</span><span class="o">::</span><span class="n">DefaultFilePattern</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
 
               
             </article>

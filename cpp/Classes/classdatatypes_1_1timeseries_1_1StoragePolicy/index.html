@@ -12,6 +12,8 @@
         <meta name="author" content="Jean-Michel Perraud">
       
       
+        <link rel="canonical" href="https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
@@ -663,8 +665,8 @@
 <h1 id="datatypestimeseriesstoragepolicy">datatypes::timeseries::StoragePolicy<a class="headerlink" href="#datatypestimeseriesstoragepolicy" title="Permanent link">&para;</a></h1>
 <p>An interface for classes that can handle the storage of data for time series.  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;time_series_strategies.hpp&gt;</code></p>
-<p>Inherits from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></p>
-<p>Inherited by <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/">datatypes::timeseries::MultiFileTsStorage&lt; T &gt;</a></p>
+<p>Inherits from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></p>
+<p>Inherited by <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/">datatypes::timeseries::MultiFileTsStorage&lt; T &gt;</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -676,63 +678,63 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-~storagepolicy">~StoragePolicy</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-~storagepolicy">~StoragePolicy</a></strong>()</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-copyto">CopyTo</a></strong>(vector&lt; T &gt; &amp; dest, size_t from =0, size_t to =-1) const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-copyto">CopyTo</a></strong>(vector&lt; T &gt; &amp; dest, size_t from =0, size_t to =-1) const =0</td>
 </tr>
 <tr>
 <td>virtual size_t</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-size">Size</a></strong>() const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-size">Size</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocate">Allocate</a></strong>(size_t length, T value) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocate">Allocate</a></strong>(size_t length, T value) =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocatevalues">AllocateValues</a></strong>(size_t length, const T * values) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocatevalues">AllocateValues</a></strong>(size_t length, const T * values) =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocatevalues">AllocateValues</a></strong>(const vector&lt; T &gt; &amp; values) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-allocatevalues">AllocateValues</a></strong>(const vector&lt; T &gt; &amp; values) =0</td>
 </tr>
 <tr>
 <td>virtual const T &amp;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-operator[]">operator[]</a></strong>(const size_t i) const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-operator[]">operator[]</a></strong>(const size_t i) const =0</td>
 </tr>
 <tr>
 <td>virtual T &amp;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-operator[]">operator[]</a></strong>(const size_t i) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-operator[]">operator[]</a></strong>(const size_t i) =0</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a> *</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-clone">Clone</a></strong>() const =0</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a> *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-clone">Clone</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-copyto">CopyTo</a></strong>(<a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a>&lt; T &gt; &amp; dest)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-copyto">CopyTo</a></strong>(<a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a>&lt; T &gt; &amp; dest)</td>
 </tr>
 <tr>
 <td>virtual bool</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-readonly">ReadOnly</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-readonly">ReadOnly</a></strong>()</td>
 </tr>
 <tr>
-<td>virtual <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-gettimestep">GetTimeStep</a></strong>() const =0</td>
+<td>virtual <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-gettimestep">GetTimeStep</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>virtual ptime</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-getstart">GetStart</a></strong>() const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-getstart">GetStart</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-settimestep">SetTimeStep</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; tStep) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-settimestep">SetTimeStep</a></strong>(const <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/">TimeStep</a> &amp; tStep) =0</td>
 </tr>
 <tr>
 <td>virtual void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-setstart">SetStart</a></strong>(const ptime &amp; start) =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-setstart">SetStart</a></strong>(const ptime &amp; start) =0</td>
 </tr>
 </tbody>
 </table>
@@ -747,16 +749,16 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-storagepolicy">StoragePolicy</a></strong>(const <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a> &amp; src)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-storagepolicy">StoragePolicy</a></strong>(const <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a> &amp; src)</td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-storagepolicy">StoragePolicy</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/#function-storagepolicy">StoragePolicy</a></strong>()</td>
 </tr>
 </tbody>
 </table>
 <h2 id="additional-inherited-members">Additional inherited members<a class="headerlink" href="#additional-inherited-members" title="Permanent link">&para;</a></h2>
-<p><strong>Public Functions inherited from <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></strong></p>
+<p><strong>Public Functions inherited from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a></strong></p>
 <table>
 <thead>
 <tr>
@@ -767,11 +769,11 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-~timeseriesinfoprovider">~TimeSeriesInfoProvider</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-~timeseriesinfoprovider">~TimeSeriesInfoProvider</a></strong>()</td>
 </tr>
 <tr>
 <td>virtual size_t</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-getlength">GetLength</a></strong>() const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-getlength">GetLength</a></strong>() const =0</td>
 </tr>
 </tbody>
 </table>
@@ -801,47 +803,47 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="mi">-1</span><span class="w"></span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-copyto">datatypes::timeseries::EagerWriter::CopyTo</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-copyto">datatypes::timeseries::MultiFileTsStorage::CopyTo</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-copyto">datatypes::timeseries::EagerWriter::CopyTo</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-copyto">datatypes::timeseries::MultiFileTsStorage::CopyTo</a></p>
 <h3 id="function-size">function Size<a class="headerlink" href="#function-size" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">Size</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-size">datatypes::timeseries::EagerWriter::Size</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-size">datatypes::timeseries::MultiFileTsStorage::Size</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-size">datatypes::timeseries::StlVectorStorage::Size</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-size">datatypes::timeseries::SharedVectorStorage::Size</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-size">datatypes::timeseries::MemoryCachingStorageWriter::Size</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-size">datatypes::timeseries::EagerWriter::Size</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-size">datatypes::timeseries::MultiFileTsStorage::Size</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-size">datatypes::timeseries::StlVectorStorage::Size</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-size">datatypes::timeseries::SharedVectorStorage::Size</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-size">datatypes::timeseries::MemoryCachingStorageWriter::Size</a></p>
 <h3 id="function-allocate">function Allocate<a class="headerlink" href="#function-allocate" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Allocate</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocate">datatypes::timeseries::EagerWriter::Allocate</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocate">datatypes::timeseries::MultiFileTsStorage::Allocate</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocate">datatypes::timeseries::EagerWriter::Allocate</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocate">datatypes::timeseries::MultiFileTsStorage::Allocate</a></p>
 <h3 id="function-allocatevalues">function AllocateValues<a class="headerlink" href="#function-allocatevalues" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AllocateValues</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocatevalues">datatypes::timeseries::EagerWriter::AllocateValues</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocatevalues">datatypes::timeseries::MultiFileTsStorage::AllocateValues</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocatevalues">datatypes::timeseries::EagerWriter::AllocateValues</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocatevalues">datatypes::timeseries::MultiFileTsStorage::AllocateValues</a></p>
 <h3 id="function-allocatevalues_1">function AllocateValues<a class="headerlink" href="#function-allocatevalues_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AllocateValues</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="w"></span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocatevalues">datatypes::timeseries::EagerWriter::AllocateValues</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocatevalues">datatypes::timeseries::MultiFileTsStorage::AllocateValues</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-allocatevalues">datatypes::timeseries::EagerWriter::AllocateValues</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-allocatevalues">datatypes::timeseries::MultiFileTsStorage::AllocateValues</a></p>
 <h3 id="function-operator">function operator[]<a class="headerlink" href="#function-operator" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-operator[]">datatypes::timeseries::EagerWriter::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-operator[]">datatypes::timeseries::MultiFileTsStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-operator[]">datatypes::timeseries::StlVectorStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-operator[]">datatypes::timeseries::SharedVectorStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-operator[]">datatypes::timeseries::MemoryCachingStorageWriter::operator[]</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-operator[]">datatypes::timeseries::EagerWriter::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-operator[]">datatypes::timeseries::MultiFileTsStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-operator[]">datatypes::timeseries::StlVectorStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-operator[]">datatypes::timeseries::SharedVectorStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-operator[]">datatypes::timeseries::MemoryCachingStorageWriter::operator[]</a></p>
 <h3 id="function-operator_1">function operator[]<a class="headerlink" href="#function-operator_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="p">[](</span><span class="w"></span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-operator[]">datatypes::timeseries::EagerWriter::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-operator[]">datatypes::timeseries::MultiFileTsStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-operator[]">datatypes::timeseries::StlVectorStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-operator[]">datatypes::timeseries::SharedVectorStorage::operator[]</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-operator[]">datatypes::timeseries::MemoryCachingStorageWriter::operator[]</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-operator[]">datatypes::timeseries::EagerWriter::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-operator[]">datatypes::timeseries::MultiFileTsStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-operator[]">datatypes::timeseries::StlVectorStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-operator[]">datatypes::timeseries::SharedVectorStorage::operator[]</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-operator[]">datatypes::timeseries::MemoryCachingStorageWriter::operator[]</a></p>
 <h3 id="function-clone">function Clone<a class="headerlink" href="#function-clone" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">StoragePolicy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Clone</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-clone">datatypes::timeseries::EagerWriter::Clone</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-clone">datatypes::timeseries::MultiFileTsStorage::Clone</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-clone">datatypes::timeseries::StlVectorStorage::Clone</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-clone">datatypes::timeseries::SharedVectorStorage::Clone</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-clone">datatypes::timeseries::MemoryCachingStorageWriter::Clone</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-clone">datatypes::timeseries::EagerWriter::Clone</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-clone">datatypes::timeseries::MultiFileTsStorage::Clone</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-clone">datatypes::timeseries::StlVectorStorage::Clone</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-clone">datatypes::timeseries::SharedVectorStorage::Clone</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-clone">datatypes::timeseries::MemoryCachingStorageWriter::Clone</a></p>
 <h3 id="function-copyto_1">function CopyTo<a class="headerlink" href="#function-copyto_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">CopyTo</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">StoragePolicy</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dest</span><span class="w"></span>
@@ -850,29 +852,29 @@
 <h3 id="function-readonly">function ReadOnly<a class="headerlink" href="#function-readonly" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ReadOnly</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-readonly">datatypes::timeseries::EagerWriter::ReadOnly</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-readonly">datatypes::timeseries::MultiFileTsStorage::ReadOnly</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-readonly">datatypes::timeseries::EagerWriter::ReadOnly</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-readonly">datatypes::timeseries::MultiFileTsStorage::ReadOnly</a></p>
 <h3 id="function-gettimestep">function GetTimeStep<a class="headerlink" href="#function-gettimestep" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="n">GetTimeStep</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-gettimestep">datatypes::timeseries::TimeSeriesInfoProvider::GetTimeStep</a></p>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-gettimestep">datatypes::timeseries::EagerWriter::GetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-gettimestep">datatypes::timeseries::MultiFileTsStorage::GetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-gettimestep">datatypes::timeseries::StlVectorStorage::GetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-gettimestep">datatypes::timeseries::SharedVectorStorage::GetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-gettimestep">datatypes::timeseries::MemoryCachingStorageWriter::GetTimeStep</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-gettimestep">datatypes::timeseries::TimeSeriesInfoProvider::GetTimeStep</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-gettimestep">datatypes::timeseries::EagerWriter::GetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-gettimestep">datatypes::timeseries::MultiFileTsStorage::GetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-gettimestep">datatypes::timeseries::StlVectorStorage::GetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-gettimestep">datatypes::timeseries::SharedVectorStorage::GetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-gettimestep">datatypes::timeseries::MemoryCachingStorageWriter::GetTimeStep</a></p>
 <h3 id="function-getstart">function GetStart<a class="headerlink" href="#function-getstart" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="n">GetStart</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplements</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-getstart">datatypes::timeseries::TimeSeriesInfoProvider::GetStart</a></p>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-getstart">datatypes::timeseries::EagerWriter::GetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-getstart">datatypes::timeseries::MultiFileTsStorage::GetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-getstart">datatypes::timeseries::StlVectorStorage::GetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-getstart">datatypes::timeseries::SharedVectorStorage::GetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-getstart">datatypes::timeseries::MemoryCachingStorageWriter::GetStart</a></p>
+<p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/#function-getstart">datatypes::timeseries::TimeSeriesInfoProvider::GetStart</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-getstart">datatypes::timeseries::EagerWriter::GetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-getstart">datatypes::timeseries::MultiFileTsStorage::GetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-getstart">datatypes::timeseries::StlVectorStorage::GetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-getstart">datatypes::timeseries::SharedVectorStorage::GetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-getstart">datatypes::timeseries::MemoryCachingStorageWriter::GetStart</a></p>
 <h3 id="function-settimestep">function SetTimeStep<a class="headerlink" href="#function-settimestep" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetTimeStep</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TimeStep</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tStep</span><span class="w"></span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-settimestep">datatypes::timeseries::EagerWriter::SetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-settimestep">datatypes::timeseries::MultiFileTsStorage::SetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-settimestep">datatypes::timeseries::StlVectorStorage::SetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-settimestep">datatypes::timeseries::SharedVectorStorage::SetTimeStep</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-settimestep">datatypes::timeseries::MemoryCachingStorageWriter::SetTimeStep</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-settimestep">datatypes::timeseries::EagerWriter::SetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-settimestep">datatypes::timeseries::MultiFileTsStorage::SetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-settimestep">datatypes::timeseries::StlVectorStorage::SetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-settimestep">datatypes::timeseries::SharedVectorStorage::SetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-settimestep">datatypes::timeseries::MemoryCachingStorageWriter::SetTimeStep</a></p>
 <h3 id="function-setstart">function SetStart<a class="headerlink" href="#function-setstart" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">SetStart</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ptime</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="w"></span>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-setstart">datatypes::timeseries::EagerWriter::SetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-setstart">datatypes::timeseries::MultiFileTsStorage::SetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-setstart">datatypes::timeseries::StlVectorStorage::SetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-setstart">datatypes::timeseries::SharedVectorStorage::SetStart</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-setstart">datatypes::timeseries::MemoryCachingStorageWriter::SetStart</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/#function-setstart">datatypes::timeseries::EagerWriter::SetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/#function-setstart">datatypes::timeseries::MultiFileTsStorage::SetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/#function-setstart">datatypes::timeseries::StlVectorStorage::SetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/#function-setstart">datatypes::timeseries::SharedVectorStorage::SetStart</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/#function-setstart">datatypes::timeseries::MemoryCachingStorageWriter::SetStart</a></p>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-storagepolicy_1">function StoragePolicy<a class="headerlink" href="#function-storagepolicy_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">StoragePolicy</span><span class="p">(</span><span class="w"></span>
@@ -883,7 +885,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">StoragePolicy</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
 
               
             </article>

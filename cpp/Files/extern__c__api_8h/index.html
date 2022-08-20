@@ -12,6 +12,8 @@
         <meta name="author" content="Jean-Michel Perraud">
       
       
+        <link rel="canonical" href="https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/extern__c__api_8h/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
@@ -896,192 +898,192 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getlaststdexceptionmessage">GetLastStdExceptionMessage</a></strong>()<br>Gets the last message from an std::exception caught by the uchronia API.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getlaststdexceptionmessage">GetLastStdExceptionMessage</a></strong>()<br>Gets the last message from an std::exception caught by the uchronia API.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-registerexceptioncallback">RegisterExceptionCallback</a></strong>(const void * callback)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-registerexceptioncallback">RegisterExceptionCallback</a></strong>(const void * callback)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposesharedpointer">DisposeSharedPointer</a></strong>(VOID_PTR_PROVIDER_PTR ptr)<br>Notifies uchronia that an object managed by an opaque pointer is not used by the caller anymore.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-disposesharedpointer">DisposeSharedPointer</a></strong>(VOID_PTR_PROVIDER_PTR ptr)<br>Notifies uchronia that an object managed by an opaque pointer is not used by the caller anymore.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deleteansistringarray">DeleteAnsiStringArray</a></strong>(char ** values, int arrayLength)<br>Deletes the ANSI string array , which has been create by uchronia. Do not use for char** created outside libswift.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-deleteansistringarray">DeleteAnsiStringArray</a></strong>(char ** values, int arrayLength)<br>Deletes the ANSI string array , which has been create by uchronia. Do not use for char** created outside libswift.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deleteansistring">DeleteAnsiString</a></strong>(const char * value)<br>Deletes the ANSI string which has been create by uchronia. Do not use for char* created outside libswift.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-deleteansistring">DeleteAnsiString</a></strong>(const char * value)<br>Deletes the ANSI string which has been create by uchronia. Do not use for char* created outside libswift.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-deletedoublearray">DeleteDoubleArray</a></strong>(double * value)<br>Dispose of an array of double created via this C API.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-deletedoublearray">DeleteDoubleArray</a></strong>(double * value)<br>Dispose of an array of double created via this C API.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-settimeseriesmissingvaluevalue">SetTimeSeriesMissingValueValue</a></strong>(double missingValueValue)<br>Sets a value whoch should be considered as a missing value when data is passed to this C API.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-settimeseriesmissingvaluevalue">SetTimeSeriesMissingValueValue</a></strong>(double missingValueValue)<br>Sets a value whoch should be considered as a missing value when data is passed to this C API.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-loadensembledataset">LoadEnsembleDataset</a></strong>(const char * libraryIdentifier, const char * dataPath)<br>Creates a time series library, defined (for now) by a YAML descriptor.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-loadensembledataset">LoadEnsembleDataset</a></strong>(const char * libraryIdentifier, const char * dataPath)<br>Creates a time series library, defined (for now) by a YAML descriptor.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembledataset">CreateEnsembleDataset</a></strong>(const char * type)<br>Creates a time series library.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-createensembledataset">CreateEnsembleDataset</a></strong>(const char * type)<br>Creates a time series library.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdataidentifiers">GetEnsembleDatasetDataIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)<br>Gets the highest level datasets' IDs known to this library.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getensembledatasetdataidentifiers">GetEnsembleDatasetDataIdentifiers</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)<br>Gets the highest level datasets' IDs known to this library.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasubidentifiers">GetEnsembleDatasetDataSubIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataCollectionId, int * size)<br>Gets sub identifiers, if any, in a hierarchical ID scheme (e.g. if a collection of streamflows is such that you can ID each series as "streamflow.gauge_id")</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasubidentifiers">GetEnsembleDatasetDataSubIdentifiers</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataCollectionId, int * size)<br>Gets sub identifiers, if any, in a hierarchical ID scheme (e.g. if a collection of streamflows is such that you can ID each series as "streamflow.gauge_id")</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasummaries">GetEnsembleDatasetDataSummaries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getensembledatasetdatasummaries">GetEnsembleDatasetDataSummaries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, int * size)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> time_series_dimensions_description *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatadimensionsdescription">GetDataDimensionsDescription</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)<br>Gets data dimensions description. This function is useful for wrappers to discover the dimensionality of a data set before trying to load it in memory.</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> time_series_dimensions_description *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getdatadimensionsdescription">GetDataDimensionsDescription</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)<br>Gets data dimensions description. This function is useful for wrappers to discover the dimensionality of a data set before trying to load it in memory.</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-ensemblesizeensembletimeseries">EnsembleSizeEnsembleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-ensemblesizeensembletimeseries">EnsembleSizeEnsembleTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposedatadimensionsdescriptions">DisposeDataDimensionsDescriptions</a></strong>(time_series_dimensions_description * data)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-disposedatadimensionsdescriptions">DisposeDataDimensionsDescriptions</a></strong>(time_series_dimensions_description * data)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembleforecasttimeseries">CreateEnsembleForecastTimeSeries</a></strong>(date_time_to_second start, int length, const char * timeStepName)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-createensembleforecasttimeseries">CreateEnsembleForecastTimeSeries</a></strong>(date_time_to_second start, int length, const char * timeStepName)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetsingletimeseries">GetDatasetSingleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getdatasetsingletimeseries">GetDatasetSingleTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetensembletimeseries">GetDatasetEnsembleTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataEnsembleId)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getdatasetensembletimeseries">GetDatasetEnsembleTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataEnsembleId)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getdatasetensembleforecasttimeseries">GetDatasetEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getdatasetensembleforecasttimeseries">GetDatasetEnsembleForecastTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr">ENSEMBLE_DATA_SET_PTR</a> dataLibrary, const char * dataId)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-savesingletimeseriestonetcdf">SaveSingleTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, const char * filename, bool overwrite)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-savesingletimeseriestonetcdf">SaveSingleTimeSeriesToNetcdf</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, const char * filename, bool overwrite)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-saveensembletimeseriestonetcdf">SaveEnsembleTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, const char * filename, bool overwrite)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-saveensembletimeseriestonetcdf">SaveEnsembleTimeSeriesToNetcdf</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, const char * filename, bool overwrite)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-saveensembleforecasttimeseriestonetcdf">SaveEnsembleForecastTimeSeriesToNetcdf</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * filename, bool overwrite)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-saveensembleforecasttimeseriestonetcdf">SaveEnsembleForecastTimeSeriesToNetcdf</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * filename, bool overwrite)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> bool</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-ismissingvalueitemensembleforecasttimeseries">IsMissingValueItemEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> bool</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-ismissingvalueitemensembleforecasttimeseries">IsMissingValueItemEnsembleForecastTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseries">GetItemEnsembleForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int i)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseries">GetItemEnsembleForecastTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int i)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromensembleoftimeseries">TimeSeriesFromEnsembleOfTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collectionTs, int index)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-timeseriesfromensembleoftimeseries">TimeSeriesFromEnsembleOfTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collectionTs, int index)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromtimeseriesofensembleoftimeseries">TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int indexInIssueTime, int indexInForecastTime)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-timeseriesfromtimeseriesofensembleoftimeseries">TimeSeriesFromTimeSeriesOfEnsembleOfTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> efts, int indexInIssueTime, int indexInForecastTime)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> double</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getvaluefromunivariatetimeseries">GetValueFromUnivariateTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> double</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getvaluefromunivariatetimeseries">GetValueFromUnivariateTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-transformeachitem">TransformEachItem</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * method, const char * methodArgument)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-transformeachitem">TransformEachItem</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> tsEnsTs, const char * method, const char * methodArgument)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setvaluetounivariatetimeseries">SetValueToUnivariateTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index, double value)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-setvaluetounivariatetimeseries">SetValueToUnivariateTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> ts, int index, double value)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseriesasstructure">GetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getitemensembleforecasttimeseriesasstructure">GetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getitemensembletimeseriesasstructure">GetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> series, int i)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getitemensembletimeseriesasstructure">GetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> series, int i)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setitemensembleforecasttimeseriesasstructure">SetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i, const multi_regular_time_series_data * values)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-setitemensembleforecasttimeseriesasstructure">SetItemEnsembleForecastTimeSeriesAsStructure</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> series, int i, const multi_regular_time_series_data * values)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-setitemensembletimeseriesasstructure">SetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, int i, const multi_regular_time_series_data * values)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-setitemensembletimeseriesasstructure">SetItemEnsembleTimeSeriesAsStructure</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> collection, int i, const multi_regular_time_series_data * values)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createperfectforecasttimeseries">CreatePerfectForecastTimeSeries</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> observations, date_time_to_second start, int length, const char * timeStepName, int offsetForecasts, int leadTime)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-createperfectforecasttimeseries">CreatePerfectForecastTimeSeries</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> observations, date_time_to_second start, int length, const char * timeStepName, int offsetForecasts, int leadTime)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-tostructensembletimeseriesdata">ToStructEnsembleTimeSeriesData</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-tostructensembletimeseriesdata">ToStructEnsembleTimeSeriesData</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a> ensSeries)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-tostructsingletimeseriesdata">ToStructSingleTimeSeriesData</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> multi_regular_time_series_data *</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-tostructsingletimeseriesdata">ToStructSingleTimeSeriesData</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createensembletimeseriesdatafromstruct">CreateEnsembleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * ensSeries)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr">ENSEMBLE_PTR_TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-createensembletimeseriesdatafromstruct">CreateEnsembleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * ensSeries)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-createsingletimeseriesdatafromstruct">CreateSingleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * timeSeries)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-createsingletimeseriesdatafromstruct">CreateSingleTimeSeriesDataFromStruct</a></strong>(const multi_regular_time_series_data * timeSeries)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-disposemultitimeseriesdata">DisposeMultiTimeSeriesData</a></strong>(multi_regular_time_series_data * data)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-disposemultitimeseriesdata">DisposeMultiTimeSeriesData</a></strong>(multi_regular_time_series_data * data)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-gettimeseriesgeometry">GetTimeSeriesGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-gettimeseriesgeometry">GetTimeSeriesGeometry</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, <a href="/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getensembleforecasttimeseriesgeometry">GetEnsembleForecastTimeSeriesGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> timeSeries, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getensembleforecasttimeseriesgeometry">GetEnsembleForecastTimeSeriesGeometry</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr">ENSEMBLE_FORECAST_TIME_SERIES_PTR</a> timeSeries, <a href="/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-gettimeseriesvalues">GetTimeSeriesValues</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, double * values, int arrayLength)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-gettimeseriesvalues">GetTimeSeriesValues</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a> timeSeries, double * values, int arrayLength)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getnumtimeseries">GetNumTimeSeries</a></strong>()</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> int</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getnumtimeseries">GetNumTimeSeries</a></strong>()</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertsgeometry">GetProviderTsGeometry</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, <a href="/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getprovidertsgeometry">GetProviderTsGeometry</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, <a href="/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr">TS_GEOMETRY_PTR</a> geom)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesvalues">GetProviderTimeSeriesValues</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, double * values, int arrayLength)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> void</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesvalues">GetProviderTimeSeriesValues</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier, double * values, int arrayLength)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesidentifiers">GetProviderTimeSeriesIdentifiers</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, int * size)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a> char **</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-getprovidertimeseriesidentifiers">GetProviderTimeSeriesIdentifiers</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, int * size)</td>
 </tr>
 <tr>
-<td><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#function-timeseriesfromproviderts">TimeSeriesFromProviderTs</a></strong>(<a href="/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier)</td>
+<td><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a><a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr">TIME_SERIES_PTR</a></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#function-timeseriesfromproviderts">TimeSeriesFromProviderTs</a></strong>(<a href="/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr">TIME_SERIES_PROVIDER_PTR</a> dataLibrary, const char * variableIdentifier)</td>
 </tr>
 </tbody>
 </table>
@@ -1096,11 +1098,11 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-use-cpp-pointers">DATATYPES_USE_CPP_POINTERS</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-use-cpp-pointers">DATATYPES_USE_CPP_POINTERS</a></strong></td>
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Files/extern__c__api_8h/#define-datatypes-api">DATATYPES_API</a></strong></td>
 </tr>
 </tbody>
 </table>
@@ -1595,7 +1597,7 @@
 <a id="__codelineno-49-134" name="__codelineno-49-134" href="#__codelineno-49-134"></a><span class="cp">#endif</span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
 
               
             </article>

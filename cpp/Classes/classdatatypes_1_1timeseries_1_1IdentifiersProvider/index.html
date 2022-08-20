@@ -12,6 +12,8 @@
         <meta name="author" content="Jean-Michel Perraud">
       
       
+        <link rel="canonical" href="https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
@@ -552,7 +554,7 @@
 <h1 id="datatypestimeseriesidentifiersprovider">datatypes::timeseries::IdentifiersProvider<a class="headerlink" href="#datatypestimeseriesidentifiersprovider" title="Permanent link">&para;</a></h1>
 <p>An interface definition for objects that can provide hierarchical identification.  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;time_series_store.hpp&gt;</code></p>
-<p>Inherited by <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">datatypes::timeseries::EnsembleTimeSeriesStore&lt; double &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">datatypes::timeseries::SingleTimeSeriesStore&lt; double &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/">datatypes::timeseries::TimeSeriesProvider&lt; double &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">datatypes::timeseries::EnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">datatypes::timeseries::SingleTimeSeriesStore&lt; T &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/">datatypes::timeseries::TimeSeriesProvider&lt; T &gt;</a></p>
+<p>Inherited by <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">datatypes::timeseries::EnsembleTimeSeriesStore&lt; double &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">datatypes::timeseries::SingleTimeSeriesStore&lt; double &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/">datatypes::timeseries::TimeSeriesProvider&lt; double &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">datatypes::timeseries::EnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">datatypes::timeseries::SingleTimeSeriesStore&lt; T &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/">datatypes::timeseries::TimeSeriesProvider&lt; T &gt;</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -564,23 +566,23 @@
 <tbody>
 <tr>
 <td>virtual</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider">~IdentifiersProvider</a></strong>()</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider">~IdentifiersProvider</a></strong>()</td>
 </tr>
 <tr>
 <td>virtual vector&lt; string &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-getidentifiers">GetIdentifiers</a></strong>() const =0</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-getidentifiers">GetIdentifiers</a></strong>() const =0</td>
 </tr>
 <tr>
 <td>vector&lt; string &gt;</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier">SplitHierarchicalIdentifier</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier">SplitHierarchicalIdentifier</a></strong>(const string &amp; longId)</td>
 </tr>
 <tr>
 <td>string</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier">GetTopmostIdentifier</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier">GetTopmostIdentifier</a></strong>(const string &amp; longId)</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty">CheckNotEmpty</a></strong>(const string &amp; longId)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty">CheckNotEmpty</a></strong>(const string &amp; longId)</td>
 </tr>
 </tbody>
 </table>
@@ -598,7 +600,7 @@
 <h3 id="function-getidentifiers">function GetIdentifiers<a class="headerlink" href="#function-getidentifiers" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetIdentifiers</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Reimplemented by</strong>: <a href="/cpp/Classes/classdatatypes_1_1tests_1_1TestSingleTimeSeriesStore/#function-getidentifiers">datatypes::tests::TestSingleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfSingleSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::EnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::EnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers">datatypes::timeseries::TimeSeriesLibrary::GetIdentifiers</a></p>
+<p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestSingleTimeSeriesStore/#function-getidentifiers">datatypes::tests::TestSingleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfSingleSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::EnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::EnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/#function-getidentifiers">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore::GetIdentifiers</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers">datatypes::timeseries::TimeSeriesLibrary::GetIdentifiers</a></p>
 <h3 id="function-splithierarchicalidentifier">function SplitHierarchicalIdentifier<a class="headerlink" href="#function-splithierarchicalidentifier" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">SplitHierarchicalIdentifier</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">longId</span><span class="w"></span>
@@ -615,7 +617,7 @@
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 18:35:57 +1000</p>
+<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
 
               
             </article>
