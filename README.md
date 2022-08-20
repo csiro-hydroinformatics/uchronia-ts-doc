@@ -62,8 +62,14 @@ $DX2 --input ./doxyoutput/xml --output ./docs/cpp --config config-doxybook2.json
 . ~/config/baseconda
 conda activate poetry
 mkdocs build --clean --site-dir _build/html --config-file mkdocs.yml
+mkdocs serve
 ```
 
 ```sh
 mkdocs gh-deploy --clean --site-dir _build/html --config-file mkdocs.yml
 ```
+
+## Python code
+
+Checking that indeed, the `mkdocs.yml` and `docs/` folder are enough to run mkdocs so long as the package is accessible in the virtual environment. Not sure whether having them installed in `develop` mode is required for it to work, but given that docstrings would be present even in a normal installation, probably all right in all cases.
+

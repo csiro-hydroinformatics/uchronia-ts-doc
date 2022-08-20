@@ -12,49 +12,49 @@ title: datatypes::timeseries::NetCdfSourceInfo
 
 `#include <time_series_store.hpp>`
 
-Inherits from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)
+Inherits from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[NetCdfSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**() |
-| | **[NetCdfSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**(const string & dataId, const string & fileName, const string & ncVarName, const string & identifier ="", int index =-1, const string & storageType ="", const string & timeStep ="", const string & start ="", int length =-1, int ensembleSize =-1, int ensembleLength =-1, const string & ensembleTimeStep ="", const string & containingDirectory ="") |
-| | **[NetCdfSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**(const string & dataId, const string & fileName, const string & ncVarName, const string & identifier, int index, const string & storageType, const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & timeStep, const ptime & start, int length, int ensembleSize, int ensembleLength, const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & ensembleTimeStep) |
-| virtual [TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) * | **[Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-clone)**() const |
-| virtual bool | **[ApplyRootDir](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-applyrootdir)**(const string & rootDir) |
-| virtual [SingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createsingletimeseriesstore)**() const |
-| virtual [EnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createensembletimeseriesstore)**() const |
-| virtual [TimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createtimeseriesensembletimeseriesstore)**() const |
-| virtual std::map< string, string > | **[GetSerializableConfiguration](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-getserializableconfiguration)**() const |
+| | **[NetCdfSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**() |
+| | **[NetCdfSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**(const string & dataId, const string & fileName, const string & ncVarName, const string & identifier ="", int index =-1, const string & storageType ="", const string & timeStep ="", const string & start ="", int length =-1, int ensembleSize =-1, int ensembleLength =-1, const string & ensembleTimeStep ="", const string & containingDirectory ="") |
+| | **[NetCdfSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-netcdfsourceinfo)**(const string & dataId, const string & fileName, const string & ncVarName, const string & identifier, int index, const string & storageType, const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & timeStep, const ptime & start, int length, int ensembleSize, int ensembleLength, const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & ensembleTimeStep) |
+| virtual [TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) * | **[Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-clone)**() const |
+| virtual bool | **[ApplyRootDir](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-applyrootdir)**(const string & rootDir) |
+| virtual [SingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createsingletimeseriesstore)**() const |
+| virtual [EnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createensembletimeseriesstore)**() const |
+| virtual [TimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-createtimeseriesensembletimeseriesstore)**() const |
+| virtual std::map< string, string > | **[GetSerializableConfiguration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#function-getserializableconfiguration)**() const |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| const string | **[FileKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-filekey)**  |
-| const string | **[VarKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-varkey)**  |
-| const string | **[IdentifierKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-identifierkey)**  |
-| const string | **[IndexKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-indexkey)**  |
-| const string | **[TypeKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-typekey)**  |
-| const string | **[StorageTypeSingleNetcdfFile](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-storagetypesinglenetcdffile)**  |
-| const string | **[StorageTypeMultipleNetcdfFiles](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-storagetypemultiplenetcdffiles)**  |
+| const string | **[FileKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-filekey)**  |
+| const string | **[VarKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-varkey)**  |
+| const string | **[IdentifierKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-identifierkey)**  |
+| const string | **[IndexKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-indexkey)**  |
+| const string | **[TypeKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-typekey)**  |
+| const string | **[StorageTypeSingleNetcdfFile](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-storagetypesinglenetcdffile)**  |
+| const string | **[StorageTypeMultipleNetcdfFiles](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/#variable-storagetypemultiplenetcdffiles)**  |
 
 ## Additional inherited members
 
-**Public Functions inherited from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**
+**Public Functions inherited from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-~timeseriessourceinfoimpl)**() |
-| string | **[OptionalApplyRootDir](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-optionalapplyrootdir)**(const std::string & rootDir, const std::string & filename, bool checkDirExists =true) |
+| virtual | **[~TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-~timeseriessourceinfoimpl)**() |
+| string | **[OptionalApplyRootDir](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-optionalapplyrootdir)**(const std::string & rootDir, const std::string & filename, bool checkDirExists =true) |
 
-**Protected Functions inherited from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**
+**Protected Functions inherited from [datatypes::timeseries::TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-timeseriessourceinfoimpl)**() |
-| | **[TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-timeseriessourceinfoimpl)**(const [TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) & src) |
+| | **[TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-timeseriessourceinfoimpl)**() |
+| | **[TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-timeseriessourceinfoimpl)**(const [TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) & src) |
 
 
 ## Public Functions Documentation
@@ -114,7 +114,7 @@ virtual TimeSeriesSourceInfoImpl * Clone() const
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-clone)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-clone)
 
 
 ### function ApplyRootDir
@@ -126,7 +126,7 @@ virtual bool ApplyRootDir(
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::ApplyRootDir](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-applyrootdir)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::ApplyRootDir](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-applyrootdir)
 
 
 ### function CreateSingleTimeSeriesStore
@@ -136,7 +136,7 @@ virtual SingleTimeSeriesStore< double > * CreateSingleTimeSeriesStore() const
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateSingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createsingletimeseriesstore)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateSingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createsingletimeseriesstore)
 
 
 ### function CreateEnsembleTimeSeriesStore
@@ -146,7 +146,7 @@ virtual EnsembleTimeSeriesStore< double > * CreateEnsembleTimeSeriesStore() cons
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createensembletimeseriesstore)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createensembletimeseriesstore)
 
 
 ### function CreateTimeSeriesEnsembleTimeSeriesStore
@@ -156,7 +156,7 @@ virtual TimeSeriesEnsembleTimeSeriesStore< double > * CreateTimeSeriesEnsembleTi
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createtimeseriesensembletimeseriesstore)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::CreateTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-createtimeseriesensembletimeseriesstore)
 
 
 ### function GetSerializableConfiguration
@@ -166,7 +166,7 @@ virtual std::map< string, string > GetSerializableConfiguration() const
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::GetSerializableConfiguration](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-getserializableconfiguration)
+**Reimplements**: [datatypes::timeseries::TimeSeriesSourceInfoImpl::GetSerializableConfiguration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/#function-getserializableconfiguration)
 
 
 ## Public Attributes Documentation
@@ -222,4 +222,4 @@ static const string StorageTypeMultipleNetcdfFiles;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

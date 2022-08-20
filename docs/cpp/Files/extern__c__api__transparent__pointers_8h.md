@@ -11,20 +11,20 @@ title: datatypes/extern_c_api_transparent_pointers.h
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[DATATYPES_TIME_SERIES_DOUBLE](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-time-series-double)**  |
-|  | **[DATATYPES_TIME_SERIES_DOUBLE_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-time-series-double-ptr)**  |
-|  | **[DATATYPES_ENSEMBLE_TIME_SERIES_DOUBLE](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-ensemble-time-series-double)**  |
-|  | **[DATATYPES_ENSEMBLE_PTR_TIME_SERIES_DOUBLE](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-ensemble-ptr-time-series-double)**  |
-|  | **[ENSEMBLE_FORECAST_TIME_SERIES_DOUBLE](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-forecast-time-series-double)**  |
-|  | **[TS_GEOMETRY_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr)**  |
-|  | **[MULTI_REGULAR_SERIES_STRUCT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-multi-regular-series-struct-ptr)**  |
-|  | **[DATE_TIME_INFO_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-date-time-info-ptr)**  |
-|  | **[TIME_SERIES_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-time-series-transparent-ptr)**  |
-|  | **[ENSEMBLE_DATA_SET_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-data-set-transparent-ptr)**  |
-|  | **[ENSEMBLE_FORECAST_TIME_SERIES_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-forecast-time-series-transparent-ptr)**  |
-|  | **[ENSEMBLE_TIME_SERIES_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-time-series-transparent-ptr)**  |
-|  | **[ENSEMBLE_PTR_TIME_SERIES_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-ptr-time-series-transparent-ptr)**  |
-|  | **[TIME_SERIES_PROVIDER_TRANSPARENT_PTR](/cpp/Files/extern__c__api__transparent__pointers_8h/#define-time-series-provider-transparent-ptr)**  |
+|  | **[DATATYPES_TIME_SERIES_DOUBLE](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-time-series-double)**  |
+|  | **[DATATYPES_TIME_SERIES_DOUBLE_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-time-series-double-ptr)**  |
+|  | **[DATATYPES_ENSEMBLE_TIME_SERIES_DOUBLE](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-ensemble-time-series-double)**  |
+|  | **[DATATYPES_ENSEMBLE_PTR_TIME_SERIES_DOUBLE](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-datatypes-ensemble-ptr-time-series-double)**  |
+|  | **[ENSEMBLE_FORECAST_TIME_SERIES_DOUBLE](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-forecast-time-series-double)**  |
+|  | **[TS_GEOMETRY_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr)**  |
+|  | **[MULTI_REGULAR_SERIES_STRUCT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-multi-regular-series-struct-ptr)**  |
+|  | **[DATE_TIME_INFO_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-date-time-info-ptr)**  |
+|  | **[TIME_SERIES_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-time-series-transparent-ptr)**  |
+|  | **[ENSEMBLE_DATA_SET_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-data-set-transparent-ptr)**  |
+|  | **[ENSEMBLE_FORECAST_TIME_SERIES_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-forecast-time-series-transparent-ptr)**  |
+|  | **[ENSEMBLE_TIME_SERIES_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-time-series-transparent-ptr)**  |
+|  | **[ENSEMBLE_PTR_TIME_SERIES_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ensemble-ptr-time-series-transparent-ptr)**  |
+|  | **[TIME_SERIES_PROVIDER_TRANSPARENT_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-time-series-provider-transparent-ptr)**  |
 
 
 
@@ -166,4 +166,4 @@ using moirai::reference_handle;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

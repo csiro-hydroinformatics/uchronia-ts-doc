@@ -16,7 +16,7 @@ title: datatypes::utils::ValueTypeVectorDispose
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[Dispose](/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/#function-dispose)**(vector< T > & a) |
+| void | **[Dispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/#function-dispose)**(vector< T > & a) |
 
 ## Detailed Description
 
@@ -38,4 +38,4 @@ static inline void Dispose(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -17,8 +17,8 @@ An abstract class to allow callers to inject custom time series data sources int
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual bool | **[HandlesStorageType](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/#function-handlesstoragetype)**(const string storageType) const =0 |
-| virtual void | **[BuildTimeSeriesSource](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/#function-buildtimeseriessource)**(const string & storageType, const string & dataId, const YAML::Node & storage, [TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & targetContainer) const =0 |
+| virtual bool | **[HandlesStorageType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/#function-handlesstoragetype)**(const string storageType) const =0 |
+| virtual void | **[BuildTimeSeriesSource](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/#function-buildtimeseriessource)**(const string & storageType, const string & dataId, const YAML::Node & storage, [TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & targetContainer) const =0 |
 
 ## Public Functions Documentation
 
@@ -45,4 +45,4 @@ virtual void BuildTimeSeriesSource(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

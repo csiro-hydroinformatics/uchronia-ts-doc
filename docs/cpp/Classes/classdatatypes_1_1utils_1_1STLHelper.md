@@ -16,17 +16,17 @@ title: datatypes::utils::STLHelper
 
 |                | Name           |
 | -------------- | -------------- |
-| template <typename K  =string,typename V  =string\> <br>bool | **[HasKey](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-haskey)**(const map< K, V > & dict, const string & key) |
-| template <typename K  =string,typename V  =string\> <br>vector< K > | **[GetKeys](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getkeys)**(const map< K, V > & dict) |
-| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Remap](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-remap)**(const map< K, V > & dict, const map< K, K > & newKeys) |
-| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Zip](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-zip)**(const vector< K > & key, const vector< V > & values) |
-| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict) |
-| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict, const vector< K > & keys) |
-| template <typename U \> <br>bool | **[LessThan](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)**(const U & first, const U & second) |
-| template <typename U \> <br>bool | **[MoreThan](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-morethan)**(const U & first, const U & second) |
-| template <typename K ,typename V \> <br>vector< V > | **[SortValues](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortvalues)**(const std::map< K, V > & in, const vector< K > & order) |
-| template <typename T \> <br>vector< T > | **[Serialize](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-serialize)**(const vector< vector< T >> & series) |
-| template <typename T ,typename U \> <br>vector< T > | **[SortFromRef](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortfromref)**(const vector< T > & in, const vector< U > & reference, std::function< bool(const U &, const U &)> comparer =[STLHelper::LessThan](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)< U >) |
+| template <typename K  =string,typename V  =string\> <br>bool | **[HasKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-haskey)**(const map< K, V > & dict, const string & key) |
+| template <typename K  =string,typename V  =string\> <br>vector< K > | **[GetKeys](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getkeys)**(const map< K, V > & dict) |
+| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Remap](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-remap)**(const map< K, V > & dict, const map< K, K > & newKeys) |
+| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Zip](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-zip)**(const vector< K > & key, const vector< V > & values) |
+| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict) |
+| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict, const vector< K > & keys) |
+| template <typename U \> <br>bool | **[LessThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)**(const U & first, const U & second) |
+| template <typename U \> <br>bool | **[MoreThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-morethan)**(const U & first, const U & second) |
+| template <typename K ,typename V \> <br>vector< V > | **[SortValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortvalues)**(const std::map< K, V > & in, const vector< K > & order) |
+| template <typename T \> <br>vector< T > | **[Serialize](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-serialize)**(const vector< vector< T >> & series) |
+| template <typename T ,typename U \> <br>vector< T > | **[SortFromRef](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortfromref)**(const vector< T > & in, const vector< U > & reference, std::function< bool(const U &, const U &)> comparer =[STLHelper::LessThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)< U >) |
 
 ## Public Functions Documentation
 
@@ -159,4 +159,4 @@ static inline vector< T > SortFromRef(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

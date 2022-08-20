@@ -17,44 +17,44 @@ Time step handling for time series.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**(const time_duration & stepDuration)<br>Define a time step where every step is a fixed time duration.  |
-| | **[TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**([TimeStepImplementation](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStepImplementation/) * tsi) |
-| | **[TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & src)<br>Copy constructor.  |
-| | **[TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**() |
-| | **[~TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-~timestep)**() |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const time_duration & stepDuration)<br>Assignment operator.  |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const string & stepDuration) |
-| bool | **[operator==](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator==)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) const |
-| bool | **[operator!=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator!=)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) const |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator*](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator*)**(int mult) const<br>Multiplication operator, using the time_duration multiplication operator.  |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator*](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator*)**(double mult) const |
-| int | **[operator/](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator/)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & divisor) const |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator/](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator/)**(int divisor) const |
-| time_duration | **[operator%](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator%)**(const [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & other) const |
-| bool | **[IsRegular](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-isregular)**() const<br>Query if this time step is defined by a time duration in the true sense (day, week). Monthly time step would return false;.  |
-| time_duration | **[GetRegularStepDuration](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getregularstepduration)**() const<br>Gets the underlying time_duration for this time step. Exception thrown if not a regular time step.  |
-| const ptime | **[AddSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, size_t n) const |
-| const ptime | **[AddSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, int n) const |
-| const ptime | **[AddSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, double mult) const<br>Adds a number of steps to an instant, which can be non-integer for regular time steps. Behavior TBC for irregular time steps.  |
-| vector< ptime > | **[AddSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, const vector< double > timeSteps) const<br>Vectorized version of shifting time steps. Adds a number of steps to an instant, which can be non-integer for regular time steps. Behavior TBC for irregular time steps.  |
-| vector< ptime > | **[AddSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const vector< ptime > & times, double mult) const |
-| const time_duration | **[GetTimeStepDuration](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-gettimestepduration)**(const ptime & startTimeStep) const<br>Given an instant, what is the next time instant according to this present Time step.  |
-| const ptrdiff_t | **[GetUpperNumSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getuppernumsteps)**(const ptime & start, const ptime & end) const<br>Gets the minimum number of time steps covering a time interval.  |
-| const ptrdiff_t | **[GetNumSteps](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getnumsteps)**(const ptime & start, const ptime & end) const<br>Gets the maximum number of time steps from a starting instant to not get beyond an instant in time, 'end'.  |
-| const ptrdiff_t | **[GetOffset](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getoffset)**(const ptime & start, const ptime & end) const |
-| const void | **[Increment](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-increment)**(ptime * t) const<br>Increments an instant by one time step.  |
-| bool | **[IsUnknown](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-isunknown)**() const<br>Query if this object is the time step value "unknown".  |
-| string | **[GetName](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getname)**() const |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[Parse](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-parse)**(const string & name) |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[FromSeconds](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-fromseconds)**(unsigned int seconds) |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetDaily](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getdaily)**() |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetHourly](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-gethourly)**() |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetMonthlyQpp](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getmonthlyqpp)**() |
-| [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetUnknown](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getunknown)**()<br>Gets an instance of time step that is unknown. This value is indented for use in methods as a default parameter value.  |
-| ptime | **[CreatePtime](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-createptime)**(int year, int month, int day, int hour =0, int minute =0, int second =0) |
-| ptime | **[PtimeFromIsoString](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-ptimefromisostring)**(const string & t) |
-| string | **[ToString](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-tostring)**(const ptime & dt, const string & format ="YYYYMMDDThhmmss") |
+| | **[TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**(const time_duration & stepDuration)<br>Define a time step where every step is a fixed time duration.  |
+| | **[TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**([TimeStepImplementation](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStepImplementation/) * tsi) |
+| | **[TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & src)<br>Copy constructor.  |
+| | **[TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-timestep)**() |
+| | **[~TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-~timestep)**() |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const time_duration & stepDuration)<br>Assignment operator.  |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator=)**(const string & stepDuration) |
+| bool | **[operator==](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator==)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) const |
+| bool | **[operator!=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator!=)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & rhs) const |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator*](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator*)**(int mult) const<br>Multiplication operator, using the time_duration multiplication operator.  |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator*](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator*)**(double mult) const |
+| int | **[operator/](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator/)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & divisor) const |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[operator/](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator/)**(int divisor) const |
+| time_duration | **[operator%](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-operator%)**(const [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) & other) const |
+| bool | **[IsRegular](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-isregular)**() const<br>Query if this time step is defined by a time duration in the true sense (day, week). Monthly time step would return false;.  |
+| time_duration | **[GetRegularStepDuration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getregularstepduration)**() const<br>Gets the underlying time_duration for this time step. Exception thrown if not a regular time step.  |
+| const ptime | **[AddSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, size_t n) const |
+| const ptime | **[AddSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, int n) const |
+| const ptime | **[AddSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, double mult) const<br>Adds a number of steps to an instant, which can be non-integer for regular time steps. Behavior TBC for irregular time steps.  |
+| vector< ptime > | **[AddSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const ptime & startTimeStep, const vector< double > timeSteps) const<br>Vectorized version of shifting time steps. Adds a number of steps to an instant, which can be non-integer for regular time steps. Behavior TBC for irregular time steps.  |
+| vector< ptime > | **[AddSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-addsteps)**(const vector< ptime > & times, double mult) const |
+| const time_duration | **[GetTimeStepDuration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-gettimestepduration)**(const ptime & startTimeStep) const<br>Given an instant, what is the next time instant according to this present Time step.  |
+| const ptrdiff_t | **[GetUpperNumSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getuppernumsteps)**(const ptime & start, const ptime & end) const<br>Gets the minimum number of time steps covering a time interval.  |
+| const ptrdiff_t | **[GetNumSteps](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getnumsteps)**(const ptime & start, const ptime & end) const<br>Gets the maximum number of time steps from a starting instant to not get beyond an instant in time, 'end'.  |
+| const ptrdiff_t | **[GetOffset](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getoffset)**(const ptime & start, const ptime & end) const |
+| const void | **[Increment](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-increment)**(ptime * t) const<br>Increments an instant by one time step.  |
+| bool | **[IsUnknown](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-isunknown)**() const<br>Query if this object is the time step value "unknown".  |
+| string | **[GetName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getname)**() const |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[Parse](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-parse)**(const string & name) |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[FromSeconds](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-fromseconds)**(unsigned int seconds) |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetDaily](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getdaily)**() |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetHourly](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-gethourly)**() |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetMonthlyQpp](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getmonthlyqpp)**() |
+| [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) | **[GetUnknown](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-getunknown)**()<br>Gets an instance of time step that is unknown. This value is indented for use in methods as a default parameter value.  |
+| ptime | **[CreatePtime](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-createptime)**(int year, int month, int day, int hour =0, int minute =0, int second =0) |
+| ptime | **[PtimeFromIsoString](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-ptimefromisostring)**(const string & t) |
+| string | **[ToString](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/#function-tostring)**(const ptime & dt, const string & format ="YYYYMMDDThhmmss") |
 
 ## Detailed Description
 
@@ -109,7 +109,7 @@ Copy constructor.
 
 **Parameters**: 
 
-  * **src** [TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) to copy. 
+  * **src** [TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/) to copy. 
 
 
 ### function TimeStep
@@ -504,4 +504,4 @@ static string ToString(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

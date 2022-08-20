@@ -16,7 +16,7 @@ title: datatypes::interop::MissingValueHandling
 
 |                | Name           |
 | -------------- | -------------- |
-| std::atomic< double > | **[TimeSeriesMissingValueValue](/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/#variable-timeseriesmissingvaluevalue)** <br>The time series missing value.  |
+| std::atomic< double > | **[TimeSeriesMissingValueValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/#variable-timeseriesmissingvaluevalue)** <br>The time series missing value.  |
 
 ## Public Attributes Documentation
 
@@ -30,4 +30,4 @@ The time series missing value.
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -11,7 +11,7 @@ title: datatypes::io
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::io::IoHelper](/cpp/Classes/classdatatypes_1_1io_1_1IoHelper/)**  |
+| class | **[datatypes::io::IoHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1io_1_1IoHelper/)**  |
 
 
 
@@ -20,4 +20,4 @@ title: datatypes::io
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

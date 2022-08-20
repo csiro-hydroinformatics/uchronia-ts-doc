@@ -16,7 +16,7 @@ title: datatypes::utils::DisposeVectorTypeFactory
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef [IfThenElse](/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/)< std::is_pointer< T >::value, [ValueTypeVectorDispose](/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/)< T >, [PointerTypeVectorDispose](/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/)< T > >::ResultT | **[type](/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/#typedef-type)**  |
+| typedef [IfThenElse](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/)< std::is_pointer< T >::value, [ValueTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/)< T >, [PointerTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/)< T > >::ResultT | **[type](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/#typedef-type)**  |
 
 ## Detailed Description
 
@@ -36,4 +36,4 @@ typedef IfThenElse< std::is_pointer<T>::value, ValueTypeVectorDispose<T>, Pointe
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

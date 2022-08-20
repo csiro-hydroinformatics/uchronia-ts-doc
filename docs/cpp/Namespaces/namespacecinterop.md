@@ -11,8 +11,8 @@ title: cinterop
 
 | Name           |
 | -------------- |
-| **[cinterop::statistics](/cpp/Namespaces/namespacecinterop_1_1statistics/)**  |
-| **[cinterop::timeseries](/cpp/Namespaces/namespacecinterop_1_1timeseries/)**  |
+| **[cinterop::statistics](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1statistics/)**  |
+| **[cinterop::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1timeseries/)**  |
 
 
 
@@ -21,4 +21,4 @@ title: cinterop
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

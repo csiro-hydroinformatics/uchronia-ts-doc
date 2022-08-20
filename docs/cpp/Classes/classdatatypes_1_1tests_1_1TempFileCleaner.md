@@ -16,14 +16,14 @@ title: datatypes::tests::TempFileCleaner
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TempFileCleaner](/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#function-tempfilecleaner)**(const string uri) |
-| | **[~TempFileCleaner](/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#function-~tempfilecleaner)**() |
+| | **[TempFileCleaner](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#function-tempfilecleaner)**(const string uri) |
+| | **[~TempFileCleaner](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#function-~tempfilecleaner)**() |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| string | **[uri](/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#variable-uri)**  |
+| string | **[uri](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/#variable-uri)**  |
 
 ## Public Functions Documentation
 
@@ -54,4 +54,4 @@ string uri;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

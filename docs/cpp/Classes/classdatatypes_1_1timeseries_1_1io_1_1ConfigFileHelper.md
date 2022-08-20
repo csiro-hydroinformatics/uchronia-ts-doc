@@ -16,36 +16,36 @@ title: datatypes::timeseries::io::ConfigFileHelper
 
 |                | Name           |
 | -------------- | -------------- |
-| [TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) | **[LoadTimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-loadtimeserieslibrarydescription)**(const string & filename, const string & dataPath ="", [TimeSeriesSourceInfoBuilder](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/) * srcBuilder =nullptr) |
-| void | **[SaveTimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-savetimeserieslibrarydescription)**(const [TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & config, const string & filename) |
-| string | **[FileName](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-filename)**(const YAML::Node & storage) |
-| string | **[FullFileName](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-fullfilename)**(const YAML::Node & storage, const [TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & tsl) |
+| [TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) | **[LoadTimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-loadtimeserieslibrarydescription)**(const string & filename, const string & dataPath ="", [TimeSeriesSourceInfoBuilder](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/) * srcBuilder =nullptr) |
+| void | **[SaveTimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-savetimeserieslibrarydescription)**(const [TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & config, const string & filename) |
+| string | **[FileName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-filename)**(const YAML::Node & storage) |
+| string | **[FullFileName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#function-fullfilename)**(const YAML::Node & storage, const [TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & tsl) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| const string | **[FileKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-filekey)**  |
-| const string | **[VarKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-varkey)**  |
-| const string | **[IdentifierKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-identifierkey)**  |
-| const string | **[IdDataKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-iddatakey)**  |
-| const string | **[IndexKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-indexkey)**  |
-| const string | **[TypeKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-typekey)**  |
-| const string | **[TimeStepKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-timestepkey)**  |
-| const string | **[StartKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-startkey)**  |
-| const string | **[LengthKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-lengthkey)**  |
-| const string | **[EnsembleSizeKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensemblesizekey)**  |
-| const string | **[EnsembleLengthKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensemblelengthkey)**  |
-| const string | **[EnsembleTimeStepKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensembletimestepkey)**  |
-| const string | **[FilePatternKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-filepatternkey)**  |
-| const string | **[MappingKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-mappingkey)**  |
-| const string | **[StorageKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagekey)**  |
-| const string | **[SingleSeriesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-singleseriestypeid)**  |
-| const string | **[EnsembleSeriesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensembleseriestypeid)**  |
-| const string | **[TimeSeriesEnsemblesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-timeseriesensemblestypeid)**  |
-| const string | **[SingleSeriesCollectionTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-singleseriescollectiontypeid)**  |
-| const string | **[StorageTypeSingleNetcdfFile](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagetypesinglenetcdffile)**  |
-| const string | **[StorageTypeMultipleNetcdfFiles](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagetypemultiplenetcdffiles)**  |
+| const string | **[FileKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-filekey)**  |
+| const string | **[VarKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-varkey)**  |
+| const string | **[IdentifierKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-identifierkey)**  |
+| const string | **[IdDataKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-iddatakey)**  |
+| const string | **[IndexKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-indexkey)**  |
+| const string | **[TypeKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-typekey)**  |
+| const string | **[TimeStepKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-timestepkey)**  |
+| const string | **[StartKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-startkey)**  |
+| const string | **[LengthKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-lengthkey)**  |
+| const string | **[EnsembleSizeKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensemblesizekey)**  |
+| const string | **[EnsembleLengthKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensemblelengthkey)**  |
+| const string | **[EnsembleTimeStepKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensembletimestepkey)**  |
+| const string | **[FilePatternKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-filepatternkey)**  |
+| const string | **[MappingKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-mappingkey)**  |
+| const string | **[StorageKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagekey)**  |
+| const string | **[SingleSeriesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-singleseriestypeid)**  |
+| const string | **[EnsembleSeriesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-ensembleseriestypeid)**  |
+| const string | **[TimeSeriesEnsemblesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-timeseriesensemblestypeid)**  |
+| const string | **[SingleSeriesCollectionTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-singleseriescollectiontypeid)**  |
+| const string | **[StorageTypeSingleNetcdfFile](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagetypesinglenetcdffile)**  |
+| const string | **[StorageTypeMultipleNetcdfFiles](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/#variable-storagetypemultiplenetcdffiles)**  |
 
 ## Public Functions Documentation
 
@@ -240,4 +240,4 @@ static const string StorageTypeMultipleNetcdfFiles;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

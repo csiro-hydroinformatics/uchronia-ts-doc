@@ -16,7 +16,7 @@ title: datatypes::utils::IfThenElse< false, Ta, Tb >
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef Tb | **[ResultT](/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/#typedef-resultt)**  |
+| typedef Tb | **[ResultT](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/#typedef-resultt)**  |
 
 ## Detailed Description
 
@@ -37,4 +37,4 @@ typedef Tb datatypes::utils::IfThenElse< false, Ta, Tb >::ResultT;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

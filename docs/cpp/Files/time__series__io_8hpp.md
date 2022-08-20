@@ -11,36 +11,36 @@ title: datatypes/time_series_io.hpp
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
-| **[datatypes::timeseries::io](/cpp/Namespaces/namespacedatatypes_1_1timeseries_1_1io/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes::timeseries::io](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries_1_1io/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::timeseries::GlobalAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/)** <br>A class to hold the global attributes of a file stored in the SWIFT netCDF format.  |
-| class | **[datatypes::timeseries::VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/)** <br>A class to hold the attributes of a netCDF variable stored in the SWIFT netCDF format.  |
-| class | **[datatypes::timeseries::VariableDefinition](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/)**  |
-| class | **[datatypes::timeseries::DimensionsDefinitions](/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/)**  |
-| class | **[datatypes::timeseries::DataGeometryProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< float >](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01float_01_4/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< long >](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01long_01_4/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< int >](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01int_01_4/)**  |
-| class | **[datatypes::timeseries::io::SwiftNetCDFAccess](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/)** <br>Class responsible for the low-level read/write operations from/to a SWIFT netCDF file.  |
-| class | **[datatypes::timeseries::io::ConfigFileHelper](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/)**  |
-| class | **[datatypes::timeseries::TimeSeriesIOHelper](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesIOHelper/)** <br>Representation of an univariate, ensemble time series with a SWIFT netCDF back end.  |
-| class | **[datatypes::timeseries::SingleNetCdfFileStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleNetCdfFileStore/)**  |
-| class | **[datatypes::timeseries::NetCdfSingleSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/)**  |
-| class | **[datatypes::timeseries::NetCdfEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/)**  |
-| class | **[datatypes::timeseries::EagerWriter](/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/)**  |
-| class | **[datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/)**  |
-| class | **[datatypes::timeseries::MultiFileTsStorage](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/)** <br>An implementation of [StoragePolicy]() such that the content of a time series is spread amongst several files.  |
-| class | **[datatypes::timeseries::MultiFileTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/)** <br>An implementation of [TimeSeriesEnsembleTimeSeriesStore]() such that the content of a time series is spread amongst several files.  |
-| class | **[datatypes::timeseries::TimeSeriesLibraryFactory](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryFactory/)**  |
-| class | **[datatypes::timeseries::SwiftNetcdfStoreFactory](/cpp/Classes/classdatatypes_1_1timeseries_1_1SwiftNetcdfStoreFactory/)**  |
+| class | **[datatypes::timeseries::GlobalAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/)** <br>A class to hold the global attributes of a file stored in the SWIFT netCDF format.  |
+| class | **[datatypes::timeseries::VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/)** <br>A class to hold the attributes of a netCDF variable stored in the SWIFT netCDF format.  |
+| class | **[datatypes::timeseries::VariableDefinition](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/)**  |
+| class | **[datatypes::timeseries::DimensionsDefinitions](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/)**  |
+| class | **[datatypes::timeseries::DataGeometryProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< float >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01float_01_4/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< long >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01long_01_4/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFVariablePersister< int >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01int_01_4/)**  |
+| class | **[datatypes::timeseries::io::SwiftNetCDFAccess](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/)** <br>Class responsible for the low-level read/write operations from/to a SWIFT netCDF file.  |
+| class | **[datatypes::timeseries::io::ConfigFileHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/)**  |
+| class | **[datatypes::timeseries::TimeSeriesIOHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesIOHelper/)** <br>Representation of an univariate, ensemble time series with a SWIFT netCDF back end.  |
+| class | **[datatypes::timeseries::SingleNetCdfFileStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleNetCdfFileStore/)**  |
+| class | **[datatypes::timeseries::NetCdfSingleSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/)**  |
+| class | **[datatypes::timeseries::NetCdfEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/)**  |
+| class | **[datatypes::timeseries::EagerWriter](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/)**  |
+| class | **[datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/)**  |
+| class | **[datatypes::timeseries::MultiFileTsStorage](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/)** <br>An implementation of [StoragePolicy]() such that the content of a time series is spread amongst several files.  |
+| class | **[datatypes::timeseries::MultiFileTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/)** <br>An implementation of [TimeSeriesEnsembleTimeSeriesStore]() such that the content of a time series is spread amongst several files.  |
+| class | **[datatypes::timeseries::TimeSeriesLibraryFactory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryFactory/)**  |
+| class | **[datatypes::timeseries::SwiftNetcdfStoreFactory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SwiftNetcdfStoreFactory/)**  |
 
 
 
@@ -2756,4 +2756,4 @@ public:
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

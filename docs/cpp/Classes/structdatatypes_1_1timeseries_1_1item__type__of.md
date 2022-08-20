@@ -16,7 +16,7 @@ title: datatypes::timeseries::item_type_of
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef T::ElementType | **[type](/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/#typedef-type)**  |
+| typedef T::ElementType | **[type](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/#typedef-type)**  |
 
 ## Detailed Description
 
@@ -36,4 +36,4 @@ typedef T::ElementType datatypes::timeseries::item_type_of< T >::type;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -11,24 +11,24 @@ title: datatypes/time_series.hpp
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
-| **[datatypes::exceptions](/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes::exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[datatypes::timeseries::DefaultMissingValuePolicyTypeFactory](/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/)**  |
-| class | **[datatypes::timeseries::TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)** <br>A template for univariate, single realisasion time series.  |
-| class | **[datatypes::timeseries::MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)** <br>Template for time series with multiple values at time point; e.g. to hold multiple realizations of time series in an ensemble.  |
-| struct | **[datatypes::timeseries::time_series_of](/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/)**  |
-| struct | **[datatypes::timeseries::ensemble_of](/cpp/Classes/structdatatypes_1_1timeseries_1_1ensemble__of/)**  |
-| struct | **[datatypes::timeseries::item_type_of](/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/)**  |
-| struct | **[datatypes::timeseries::CommonTypes](/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/)** <br>Typical ensemble and time series data types derived from a fundamental data type for each data item.  |
-| class | **[datatypes::timeseries::TimeSeriesOperations](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesOperations/)**  |
-| class | **[datatypes::timeseries::TimeWindow](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/)** <br>An object that represents a time window, defining subset/trim operations on time series.  |
-| class | **[datatypes::exceptions::TimeSeriesChecks](/cpp/Classes/classdatatypes_1_1exceptions_1_1TimeSeriesChecks/)**  |
+| struct | **[datatypes::timeseries::DefaultMissingValuePolicyTypeFactory](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/)**  |
+| class | **[datatypes::timeseries::TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)** <br>A template for univariate, single realisasion time series.  |
+| class | **[datatypes::timeseries::MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)** <br>Template for time series with multiple values at time point; e.g. to hold multiple realizations of time series in an ensemble.  |
+| struct | **[datatypes::timeseries::time_series_of](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/)**  |
+| struct | **[datatypes::timeseries::ensemble_of](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1ensemble__of/)**  |
+| struct | **[datatypes::timeseries::item_type_of](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/)**  |
+| struct | **[datatypes::timeseries::CommonTypes](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/)** <br>Typical ensemble and time series data types derived from a fundamental data type for each data item.  |
+| class | **[datatypes::timeseries::TimeSeriesOperations](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesOperations/)**  |
+| class | **[datatypes::timeseries::TimeWindow](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/)** <br>An object that represents a time window, defining subset/trim operations on time series.  |
+| class | **[datatypes::exceptions::TimeSeriesChecks](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1TimeSeriesChecks/)**  |
 
 
 
@@ -1358,4 +1358,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

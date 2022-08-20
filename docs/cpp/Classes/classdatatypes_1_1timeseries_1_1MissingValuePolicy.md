@@ -13,16 +13,16 @@ An interface for classes that define missing values in time series.  [More...](#
 
 `#include <time_series_strategies.hpp>`
 
-Inherited by [datatypes::timeseries::NullPointerIsMissingPolicy< T >](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)
+Inherited by [datatypes::timeseries::NullPointerIsMissingPolicy< T >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~MissingValuePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-~missingvaluepolicy)**() |
-| virtual bool | **[IsMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-ismissingvalue)**(const T & a) const =0 |
-| virtual T | **[GetMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-getmissingvalue)**() const =0 |
-| virtual [MissingValuePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/) * | **[Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-clone)**() const =0 |
+| virtual | **[~MissingValuePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-~missingvaluepolicy)**() |
+| virtual bool | **[IsMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-ismissingvalue)**(const T & a) const =0 |
+| virtual T | **[GetMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-getmissingvalue)**() const =0 |
+| virtual [MissingValuePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/) * | **[Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/#function-clone)**() const =0 |
 
 ## Detailed Description
 
@@ -55,7 +55,7 @@ virtual bool IsMissingValue(
 ```
 
 
-**Reimplemented by**: [datatypes::timeseries::NullPointerIsMissingPolicy::IsMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-ismissingvalue)
+**Reimplemented by**: [datatypes::timeseries::NullPointerIsMissingPolicy::IsMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-ismissingvalue)
 
 
 ### function GetMissingValue
@@ -65,7 +65,7 @@ virtual T GetMissingValue() const =0
 ```
 
 
-**Reimplemented by**: [datatypes::timeseries::DefaultMissingFloatingPointPolicy::GetMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/#function-getmissingvalue), [datatypes::timeseries::NullPointerIsMissingPolicy::GetMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-getmissingvalue), [datatypes::timeseries::NegativeIsMissingFloadingPointPolicy::GetMissingValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/#function-getmissingvalue)
+**Reimplemented by**: [datatypes::timeseries::DefaultMissingFloatingPointPolicy::GetMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/#function-getmissingvalue), [datatypes::timeseries::NullPointerIsMissingPolicy::GetMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-getmissingvalue), [datatypes::timeseries::NegativeIsMissingFloadingPointPolicy::GetMissingValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/#function-getmissingvalue)
 
 
 ### function Clone
@@ -75,9 +75,9 @@ virtual MissingValuePolicy * Clone() const =0
 ```
 
 
-**Reimplemented by**: [datatypes::timeseries::DefaultMissingFloatingPointPolicy::Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/#function-clone), [datatypes::timeseries::NullPointerIsMissingPolicy::Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-clone), [datatypes::timeseries::NegativeIsMissingFloadingPointPolicy::Clone](/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/#function-clone)
+**Reimplemented by**: [datatypes::timeseries::DefaultMissingFloatingPointPolicy::Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/#function-clone), [datatypes::timeseries::NullPointerIsMissingPolicy::Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/#function-clone), [datatypes::timeseries::NegativeIsMissingFloadingPointPolicy::Clone](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/#function-clone)
 
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

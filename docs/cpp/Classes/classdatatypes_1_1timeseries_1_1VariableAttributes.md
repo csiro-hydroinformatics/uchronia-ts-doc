@@ -17,25 +17,25 @@ A class to hold the attributes of a netCDF variable stored in the SWIFT netCDF f
 
 |                | Name           |
 | -------------- | -------------- |
-| const double | **[DefaultFillValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-defaultfillvalue)**() |
-| | **[VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**() |
-| | **[VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**(const string & longName, const string & units, int type, const string & typeDescription, const string & datType, const string & datDescription, const string & locationType, double fillValue) |
-| | **[VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**([VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) && src) |
-| | **[VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**(const [VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & src) |
-| [VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-operator=)**(const [VariableAttributes](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & src) |
+| const double | **[DefaultFillValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-defaultfillvalue)**() |
+| | **[VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**() |
+| | **[VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**(const string & longName, const string & units, int type, const string & typeDescription, const string & datType, const string & datDescription, const string & locationType, double fillValue) |
+| | **[VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**([VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) && src) |
+| | **[VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-variableattributes)**(const [VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & src) |
+| [VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#function-operator=)**(const [VariableAttributes](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/) & src) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| string | **[LongName](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-longname)**  |
-| string | **[Units](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-units)**  |
-| int | **[Type](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-type)**  |
-| string | **[TypeDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-typedescription)**  |
-| string | **[LocationType](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-locationtype)**  |
-| string | **[DatType](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-dattype)**  |
-| string | **[DatDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-datdescription)**  |
-| double | **[FillValue](/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-fillvalue)**  |
+| string | **[LongName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-longname)**  |
+| string | **[Units](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-units)**  |
+| int | **[Type](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-type)**  |
+| string | **[TypeDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-typedescription)**  |
+| string | **[LocationType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-locationtype)**  |
+| string | **[DatType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-dattype)**  |
+| string | **[DatDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-datdescription)**  |
+| double | **[FillValue](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/#variable-fillvalue)**  |
 
 ## Public Functions Documentation
 
@@ -156,4 +156,4 @@ double FillValue;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

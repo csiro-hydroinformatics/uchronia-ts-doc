@@ -13,66 +13,66 @@ Library of time series, for high level access to sources of time series that nma
 
 `#include <time_series_store.hpp>`
 
-Inherits from [datatypes::timeseries::TimeSeriesProvider< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/), [datatypes::timeseries::TTimeSeriesLibrary< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/), [datatypes::timeseries::IdentifiersProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)
+Inherits from [datatypes::timeseries::TimeSeriesProvider< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/), [datatypes::timeseries::TTimeSeriesLibrary< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/), [datatypes::timeseries::IdentifiersProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**([TimeSeriesStoreFactory](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/) * storeCreator =nullptr) |
-| | **[TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**(const [TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & description) |
-| virtual | **[~TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-~timeserieslibrary)**() |
-| void | **[Close](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-close)**() |
-| [TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-operator=)**([TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) && src) |
-| | **[TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**([TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) && src)<br>Constructor using the move semantics.  |
-| [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId, boost::function< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > *([TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > *)> & tsTransform)<br>Gets a single time series out of the library.  |
-| virtual vector< string > | **[GetIdentifiers](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers)**() const |
-| vector< string > | **[GetIdentifiers](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers)**(const string & dataId) const |
-| string | **[GetDataSummary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getdatasummary)**(const string & dataId) |
-| vector< [DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) > | **[GetDataDimensionsDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getdatadimensionsdescription)**(const string & dataId) |
-| virtual [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId)<br>Gets a single time series out of the library.  |
-| virtual [MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetCollection](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getcollection)**(const string & dataId)<br>Gets a collection of time series out of the library, where each item is for a given station ID.  |
-| virtual [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId, const string & collectionIdentifier)<br>**  |
-| [MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetEnsemble](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getensemble)**(const string & dataId, const string & dataItemIdentifier) |
-| virtual [MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetEnsembleTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getensembletimeseries)**(const string & dataId) |
-| virtual [MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetAllTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getalltimeseries)**(const string & dataId) |
-| virtual [EnsembleForecastTimeSeries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries)< [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > > * | **[GetTimeSeriesEnsembleTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-gettimeseriesensembletimeseries)**(const string & dataId) |
-| void | **[AddSource](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [SingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * store) |
-| void | **[AddSource](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [EnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * store) |
-| void | **[AddSource](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [TimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * dataAccess) |
-| bool | **[CanCreateTimeSeriesEnsembleSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-cancreatetimeseriesensembleseriesstore)**(const string & dataId) |
-| void | **[CreateTimeSeriesEnsembleSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-createtimeseriesensembleseriesstore)**(const string & dataId) |
+| | **[TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**([TimeSeriesStoreFactory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/) * storeCreator =nullptr) |
+| | **[TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**(const [TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/) & description) |
+| virtual | **[~TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-~timeserieslibrary)**() |
+| void | **[Close](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-close)**() |
+| [TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-operator=)**([TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) && src) |
+| | **[TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-timeserieslibrary)**([TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) && src)<br>Constructor using the move semantics.  |
+| [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId, boost::function< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > *([TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > *)> & tsTransform)<br>Gets a single time series out of the library.  |
+| virtual vector< string > | **[GetIdentifiers](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers)**() const |
+| vector< string > | **[GetIdentifiers](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getidentifiers)**(const string & dataId) const |
+| string | **[GetDataSummary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getdatasummary)**(const string & dataId) |
+| vector< [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) > | **[GetDataDimensionsDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getdatadimensionsdescription)**(const string & dataId) |
+| virtual [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId)<br>Gets a single time series out of the library.  |
+| virtual [MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetCollection](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getcollection)**(const string & dataId)<br>Gets a collection of time series out of the library, where each item is for a given station ID.  |
+| virtual [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * | **[GetSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getsingle)**(const string & dataId, const string & collectionIdentifier)<br>**  |
+| [MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetEnsemble](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getensemble)**(const string & dataId, const string & dataItemIdentifier) |
+| virtual [MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetEnsembleTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getensembletimeseries)**(const string & dataId) |
+| virtual [MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > * > * | **[GetAllTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-getalltimeseries)**(const string & dataId) |
+| virtual [EnsembleForecastTimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-ensembleforecasttimeseries)< [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< double > > * | **[GetTimeSeriesEnsembleTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-gettimeseriesensembletimeseries)**(const string & dataId) |
+| void | **[AddSource](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [SingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * store) |
+| void | **[AddSource](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [EnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * store) |
+| void | **[AddSource](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-addsource)**(const string & dataId, [TimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * dataAccess) |
+| bool | **[CanCreateTimeSeriesEnsembleSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-cancreatetimeseriesensembleseriesstore)**(const string & dataId) |
+| void | **[CreateTimeSeriesEnsembleSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/#function-createtimeseriesensembleseriesstore)**(const string & dataId) |
 
 ## Additional inherited members
 
-**Public Functions inherited from [datatypes::timeseries::TimeSeriesProvider< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)**
+**Public Functions inherited from [datatypes::timeseries::TimeSeriesProvider< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~TimeSeriesProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/#function-~timeseriesprovider)**() |
+| virtual | **[~TimeSeriesProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/#function-~timeseriesprovider)**() |
 
-**Public Types inherited from [datatypes::timeseries::TTimeSeriesLibrary< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**
-
-|                | Name           |
-| -------------- | -------------- |
-| typedef [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< T > | **[TS](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-ts)**  |
-| typedef [MultiTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TS](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-ts) * > | **[MTS](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-mts)**  |
-
-**Public Functions inherited from [datatypes::timeseries::TTimeSeriesLibrary< double >](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**
+**Public Types inherited from [datatypes::timeseries::TTimeSeriesLibrary< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~TTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-~ttimeserieslibrary)**() |
-| virtual [TimeSeriesProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)< T > * | **[GetProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getprovider)**(const string & dataId) |
+| typedef [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< T > | **[TS](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-ts)**  |
+| typedef [MultiTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/)< [TS](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-ts) * > | **[MTS](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#typedef-mts)**  |
 
-**Public Functions inherited from [datatypes::timeseries::IdentifiersProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)**
+**Public Functions inherited from [datatypes::timeseries::TTimeSeriesLibrary< double >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~IdentifiersProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider)**() |
-| vector< string > | **[SplitHierarchicalIdentifier](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier)**(const string & longId) |
-| string | **[GetTopmostIdentifier](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier)**(const string & longId) |
-| void | **[CheckNotEmpty](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty)**(const string & longId) |
+| virtual | **[~TTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-~ttimeserieslibrary)**() |
+| virtual [TimeSeriesProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)< T > * | **[GetProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getprovider)**(const string & dataId) |
+
+**Public Functions inherited from [datatypes::timeseries::IdentifiersProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)**
+
+|                | Name           |
+| -------------- | -------------- |
+| virtual | **[~IdentifiersProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-~identifiersprovider)**() |
+| vector< string > | **[SplitHierarchicalIdentifier](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-splithierarchicalidentifier)**(const string & longId) |
+| string | **[GetTopmostIdentifier](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-gettopmostidentifier)**(const string & longId) |
+| void | **[CheckNotEmpty](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/#function-checknotempty)**(const string & longId) |
 
 
 ## Detailed Description
@@ -173,7 +173,7 @@ virtual vector< string > GetIdentifiers() const
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetIdentifiers](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getidentifiers)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetIdentifiers](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getidentifiers)
 
 
 ### function GetIdentifiers
@@ -220,7 +220,7 @@ Gets a single time series out of the library.
 
 **Return**: The univariate, single realization time series 
 
-**Reimplements**: [datatypes::timeseries::TimeSeriesProvider::GetSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/#function-getsingle)
+**Reimplements**: [datatypes::timeseries::TimeSeriesProvider::GetSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/#function-getsingle)
 
 
 ### function GetCollection
@@ -240,7 +240,7 @@ Gets a collection of time series out of the library, where each item is for a gi
 
 **Return**: The collection of univariate, single realization time series 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetCollection](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getcollection)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetCollection](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getcollection)
 
 
 ### function GetSingle
@@ -262,7 +262,7 @@ virtual TTimeSeries< double > * GetSingle(
 
 **Return**: The univariate, single realization time series 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getsingle)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getsingle)
 
 
 Gets a single time series out of the library
@@ -287,7 +287,7 @@ virtual MultiTimeSeries< TTimeSeries< double > * > * GetEnsembleTimeSeries(
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetEnsembleTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getensembletimeseries)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetEnsembleTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getensembletimeseries)
 
 
 ### function GetAllTimeSeries
@@ -299,7 +299,7 @@ virtual MultiTimeSeries< TTimeSeries< double > * > * GetAllTimeSeries(
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetAllTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getalltimeseries)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetAllTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-getalltimeseries)
 
 
 ### function GetTimeSeriesEnsembleTimeSeries
@@ -311,7 +311,7 @@ virtual EnsembleForecastTimeSeries< TTimeSeries< double > > * GetTimeSeriesEnsem
 ```
 
 
-**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetTimeSeriesEnsembleTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-gettimeseriesensembletimeseries)
+**Reimplements**: [datatypes::timeseries::TTimeSeriesLibrary::GetTimeSeriesEnsembleTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/#function-gettimeseriesensembletimeseries)
 
 
 ### function AddSource
@@ -364,4 +364,4 @@ void CreateTimeSeriesEnsembleSeriesStore(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

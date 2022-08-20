@@ -11,21 +11,21 @@ title: datatypes/time_step.h
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::timeseries::TimeStep](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/)** <br>Time step handling for time series.  |
-| class | **[datatypes::timeseries::TimeSeriesInfoProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/)** <br>An interface definition for classes that can provide essential time series temporal characteristics.  |
+| class | **[datatypes::timeseries::TimeStep](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/)** <br>Time step handling for time series.  |
+| class | **[datatypes::timeseries::TimeSeriesInfoProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/)** <br>An interface definition for classes that can provide essential time series temporal characteristics.  |
 
 ## Types
 
 |                | Name           |
 | -------------- | -------------- |
-| using boost::posix_time::time_duration::sec_type | **[sec_type](/cpp/Files/time__step_8h/#using-sec-type)**  |
+| using boost::posix_time::time_duration::sec_type | **[sec_type](/uchronia-ts-doc/cpp/Files/time__step_8h/#using-sec-type)**  |
 
 ## Types Documentation
 
@@ -156,4 +156,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

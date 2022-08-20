@@ -16,8 +16,8 @@ title: datatypes::timeseries::DataGeometryProvider
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual [DimensionsDefinitions](/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/) | **[GetDimensions](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/#function-getdimensions)**() const =0 |
-| virtual | **[~DataGeometryProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/#function-~datageometryprovider)**() |
+| virtual [DimensionsDefinitions](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/) | **[GetDimensions](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/#function-getdimensions)**() const =0 |
+| virtual | **[~DataGeometryProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/#function-~datageometryprovider)**() |
 
 ## Public Functions Documentation
 
@@ -37,4 +37,4 @@ virtual ~DataGeometryProvider()
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

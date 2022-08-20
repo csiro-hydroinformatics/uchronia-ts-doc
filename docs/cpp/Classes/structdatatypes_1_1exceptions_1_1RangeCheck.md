@@ -16,7 +16,7 @@ title: datatypes::exceptions::RangeCheck
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[Check](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/#function-check)**(T value, T min, T max, const string & variableName) |
+| void | **[Check](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/#function-check)**(T value, T min, T max, const string & variableName) |
 
 ## Detailed Description
 
@@ -41,4 +41,4 @@ static inline void Check(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -16,8 +16,8 @@ title: datatypes::timeseries::io::SwiftNetCDFVariablePersister< double >
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[NcGetVara](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/#function-ncgetvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, double * op) |
-| int | **[NcPutVara](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/#function-ncputvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, const double * op) |
+| int | **[NcGetVara](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/#function-ncgetvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, double * op) |
+| int | **[NcPutVara](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/#function-ncputvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, const double * op) |
 
 ## Public Functions Documentation
 
@@ -49,4 +49,4 @@ static inline int NcPutVara(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

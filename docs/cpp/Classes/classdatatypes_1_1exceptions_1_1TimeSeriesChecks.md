@@ -16,7 +16,7 @@ title: datatypes::exceptions::TimeSeriesChecks
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[CheckOutOfRange](/cpp/Classes/classdatatypes_1_1exceptions_1_1TimeSeriesChecks/#function-checkoutofrange)**(const string & msg, const [datatypes::timeseries::TimeSeries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts, const ptime & d) |
+| void | **[CheckOutOfRange](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1TimeSeriesChecks/#function-checkoutofrange)**(const string & msg, const [datatypes::timeseries::TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts, const ptime & d) |
 
 ## Public Functions Documentation
 
@@ -33,4 +33,4 @@ static void CheckOutOfRange(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

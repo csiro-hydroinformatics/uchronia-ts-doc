@@ -16,10 +16,10 @@ title: datatypes::exceptions::RangeCheck< size_t >
 
 |                | Name           |
 | -------------- | -------------- |
-| size_t | **[MaxIndexing](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-maxindexing)**() |
-| void | **[Check](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-check)**(size_t value, size_t min, size_t max, const string & variableName) |
-| void | **[CheckTimeSeriesInterval](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-checktimeseriesinterval)**(const size_t & from, size_t & to, const size_t & tsLength) |
-| void | **[CheckTimeSeriesIndex](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-checktimeseriesindex)**(const size_t & index, const size_t & tsLength, const string & variableName ="index") |
+| size_t | **[MaxIndexing](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-maxindexing)**() |
+| void | **[Check](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-check)**(size_t value, size_t min, size_t max, const string & variableName) |
+| void | **[CheckTimeSeriesInterval](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-checktimeseriesinterval)**(const size_t & from, size_t & to, const size_t & tsLength) |
+| void | **[CheckTimeSeriesIndex](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/#function-checktimeseriesindex)**(const size_t & index, const size_t & tsLength, const string & variableName ="index") |
 
 ## Public Functions Documentation
 
@@ -66,4 +66,4 @@ static inline void CheckTimeSeriesIndex(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

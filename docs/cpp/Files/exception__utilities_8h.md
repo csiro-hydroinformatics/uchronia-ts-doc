@@ -11,16 +11,16 @@ title: datatypes/exception_utilities.h
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::exceptions](/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[datatypes::exceptions::RangeCheck](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/)**  |
-| struct | **[datatypes::exceptions::RangeCheck< size_t >](/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/)**  |
-| class | **[datatypes::exceptions::ExceptionUtilities](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/)**  |
+| struct | **[datatypes::exceptions::RangeCheck](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/)**  |
+| struct | **[datatypes::exceptions::RangeCheck< size_t >](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/)**  |
+| class | **[datatypes::exceptions::ExceptionUtilities](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/)**  |
 
 
 
@@ -148,4 +148,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

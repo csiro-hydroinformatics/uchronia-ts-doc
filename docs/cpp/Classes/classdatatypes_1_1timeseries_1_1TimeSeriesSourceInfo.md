@@ -16,28 +16,28 @@ title: datatypes::timeseries::TimeSeriesSourceInfo
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**(const [TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) & t) |
-| | **[TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**(const [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & src) |
-| | **[TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**() |
-| virtual | **[~TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-~timeseriessourceinfo)**() |
-| | **[TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**([TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) && src) |
-| [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-operator=)**(const [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & src) |
-| [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-operator=)**([TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) && src) |
-| [SingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createsingletimeseriesstore)**() const |
-| [EnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createensembletimeseriesstore)**() const |
-| [TimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createtimeseriesensembletimeseriesstore)**() const |
-| bool | **[ApplyRootDir](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-applyrootdir)**(const string & rootDir) |
-| std::map< string, string > | **[GetSerializableConfiguration](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-getserializableconfiguration)**() const |
+| | **[TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**(const [TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/) & t) |
+| | **[TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**(const [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & src) |
+| | **[TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**() |
+| virtual | **[~TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-~timeseriessourceinfo)**() |
+| | **[TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-timeseriessourceinfo)**([TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) && src) |
+| [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-operator=)**(const [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & src) |
+| [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-operator=)**([TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) && src) |
+| [SingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createsingletimeseriesstore)**() const |
+| [EnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createensembletimeseriesstore)**() const |
+| [TimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-createtimeseriesensembletimeseriesstore)**() const |
+| bool | **[ApplyRootDir](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-applyrootdir)**(const string & rootDir) |
+| std::map< string, string > | **[GetSerializableConfiguration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#function-getserializableconfiguration)**() const |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| const string | **[IdDataKey](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-iddatakey)**  |
-| const string | **[SingleSeriesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-singleseriestypeid)**  |
-| const string | **[EnsembleSeriesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-ensembleseriestypeid)**  |
-| const string | **[TimeSeriesEnsemblesTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-timeseriesensemblestypeid)**  |
-| const string | **[SingleSeriesCollectionTypeId](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-singleseriescollectiontypeid)**  |
+| const string | **[IdDataKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-iddatakey)**  |
+| const string | **[SingleSeriesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-singleseriestypeid)**  |
+| const string | **[EnsembleSeriesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-ensembleseriestypeid)**  |
+| const string | **[TimeSeriesEnsemblesTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-timeseriesensemblestypeid)**  |
+| const string | **[SingleSeriesCollectionTypeId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/#variable-singleseriescollectiontypeid)**  |
 
 ## Public Functions Documentation
 
@@ -176,4 +176,4 @@ static const string SingleSeriesCollectionTypeId;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

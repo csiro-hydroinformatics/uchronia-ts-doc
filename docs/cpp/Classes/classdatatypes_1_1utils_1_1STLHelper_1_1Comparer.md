@@ -13,14 +13,14 @@ title: datatypes::utils::STLHelper::Comparer
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef vector< U >::const_iterator | **[const_iterator](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#typedef-const-iterator)**  |
+| typedef vector< U >::const_iterator | **[const_iterator](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#typedef-const-iterator)**  |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[Comparer](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#function-comparer)**(std::function< bool(const U &, const U &)> & valueCompare) |
-| bool | **[operator()](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#function-operator())**(const std::pair< size_t, const_iterator > & a, const std::pair< size_t, const_iterator > & b) |
+| | **[Comparer](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#function-comparer)**(std::function< bool(const U &, const U &)> & valueCompare) |
+| bool | **[operator()](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/#function-operator())**(const std::pair< size_t, const_iterator > & a, const std::pair< size_t, const_iterator > & b) |
 
 ## Detailed Description
 
@@ -61,4 +61,4 @@ inline bool operator()(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

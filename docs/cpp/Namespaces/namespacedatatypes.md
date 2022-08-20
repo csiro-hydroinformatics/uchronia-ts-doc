@@ -11,12 +11,12 @@ title: datatypes
 
 | Name           |
 | -------------- |
-| **[datatypes::exceptions](/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
-| **[datatypes::interop](/cpp/Namespaces/namespacedatatypes_1_1interop/)**  |
-| **[datatypes::io](/cpp/Namespaces/namespacedatatypes_1_1io/)**  |
-| **[datatypes::tests](/cpp/Namespaces/namespacedatatypes_1_1tests/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
-| **[datatypes::utils](/cpp/Namespaces/namespacedatatypes_1_1utils/)**  |
+| **[datatypes::exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
+| **[datatypes::interop](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1interop/)**  |
+| **[datatypes::io](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1io/)**  |
+| **[datatypes::tests](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1tests/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes::utils](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/)**  |
 
 
 
@@ -25,4 +25,4 @@ title: datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

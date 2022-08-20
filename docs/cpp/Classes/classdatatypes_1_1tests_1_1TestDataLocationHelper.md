@@ -16,40 +16,40 @@ title: datatypes::tests::TestDataLocationHelper
 
 |                | Name           |
 | -------------- | -------------- |
-| string | **[ReadEnvironmentVariable](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-readenvironmentvariable)**(const string & envVar) |
-| string | **[BuildPath](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-buildpath)**(const vector< string > & folders) |
-| [TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) | **[CreateEnsembleTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createensembletimeserieslibrary)**(string & rainObsId, string & petObsId, string & rainFcastId, string & petFcastId) |
-| [TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) | **[GetTestTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-gettesttimeserieslibrary)**() |
-| vector< string > | **[TestTsLibraryIdentifiers](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-testtslibraryidentifiers)**() |
-| [TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) * | **[CreateTestTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createtesttimeserieslibrary)**() |
-| void | **[MakeTestTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-maketesttimeserieslibrary)**([TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) & dataLibrary) |
-| vector< string > | **[TestStationIds](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-teststationids)**() |
+| string | **[ReadEnvironmentVariable](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-readenvironmentvariable)**(const string & envVar) |
+| string | **[BuildPath](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-buildpath)**(const vector< string > & folders) |
+| [TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) | **[CreateEnsembleTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createensembletimeserieslibrary)**(string & rainObsId, string & petObsId, string & rainFcastId, string & petFcastId) |
+| [TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) | **[GetTestTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-gettesttimeserieslibrary)**() |
+| vector< string > | **[TestTsLibraryIdentifiers](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-testtslibraryidentifiers)**() |
+| [TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) * | **[CreateTestTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-createtesttimeserieslibrary)**() |
+| void | **[MakeTestTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-maketesttimeserieslibrary)**([TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/) & dataLibrary) |
+| vector< string > | **[TestStationIds](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#function-teststationids)**() |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| const string | **[kVarSingleStation](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarsinglestation)**  |
-| const string | **[kVarMultiStations](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarmultistations)**  |
-| const string | **[kFileSingleStation](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilesinglestation)**  |
-| const string | **[kFileMultiStations](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilemultistations)**  |
-| const string | **[kFileAllDataCases](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilealldatacases)**  |
-| const string | **[kVar1FcastEns](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1fcastens)**  |
-| const string | **[kVar2FcastEns](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2fcastens)**  |
-| const string | **[kVar1Obs](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1obs)**  |
-| const string | **[kVar2Obs](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2obs)**  |
-| const string | **[kVar1Ens](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1ens)**  |
-| const string | **[kVar2Ens](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2ens)**  |
-| const string | **[kIdentifier1FcastEns](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1fcastens)**  |
-| const string | **[kIdentifier2FcastEns](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2fcastens)**  |
-| const string | **[kIdentifier1Obs](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1obs)**  |
-| const string | **[kIdentifier2Obs](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2obs)**  |
-| const string | **[kIdentifier1Ens](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1ens)**  |
-| const string | **[kIdentifier2Ens](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2ens)**  |
-| const string | **[kSingleStationId](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ksinglestationid)**  |
-| const string | **[kStationIdOne](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidone)**  |
-| const string | **[kStationIdTwo](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidtwo)**  |
-| const size_t | **[kTimeSeriesLength](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ktimeserieslength)**  |
+| const string | **[kVarSingleStation](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarsinglestation)**  |
+| const string | **[kVarMultiStations](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvarmultistations)**  |
+| const string | **[kFileSingleStation](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilesinglestation)**  |
+| const string | **[kFileMultiStations](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilemultistations)**  |
+| const string | **[kFileAllDataCases](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kfilealldatacases)**  |
+| const string | **[kVar1FcastEns](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1fcastens)**  |
+| const string | **[kVar2FcastEns](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2fcastens)**  |
+| const string | **[kVar1Obs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1obs)**  |
+| const string | **[kVar2Obs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2obs)**  |
+| const string | **[kVar1Ens](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar1ens)**  |
+| const string | **[kVar2Ens](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kvar2ens)**  |
+| const string | **[kIdentifier1FcastEns](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1fcastens)**  |
+| const string | **[kIdentifier2FcastEns](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2fcastens)**  |
+| const string | **[kIdentifier1Obs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1obs)**  |
+| const string | **[kIdentifier2Obs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2obs)**  |
+| const string | **[kIdentifier1Ens](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier1ens)**  |
+| const string | **[kIdentifier2Ens](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kidentifier2ens)**  |
+| const string | **[kSingleStationId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ksinglestationid)**  |
+| const string | **[kStationIdOne](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidone)**  |
+| const string | **[kStationIdTwo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-kstationidtwo)**  |
+| const size_t | **[kTimeSeriesLength](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/#variable-ktimeserieslength)**  |
 
 ## Public Functions Documentation
 
@@ -271,4 +271,4 @@ static const size_t kTimeSeriesLength;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

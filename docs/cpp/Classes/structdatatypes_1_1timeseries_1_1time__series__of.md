@@ -16,7 +16,7 @@ title: datatypes::timeseries::time_series_of
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef [TTimeSeries](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< T > | **[type](/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/#typedef-type)**  |
+| typedef [TTimeSeries](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/)< T > | **[type](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/#typedef-type)**  |
 
 ## Detailed Description
 
@@ -36,4 +36,4 @@ typedef TTimeSeries<T> datatypes::timeseries::time_series_of< T >::type;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

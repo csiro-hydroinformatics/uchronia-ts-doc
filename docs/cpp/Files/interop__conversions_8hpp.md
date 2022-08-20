@@ -11,16 +11,16 @@ title: datatypes/interop_conversions.hpp
 
 | Name           |
 | -------------- |
-| **[cinterop](/cpp/Namespaces/namespacecinterop/)**  |
-| **[cinterop::timeseries](/cpp/Namespaces/namespacecinterop_1_1timeseries/)**  |
-| **[cinterop::statistics](/cpp/Namespaces/namespacecinterop_1_1statistics/)**  |
+| **[cinterop](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop/)**  |
+| **[cinterop::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1timeseries/)**  |
+| **[cinterop::statistics](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1statistics/)**  |
 
 ## Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| template <typename Tts \> <br>void | **[ToTimeSeriesGeomStruct](/cpp/Files/interop__conversions_8hpp/#function-totimeseriesgeomstruct)**(const Tts & ts, regular_time_series_geometry & g) |
-| template <typename Tts \> <br>regular_time_series_geometry | **[ToTimeSeriesGeomStruct](/cpp/Files/interop__conversions_8hpp/#function-totimeseriesgeomstruct)**(const Tts & ts) |
+| template <typename Tts \> <br>void | **[ToTimeSeriesGeomStruct](/uchronia-ts-doc/cpp/Files/interop__conversions_8hpp/#function-totimeseriesgeomstruct)**(const Tts & ts, regular_time_series_geometry & g) |
+| template <typename Tts \> <br>regular_time_series_geometry | **[ToTimeSeriesGeomStruct](/uchronia-ts-doc/cpp/Files/interop__conversions_8hpp/#function-totimeseriesgeomstruct)**(const Tts & ts) |
 
 
 ## Functions Documentation
@@ -125,4 +125,4 @@ namespace cinterop
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

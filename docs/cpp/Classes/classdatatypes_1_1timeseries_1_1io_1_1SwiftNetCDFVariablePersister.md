@@ -16,8 +16,8 @@ title: datatypes::timeseries::io::SwiftNetCDFVariablePersister
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[NcGetVara](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/#function-ncgetvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, ElementType * op) |
-| int | **[NcPutVara](/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/#function-ncputvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, const ElementType * op) |
+| int | **[NcGetVara](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/#function-ncgetvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, ElementType * op) |
+| int | **[NcPutVara](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/#function-ncputvara)**(int ncid, int varid, const size_t * startp, const size_t * countp, const ElementType * op) |
 
 ## Detailed Description
 
@@ -56,4 +56,4 @@ static inline int NcPutVara(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

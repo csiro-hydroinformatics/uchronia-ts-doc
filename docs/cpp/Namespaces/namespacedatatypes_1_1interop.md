@@ -11,7 +11,7 @@ title: datatypes::interop
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::interop::MissingValueHandling](/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)**  |
+| class | **[datatypes::interop::MissingValueHandling](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)**  |
 
 
 
@@ -20,4 +20,4 @@ title: datatypes::interop
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -11,20 +11,20 @@ title: datatypes/internals_c_api.hpp
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[TIME_SERIES_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-time-series-dyncast)**(x)  |
-|  | **[TIME_SERIES_PROVIDER_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-time-series-provider-dyncast)**(x)  |
-|  | **[ENSEMBLE_DATA_SET_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-ensemble-data-set-dyncast)**(x)  |
-|  | **[ENSEMBLE_FORECAST_TIME_SERIES_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-ensemble-forecast-time-series-dyncast)**(x)  |
-|  | **[ENSEMBLE_PTR_TIME_SERIES_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-ensemble-ptr-time-series-dyncast)**(x)  |
-|  | **[DATE_TIME_INFO_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-date-time-info-dyncast)**(x)  |
-|  | **[TS_GEOMETRY_DYNCAST](/cpp/Files/internals__c__api_8hpp/#define-ts-geometry-dyncast)**(x)  |
-|  | **[FREE_ARRAY](/cpp/Files/internals__c__api_8hpp/#define-free-array)**(x)  |
-|  | **[WRAP_DATE_TIME_INFO_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-date-time-info-ptr)**(x)  |
-|  | **[WRAP_TIME_SERIES_PROVIDER_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-time-series-provider-ptr)**(x)  |
-|  | **[WRAP_ENSEMBLE_DATA_SET_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-data-set-ptr)**(x)  |
-|  | **[WRAP_TIME_SERIES_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-time-series-ptr)**(x)  |
-|  | **[WRAP_ENSEMBLE_FORECAST_TIME_SERIES_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-forecast-time-series-ptr)**(x)  |
-|  | **[WRAP_ENSEMBLE_TIME_SERIES_PTR](/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-time-series-ptr)**(x)  |
+|  | **[TIME_SERIES_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-time-series-dyncast)**(x)  |
+|  | **[TIME_SERIES_PROVIDER_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-time-series-provider-dyncast)**(x)  |
+|  | **[ENSEMBLE_DATA_SET_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-ensemble-data-set-dyncast)**(x)  |
+|  | **[ENSEMBLE_FORECAST_TIME_SERIES_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-ensemble-forecast-time-series-dyncast)**(x)  |
+|  | **[ENSEMBLE_PTR_TIME_SERIES_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-ensemble-ptr-time-series-dyncast)**(x)  |
+|  | **[DATE_TIME_INFO_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-date-time-info-dyncast)**(x)  |
+|  | **[TS_GEOMETRY_DYNCAST](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-ts-geometry-dyncast)**(x)  |
+|  | **[FREE_ARRAY](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-free-array)**(x)  |
+|  | **[WRAP_DATE_TIME_INFO_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-date-time-info-ptr)**(x)  |
+|  | **[WRAP_TIME_SERIES_PROVIDER_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-time-series-provider-ptr)**(x)  |
+|  | **[WRAP_ENSEMBLE_DATA_SET_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-data-set-ptr)**(x)  |
+|  | **[WRAP_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-time-series-ptr)**(x)  |
+|  | **[WRAP_ENSEMBLE_FORECAST_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-forecast-time-series-ptr)**(x)  |
+|  | **[WRAP_ENSEMBLE_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/#define-wrap-ensemble-time-series-ptr)**(x)  |
 
 
 
@@ -201,4 +201,4 @@ new reference_handle<DATATYPES_ENSEMBLE_PTR_TIME_SERIES_DOUBLE>(x)
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

@@ -11,38 +11,38 @@ title: datatypes/time_series_store.hpp
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::timeseries::IdentifiersProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)** <br>An interface definition for objects that can provide hierarchical identification.  |
-| class | **[datatypes::timeseries::TimeSeriesProvider](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)** <br>Library of time series, for high level access to sources of univariate, single instance time series that may have varying on-disk representations.  |
-| class | **[datatypes::timeseries::DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/)**  |
-| class | **[datatypes::timeseries::DataDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/)**  |
-| class | **[datatypes::timeseries::SingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)** <br>Interface definition for storages of single, univariate time series.  |
-| class | **[datatypes::timeseries::EnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)** <br>Interface definition for storages of ensembles of univariate time series.  |
-| class | **[datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)** <br>Interface definition for storages of time series of ensembles of time series.  |
-| class | **[datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/)**  |
-| class | **[datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStoragePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStoragePolicy/)**  |
-| class | **[datatypes::timeseries::TTimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**  |
-| class | **[datatypes::timeseries::TimeSeriesSourceInfoImpl](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**  |
-| class | **[datatypes::timeseries::TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/)**  |
-| class | **[datatypes::timeseries::NetCdfSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/)**  |
-| class | **[datatypes::timeseries::TimeSeriesLibraryDescription](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/)**  |
-| class | **[datatypes::timeseries::TimeSeriesSourceInfoBuilder](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/)** <br>An abstract class to allow callers to inject custom time series data sources into a time series library.  |
-| class | **[datatypes::timeseries::TimeSeriesStoreFactory](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/)**  |
-| class | **[datatypes::timeseries::TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/)** <br>Library of time series, for high level access to sources of time series that nmay have varying on-disk representations.  |
+| class | **[datatypes::timeseries::IdentifiersProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/)** <br>An interface definition for objects that can provide hierarchical identification.  |
+| class | **[datatypes::timeseries::TimeSeriesProvider](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/)** <br>Library of time series, for high level access to sources of univariate, single instance time series that may have varying on-disk representations.  |
+| class | **[datatypes::timeseries::DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/)**  |
+| class | **[datatypes::timeseries::DataDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/)**  |
+| class | **[datatypes::timeseries::SingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)** <br>Interface definition for storages of single, univariate time series.  |
+| class | **[datatypes::timeseries::EnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)** <br>Interface definition for storages of ensembles of univariate time series.  |
+| class | **[datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)** <br>Interface definition for storages of time series of ensembles of time series.  |
+| class | **[datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/)**  |
+| class | **[datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStoragePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStoragePolicy/)**  |
+| class | **[datatypes::timeseries::TTimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/)**  |
+| class | **[datatypes::timeseries::TimeSeriesSourceInfoImpl](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/)**  |
+| class | **[datatypes::timeseries::TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/)**  |
+| class | **[datatypes::timeseries::NetCdfSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/)**  |
+| class | **[datatypes::timeseries::TimeSeriesLibraryDescription](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/)**  |
+| class | **[datatypes::timeseries::TimeSeriesSourceInfoBuilder](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/)** <br>An abstract class to allow callers to inject custom time series data sources into a time series library.  |
+| class | **[datatypes::timeseries::TimeSeriesStoreFactory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/)**  |
+| class | **[datatypes::timeseries::TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/)** <br>Library of time series, for high level access to sources of time series that nmay have varying on-disk representations.  |
 
 ## Defines
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[TIME_DIM_TYPE_DATA_DIMENSION](/cpp/Files/time__series__store_8hpp/#define-time-dim-type-data-dimension)**  |
-|  | **[COLLECTION_DIM_TYPE_DATA_DIMENSION](/cpp/Files/time__series__store_8hpp/#define-collection-dim-type-data-dimension)**  |
-|  | **[ENSEMBLE_DIM_TYPE_DATA_DIMENSION](/cpp/Files/time__series__store_8hpp/#define-ensemble-dim-type-data-dimension)**  |
+|  | **[TIME_DIM_TYPE_DATA_DIMENSION](/uchronia-ts-doc/cpp/Files/time__series__store_8hpp/#define-time-dim-type-data-dimension)**  |
+|  | **[COLLECTION_DIM_TYPE_DATA_DIMENSION](/uchronia-ts-doc/cpp/Files/time__series__store_8hpp/#define-collection-dim-type-data-dimension)**  |
+|  | **[ENSEMBLE_DIM_TYPE_DATA_DIMENSION](/uchronia-ts-doc/cpp/Files/time__series__store_8hpp/#define-ensemble-dim-type-data-dimension)**  |
 
 
 
@@ -757,4 +757,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

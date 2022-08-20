@@ -16,27 +16,27 @@ title: datatypes::timeseries::TimeSeriesLibraryDescription
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[AddSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addsingle)**(const string & dataId, const [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
-| void | **[AddEnsembleTs](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addensemblets)**(const string & dataId, const [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
-| void | **[AddTsEnsembleTs](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addtsensemblets)**(const string & dataId, const [TimeSeriesSourceInfo](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
-| boost::filesystem::path | **[GetFullPath](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getfullpath)**(const string & relativePath) const |
-| string | **[GetRootDirectory](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getrootdirectory)**() const |
-| vector< string > | **[GetDataIdSingle](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidsingle)**() const |
-| vector< string > | **[GetDataIdEnsembleTs](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidensemblets)**() const |
-| vector< string > | **[GetDataIdTsEnsembleTs](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidtsensemblets)**() const |
-| std::map< string, string > | **[GetSerializableConfiguration](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getserializableconfiguration)**(const string & dataId, const vector< string > & mandatoryKeys =vector< string >({})) const |
-| void | **[SetLoadedFileName](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-setloadedfilename)**(const string & fileName) |
-| void | **[SetDataPath](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-setdatapath)**(const string & dataPath) |
-| string | **[GetDataPath](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdatapath)**() const |
-| [SingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createsingletimeseriesstore)**(const string & dataId) const |
-| [EnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createensembletimeseriesstore)**(const string & dataId) const |
-| [TimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createtimeseriesensembletimeseriesstore)**(const string & dataId) const |
+| void | **[AddSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addsingle)**(const string & dataId, const [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
+| void | **[AddEnsembleTs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addensemblets)**(const string & dataId, const [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
+| void | **[AddTsEnsembleTs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-addtsensemblets)**(const string & dataId, const [TimeSeriesSourceInfo](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/) & t) |
+| boost::filesystem::path | **[GetFullPath](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getfullpath)**(const string & relativePath) const |
+| string | **[GetRootDirectory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getrootdirectory)**() const |
+| vector< string > | **[GetDataIdSingle](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidsingle)**() const |
+| vector< string > | **[GetDataIdEnsembleTs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidensemblets)**() const |
+| vector< string > | **[GetDataIdTsEnsembleTs](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdataidtsensemblets)**() const |
+| std::map< string, string > | **[GetSerializableConfiguration](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getserializableconfiguration)**(const string & dataId, const vector< string > & mandatoryKeys =vector< string >({})) const |
+| void | **[SetLoadedFileName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-setloadedfilename)**(const string & fileName) |
+| void | **[SetDataPath](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-setdatapath)**(const string & dataPath) |
+| string | **[GetDataPath](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-getdatapath)**() const |
+| [SingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/)< double > * | **[CreateSingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createsingletimeseriesstore)**(const string & dataId) const |
+| [EnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/)< double > * | **[CreateEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createensembletimeseriesstore)**(const string & dataId) const |
+| [TimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/)< double > * | **[CreateTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#function-createtimeseriesensembletimeseriesstore)**(const string & dataId) const |
 
 ## Friends
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[TimeSeriesLibrary](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#friend-timeserieslibrary)**  |
+| class | **[TimeSeriesLibrary](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/#friend-timeserieslibrary)**  |
 
 ## Public Functions Documentation
 
@@ -182,4 +182,4 @@ friend class TimeSeriesLibrary(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

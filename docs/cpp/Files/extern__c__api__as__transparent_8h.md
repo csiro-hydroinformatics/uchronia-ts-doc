@@ -11,12 +11,12 @@ title: datatypes/extern_c_api_as_transparent.h
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[TIME_SERIES_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr)**  |
-|  | **[ENSEMBLE_DATA_SET_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr)**  |
-|  | **[ENSEMBLE_FORECAST_TIME_SERIES_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr)**  |
-|  | **[ENSEMBLE_TIME_SERIES_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-time-series-ptr)**  |
-|  | **[ENSEMBLE_PTR_TIME_SERIES_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr)**  |
-|  | **[TIME_SERIES_PROVIDER_PTR](/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr)**  |
+|  | **[TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-ptr)**  |
+|  | **[ENSEMBLE_DATA_SET_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-data-set-ptr)**  |
+|  | **[ENSEMBLE_FORECAST_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-forecast-time-series-ptr)**  |
+|  | **[ENSEMBLE_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-time-series-ptr)**  |
+|  | **[ENSEMBLE_PTR_TIME_SERIES_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-ensemble-ptr-time-series-ptr)**  |
+|  | **[TIME_SERIES_PROVIDER_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/#define-time-series-provider-ptr)**  |
 
 
 
@@ -84,4 +84,4 @@ title: datatypes/extern_c_api_as_transparent.h
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

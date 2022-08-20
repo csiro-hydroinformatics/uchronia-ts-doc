@@ -11,23 +11,23 @@ title: datatypes/time_series_strategies.hpp
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::timeseries](/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::timeseries::StoragePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/)** <br>An interface for classes that can handle the storage of data for time series.  |
-| class | **[datatypes::timeseries::MissingValuePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/)** <br>An interface for classes that define missing values in time series.  |
-| class | **[datatypes::timeseries::DefaultMissingFloatingPointPolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/)**  |
-| class | **[datatypes::timeseries::NullPointerIsMissingPolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)**  |
-| class | **[datatypes::timeseries::NegativeIsMissingFloadingPointPolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/)**  |
-| class | **[datatypes::timeseries::StlVectorStorage](/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/)**  |
-| class | **[datatypes::timeseries::SharedVectorStorage](/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/)** <br>A storage strategy for time serie such that data is a shared state amongst several time series.  |
-| class | **[datatypes::timeseries::MemoryCachingStorageWriter](/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/)**  |
-| class | **[datatypes::timeseries::EnsembleStoragePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/)**  |
-| class | **[datatypes::timeseries::StdVectorEnsembleStoragePolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/)**  |
+| class | **[datatypes::timeseries::StoragePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/)** <br>An interface for classes that can handle the storage of data for time series.  |
+| class | **[datatypes::timeseries::MissingValuePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/)** <br>An interface for classes that define missing values in time series.  |
+| class | **[datatypes::timeseries::DefaultMissingFloatingPointPolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/)**  |
+| class | **[datatypes::timeseries::NullPointerIsMissingPolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)**  |
+| class | **[datatypes::timeseries::NegativeIsMissingFloadingPointPolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/)**  |
+| class | **[datatypes::timeseries::StlVectorStorage](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/)**  |
+| class | **[datatypes::timeseries::SharedVectorStorage](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/)** <br>A storage strategy for time serie such that data is a shared state amongst several time series.  |
+| class | **[datatypes::timeseries::MemoryCachingStorageWriter](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/)**  |
+| class | **[datatypes::timeseries::EnsembleStoragePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/)**  |
+| class | **[datatypes::timeseries::StdVectorEnsembleStoragePolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/)**  |
 
 
 
@@ -683,4 +683,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

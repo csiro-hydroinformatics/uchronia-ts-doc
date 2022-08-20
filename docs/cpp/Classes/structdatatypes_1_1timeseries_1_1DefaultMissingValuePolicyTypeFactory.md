@@ -16,7 +16,7 @@ title: datatypes::timeseries::DefaultMissingValuePolicyTypeFactory
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef [IfThenElse](/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/)< std::is_pointer< T >::value, [NullPointerIsMissingPolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)< T >, [DefaultMissingFloatingPointPolicy](/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/)< T > >::ResultT | **[type](/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/#typedef-type)**  |
+| typedef [IfThenElse](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/)< std::is_pointer< T >::value, [NullPointerIsMissingPolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/)< T >, [DefaultMissingFloatingPointPolicy](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/)< T > >::ResultT | **[type](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/#typedef-type)**  |
 
 ## Detailed Description
 
@@ -36,4 +36,4 @@ typedef IfThenElse< std::is_pointer<T>::value, NullPointerIsMissingPolicy<T>, De
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

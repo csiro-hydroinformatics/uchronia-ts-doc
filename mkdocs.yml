@@ -13,6 +13,8 @@ site_description: >-
 repo_name: csiro-hydroinformatics/uchronia-time-series
 repo_url: https://github.com/csiro-hydroinformatics/uchronia-time-series
 
+site_url: https://csiro-hydroinformatics.github.io/uchronia-ts-doc/
+
 docs_dir: './docs'
 
 # Copyright

@@ -16,17 +16,17 @@ title: datatypes::exceptions::ExceptionUtilities
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[ThrowInvalidArgument](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidargument)**(const string & msg ="Invalid argument") |
-| void | **[ThrowInvalidOperation](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidoperation)**(const string & msg ="Invalid operation") |
-| void | **[ThrowInvalidArgumentModelVariableId](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidargumentmodelvariableid)**(const string & variableId) |
-| void | **[ThrowNotImplemented](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotimplemented)**(const string & msg ="Not implemented") |
-| void | **[ThrowNotSupported](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotsupported)**(const string & typeName, const string & methodName) |
-| void | **[ThrowNotSupported](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotsupported)**(const string & msg) |
-| void | **[ThrowOutOfRange](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwoutofrange)**(const string & msg ="Operation led to a state out of range") |
-| template <typename T \> <br>void | **[CheckInRange](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkinrange)**(T value, T min, T max, const string & variableName) |
-| void | **[CheckFileExists](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkfileexists)**(const boost::filesystem::path & p) |
-| void | **[CheckFileDoesNotExist](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkfiledoesnotexist)**(const boost::filesystem::path & p) |
-| void | **[CheckExists](/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkexists)**(const boost::filesystem::path & p) |
+| void | **[ThrowInvalidArgument](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidargument)**(const string & msg ="Invalid argument") |
+| void | **[ThrowInvalidOperation](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidoperation)**(const string & msg ="Invalid operation") |
+| void | **[ThrowInvalidArgumentModelVariableId](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwinvalidargumentmodelvariableid)**(const string & variableId) |
+| void | **[ThrowNotImplemented](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotimplemented)**(const string & msg ="Not implemented") |
+| void | **[ThrowNotSupported](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotsupported)**(const string & typeName, const string & methodName) |
+| void | **[ThrowNotSupported](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-thrownotsupported)**(const string & msg) |
+| void | **[ThrowOutOfRange](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-throwoutofrange)**(const string & msg ="Operation led to a state out of range") |
+| template <typename T \> <br>void | **[CheckInRange](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkinrange)**(T value, T min, T max, const string & variableName) |
+| void | **[CheckFileExists](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkfileexists)**(const boost::filesystem::path & p) |
+| void | **[CheckFileDoesNotExist](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkfiledoesnotexist)**(const boost::filesystem::path & p) |
+| void | **[CheckExists](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/#function-checkexists)**(const boost::filesystem::path & p) |
 
 ## Public Functions Documentation
 
@@ -136,4 +136,4 @@ static inline void CheckExists(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

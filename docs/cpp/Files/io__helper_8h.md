@@ -11,14 +11,14 @@ title: datatypes/io_helper.h
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::io](/cpp/Namespaces/namespacedatatypes_1_1io/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::io](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1io/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::io::IoHelper](/cpp/Classes/classdatatypes_1_1io_1_1IoHelper/)**  |
+| class | **[datatypes::io::IoHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1io_1_1IoHelper/)**  |
 
 
 
@@ -55,4 +55,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

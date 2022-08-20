@@ -11,9 +11,9 @@ title: datatypes/setup_exports.h
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[USING_MOIRAI](/cpp/Files/setup__exports_8h/#define-using-moirai)**  |
-|  | **[DATATYPES_DLL_LIB](/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)**  |
-|  | **[TEMPLATE_SPECIALIZATION_EXTERN](/cpp/Files/setup__exports_8h/#define-template-specialization-extern)**  |
+|  | **[USING_MOIRAI](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-using-moirai)**  |
+|  | **[DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)**  |
+|  | **[TEMPLATE_SPECIALIZATION_EXTERN](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-template-specialization-extern)**  |
 
 
 
@@ -89,4 +89,4 @@ title: datatypes/setup_exports.h
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

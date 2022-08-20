@@ -11,20 +11,20 @@ title: datatypes/datatypes_test_helpers.h
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::tests](/cpp/Namespaces/namespacedatatypes_1_1tests/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::tests](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1tests/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::tests::FileSystemHelper](/cpp/Classes/classdatatypes_1_1tests_1_1FileSystemHelper/)**  |
-| class | **[datatypes::tests::TempFileCleaner](/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/)**  |
-| class | **[datatypes::tests::TestDataLocationHelper](/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/)**  |
-| class | **[datatypes::tests::TestSingleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1tests_1_1TestSingleTimeSeriesStore/)**  |
-| class | **[datatypes::tests::TestTimeSeriesEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesEnsembleTimeSeriesStore/)** <br>A time series store for unit tests.  |
-| class | **[datatypes::tests::TestEnsembleTimeSeriesStore](/cpp/Classes/classdatatypes_1_1tests_1_1TestEnsembleTimeSeriesStore/)**  |
-| class | **[datatypes::tests::TestTimeSeriesStoreFactory](/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesStoreFactory/)**  |
+| class | **[datatypes::tests::FileSystemHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1FileSystemHelper/)**  |
+| class | **[datatypes::tests::TempFileCleaner](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/)**  |
+| class | **[datatypes::tests::TestDataLocationHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/)**  |
+| class | **[datatypes::tests::TestSingleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestSingleTimeSeriesStore/)**  |
+| class | **[datatypes::tests::TestTimeSeriesEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesEnsembleTimeSeriesStore/)** <br>A time series store for unit tests.  |
+| class | **[datatypes::tests::TestEnsembleTimeSeriesStore](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestEnsembleTimeSeriesStore/)**  |
+| class | **[datatypes::tests::TestTimeSeriesStoreFactory](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesStoreFactory/)**  |
 
 
 
@@ -223,4 +223,4 @@ namespace datatypes {
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

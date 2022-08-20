@@ -16,19 +16,19 @@ title: datatypes::timeseries::DataDimensionDescriptor
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**(const string & type, const string & dimname ="", size_t size =0) |
-| | **[DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**(const [DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & src) |
-| | **[DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**([DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) && src) |
-| [DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-operator=)**(const [DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & src) |
-| [DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & | **[operator=](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-operator=)**([DataDimensionDescriptor](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) && src) |
+| | **[DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**(const string & type, const string & dimname ="", size_t size =0) |
+| | **[DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**(const [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & src) |
+| | **[DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-datadimensiondescriptor)**([DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) && src) |
+| [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-operator=)**(const [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & src) |
+| [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) & | **[operator=](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#function-operator=)**([DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) && src) |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| string | **[DimensionType](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-dimensiontype)**  |
-| string | **[DimensionName](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-dimensionname)**  |
-| size_t | **[Size](/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-size)**  |
+| string | **[DimensionType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-dimensiontype)**  |
+| string | **[DimensionName](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-dimensionname)**  |
+| size_t | **[Size](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/#variable-size)**  |
 
 ## Public Functions Documentation
 
@@ -104,4 +104,4 @@ size_t Size = 0;
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

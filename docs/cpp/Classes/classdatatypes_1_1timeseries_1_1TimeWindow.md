@@ -17,8 +17,8 @@ An object that represents a time window, defining subset/trim operations on time
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[TimeWindow](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/#function-timewindow)**(const ptime & startDate, const ptime & endDate) |
-| Tts * | **[Trim](/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/#function-trim)**(const Tts & timeSeries) const |
+| | **[TimeWindow](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/#function-timewindow)**(const ptime & startDate, const ptime & endDate) |
+| Tts * | **[Trim](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/#function-trim)**(const Tts & timeSeries) const |
 
 ## Detailed Description
 
@@ -56,4 +56,4 @@ inline Tts * Trim(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

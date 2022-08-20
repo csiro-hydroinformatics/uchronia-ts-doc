@@ -16,7 +16,7 @@ title: moirai::known_conversions< TimeSeriesProvider< double > >
 
 |                | Name           |
 | -------------- | -------------- |
-| TimeSeriesProvider< double > * | **[dyn_cast](/cpp/Classes/structmoirai_1_1known__conversions_3_01TimeSeriesProvider_3_01double_01_4_01_4/#function-dyn-cast)**(void * p, const typeinfo & tinfo) |
+| TimeSeriesProvider< double > * | **[dyn_cast](/uchronia-ts-doc/cpp/Classes/structmoirai_1_1known__conversions_3_01TimeSeriesProvider_3_01double_01_4_01_4/#function-dyn-cast)**(void * p, const typeinfo & tinfo) |
 
 ## Public Functions Documentation
 
@@ -32,4 +32,4 @@ static inline TimeSeriesProvider< double > * dyn_cast(
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000

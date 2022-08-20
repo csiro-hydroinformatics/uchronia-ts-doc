@@ -11,56 +11,56 @@ title: datatypes/common.h
 
 | Name           |
 | -------------- |
-| **[datatypes](/cpp/Namespaces/namespacedatatypes/)**  |
-| **[datatypes::utils](/cpp/Namespaces/namespacedatatypes_1_1utils/)**  |
-| **[datatypes::interop](/cpp/Namespaces/namespacedatatypes_1_1interop/)**  |
-| **[boost::posix_time](/cpp/Namespaces/namespaceboost_1_1posix__time/)**  |
-| **[boost::gregorian](/cpp/Namespaces/namespaceboost_1_1gregorian/)**  |
+| **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
+| **[datatypes::utils](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/)**  |
+| **[datatypes::interop](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1interop/)**  |
+| **[boost::posix_time](/uchronia-ts-doc/cpp/Namespaces/namespaceboost_1_1posix__time/)**  |
+| **[boost::gregorian](/uchronia-ts-doc/cpp/Namespaces/namespaceboost_1_1gregorian/)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::utils::STLHelper](/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/)**  |
-| class | **[datatypes::utils::IfThenElse< true, Ta, Tb >](/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/)**  |
-| class | **[datatypes::utils::IfThenElse< false, Ta, Tb >](/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/)**  |
-| class | **[datatypes::utils::ValueTypeVectorDispose](/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/)**  |
-| class | **[datatypes::utils::PointerTypeVectorDispose](/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/)**  |
-| struct | **[datatypes::utils::DisposeVectorTypeFactory](/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/)**  |
-| class | **[datatypes::utils::bad_lexical_cast](/cpp/Classes/classdatatypes_1_1utils_1_1bad__lexical__cast/)** <br>A [bad_lexical_cast]() that inherits from std::exception, unlike Boost's. Needed for graceful C API interop.  |
-| class | **[datatypes::utils::StringProcessing](/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/)**  |
-| class | **[datatypes::interop::MissingValueHandling](/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)**  |
+| class | **[datatypes::utils::STLHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/)**  |
+| class | **[datatypes::utils::IfThenElse< true, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/)**  |
+| class | **[datatypes::utils::IfThenElse< false, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/)**  |
+| class | **[datatypes::utils::ValueTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/)**  |
+| class | **[datatypes::utils::PointerTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/)**  |
+| struct | **[datatypes::utils::DisposeVectorTypeFactory](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/)**  |
+| class | **[datatypes::utils::bad_lexical_cast](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1bad__lexical__cast/)** <br>A [bad_lexical_cast]() that inherits from std::exception, unlike Boost's. Needed for graceful C API interop.  |
+| class | **[datatypes::utils::StringProcessing](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/)**  |
+| class | **[datatypes::interop::MissingValueHandling](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)**  |
 
 ## Defines
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[DEFAULT_MISSING_DATA_VALUE](/cpp/Files/common_8h/#define-default-missing-data-value)**  |
-|  | **[DEFAULT_STATION_IDENTIFIER](/cpp/Files/common_8h/#define-default-station-identifier)**  |
-|  | **[STRDUP](/cpp/Files/common_8h/#define-strdup)**  |
-|  | **[STLSTR_TO_ANSISTR](/cpp/Files/common_8h/#define-stlstr-to-ansistr)**(x)  |
-|  | **[DATATYPES_DOUBLE_PRECISION_ID](/cpp/Files/common_8h/#define-datatypes-double-precision-id)**  |
-|  | **[DATATYPES_SINGLE_PRECISION_ID](/cpp/Files/common_8h/#define-datatypes-single-precision-id)**  |
-|  | **[DATATYPES_FOUR_DIMENSIONS_DATA](/cpp/Files/common_8h/#define-datatypes-four-dimensions-data)**  |
-|  | **[DATATYPES_THREE_DIMENSIONS_DATA](/cpp/Files/common_8h/#define-datatypes-three-dimensions-data)**  |
-|  | **[DATATYPES_TWO_DIMENSIONS_DATA](/cpp/Files/common_8h/#define-datatypes-two-dimensions-data)**  |
-|  | **[SWIFT_TIME_UNIT_MINUTE](/cpp/Files/common_8h/#define-swift-time-unit-minute)**  |
-|  | **[SWIFT_TIME_UNIT_HOUR](/cpp/Files/common_8h/#define-swift-time-unit-hour)**  |
-|  | **[SWIFT_TIME_UNIT_DAY](/cpp/Files/common_8h/#define-swift-time-unit-day)**  |
-|  | **[SWIFT_TIME_UNIT_MONTH](/cpp/Files/common_8h/#define-swift-time-unit-month)**  |
-|  | **[FILE_KEY](/cpp/Files/common_8h/#define-file-key)**  |
-|  | **[ID_DATA_KEY](/cpp/Files/common_8h/#define-id-data-key)**  |
-|  | **[VAR_KEY](/cpp/Files/common_8h/#define-var-key)**  |
-|  | **[IDENTIFIER_KEY](/cpp/Files/common_8h/#define-identifier-key)**  |
-|  | **[INDEX_KEY](/cpp/Files/common_8h/#define-index-key)**  |
-|  | **[TYPE_KEY](/cpp/Files/common_8h/#define-type-key)**  |
-|  | **[SINGLE_SERIES_COLLECTION_TYPE_ID](/cpp/Files/common_8h/#define-single-series-collection-type-id)** <br>A string identifier for a multivariate time series (structurally an ensemble, but not semantically, e.g. TS for multiple sites)  |
-|  | **[SINGLE_SERIES_TYPE_ID](/cpp/Files/common_8h/#define-single-series-type-id)** <br>A string identifier for a single univariate time series.  |
-|  | **[ENSEMBLE_SERIES_TYPE_ID](/cpp/Files/common_8h/#define-ensemble-series-type-id)** <br>A string identifier for ensemble of time series (e.g. ensemble forecasts for one lead time)  |
-|  | **[TIME_SERIES_ENSEMBLE_SERIES_TYPE_ID](/cpp/Files/common_8h/#define-time-series-ensemble-series-type-id)** <br>A string identifier for time series of ensemble of time series (e.g. ensemble forecasts time series)  |
-|  | **[TIME_SERIES_SERIES_COLLECTION_TYPE_ID](/cpp/Files/common_8h/#define-time-series-series-collection-type-id)** <br>A string identifier for time series of collection of time series (e.g. forecasts for multiple sites)  |
-|  | **[STORAGE_TYPE_SINGLE_NETCDF_FILE](/cpp/Files/common_8h/#define-storage-type-single-netcdf-file)**  |
-|  | **[STORAGE_TYPE_MULTIPLE_NETCDF_FILES](/cpp/Files/common_8h/#define-storage-type-multiple-netcdf-files)**  |
+|  | **[DEFAULT_MISSING_DATA_VALUE](/uchronia-ts-doc/cpp/Files/common_8h/#define-default-missing-data-value)**  |
+|  | **[DEFAULT_STATION_IDENTIFIER](/uchronia-ts-doc/cpp/Files/common_8h/#define-default-station-identifier)**  |
+|  | **[STRDUP](/uchronia-ts-doc/cpp/Files/common_8h/#define-strdup)**  |
+|  | **[STLSTR_TO_ANSISTR](/uchronia-ts-doc/cpp/Files/common_8h/#define-stlstr-to-ansistr)**(x)  |
+|  | **[DATATYPES_DOUBLE_PRECISION_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-datatypes-double-precision-id)**  |
+|  | **[DATATYPES_SINGLE_PRECISION_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-datatypes-single-precision-id)**  |
+|  | **[DATATYPES_FOUR_DIMENSIONS_DATA](/uchronia-ts-doc/cpp/Files/common_8h/#define-datatypes-four-dimensions-data)**  |
+|  | **[DATATYPES_THREE_DIMENSIONS_DATA](/uchronia-ts-doc/cpp/Files/common_8h/#define-datatypes-three-dimensions-data)**  |
+|  | **[DATATYPES_TWO_DIMENSIONS_DATA](/uchronia-ts-doc/cpp/Files/common_8h/#define-datatypes-two-dimensions-data)**  |
+|  | **[SWIFT_TIME_UNIT_MINUTE](/uchronia-ts-doc/cpp/Files/common_8h/#define-swift-time-unit-minute)**  |
+|  | **[SWIFT_TIME_UNIT_HOUR](/uchronia-ts-doc/cpp/Files/common_8h/#define-swift-time-unit-hour)**  |
+|  | **[SWIFT_TIME_UNIT_DAY](/uchronia-ts-doc/cpp/Files/common_8h/#define-swift-time-unit-day)**  |
+|  | **[SWIFT_TIME_UNIT_MONTH](/uchronia-ts-doc/cpp/Files/common_8h/#define-swift-time-unit-month)**  |
+|  | **[FILE_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-file-key)**  |
+|  | **[ID_DATA_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-id-data-key)**  |
+|  | **[VAR_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-var-key)**  |
+|  | **[IDENTIFIER_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-identifier-key)**  |
+|  | **[INDEX_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-index-key)**  |
+|  | **[TYPE_KEY](/uchronia-ts-doc/cpp/Files/common_8h/#define-type-key)**  |
+|  | **[SINGLE_SERIES_COLLECTION_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-single-series-collection-type-id)** <br>A string identifier for a multivariate time series (structurally an ensemble, but not semantically, e.g. TS for multiple sites)  |
+|  | **[SINGLE_SERIES_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-single-series-type-id)** <br>A string identifier for a single univariate time series.  |
+|  | **[ENSEMBLE_SERIES_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-ensemble-series-type-id)** <br>A string identifier for ensemble of time series (e.g. ensemble forecasts for one lead time)  |
+|  | **[TIME_SERIES_ENSEMBLE_SERIES_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-time-series-ensemble-series-type-id)** <br>A string identifier for time series of ensemble of time series (e.g. ensemble forecasts time series)  |
+|  | **[TIME_SERIES_SERIES_COLLECTION_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-time-series-series-collection-type-id)** <br>A string identifier for time series of collection of time series (e.g. forecasts for multiple sites)  |
+|  | **[STORAGE_TYPE_SINGLE_NETCDF_FILE](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-single-netcdf-file)**  |
+|  | **[STORAGE_TYPE_MULTIPLE_NETCDF_FILES](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-multiple-netcdf-files)**  |
 
 
 
@@ -747,4 +747,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 18:35:57 +1000
+Updated on 2022-08-20 at 19:28:22 +1000
