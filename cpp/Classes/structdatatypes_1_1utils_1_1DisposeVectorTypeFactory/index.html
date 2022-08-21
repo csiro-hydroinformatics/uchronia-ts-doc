@@ -524,7 +524,7 @@
 
 
 <h1 id="datatypesutilsdisposevectortypefactory">datatypes::utils::DisposeVectorTypeFactory<a class="headerlink" href="#datatypesutilsdisposevectortypefactory" title="Permanent link">&para;</a></h1>
-<p><a href="#detailed-description">More...</a></p>
+<p>Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types.  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;common.h&gt;</code></p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
 <table>
@@ -545,12 +545,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">datatypes</span><span class="o">::</span><span class="n">utils</span><span class="o">::</span><span class="n">DisposeVectorTypeFactory</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types. </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> type of items in the vector to clear/dispose of. </li>
+</ul>
 <h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="typedef-type">typedef type<a class="headerlink" href="#typedef-type" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">IfThenElse</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">is_pointer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">ValueTypeVectorDispose</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">PointerTypeVectorDispose</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">ResultT</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">utils</span><span class="o">::</span><span class="n">DisposeVectorTypeFactory</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
+<p>Updated on 2022-08-21 at 18:10:33 +1000</p>
 
               
             </article>

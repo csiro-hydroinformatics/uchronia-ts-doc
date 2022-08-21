@@ -598,19 +598,19 @@
 <tbody>
 <tr>
 <td>class</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/">datatypes::utils::STLHelper</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/">datatypes::utils::STLHelper</a></strong> <br>Helper functions with features found in other languages but not found in the C++ standard template library. Many of these features are not used in this library (uchronia) as such, but are here as a place of convenience for dependent modelling libraries.</td>
 </tr>
 <tr>
 <td>class</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/">datatypes::utils::IfThenElse</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/">datatypes::utils::IfThenElse</a></strong> <br>Yield second or third argument depending on first argument. Could not find an easy to use if_then_else in the STL or Boost. <a href="">IfThenElse</a> will probably be replaced. Primary template: yield second or third argument depending on first argument.</td>
 </tr>
 <tr>
 <td>class</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/">datatypes::utils::IfThenElse&lt; true, Ta, Tb &gt;</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/">datatypes::utils::IfThenElse&lt; true, Ta, Tb &gt;</a></strong> <br>partial specialization: true yields second argument</td>
 </tr>
 <tr>
 <td>class</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/">datatypes::utils::IfThenElse&lt; false, Ta, Tb &gt;</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/">datatypes::utils::IfThenElse&lt; false, Ta, Tb &gt;</a></strong> <br>partial specialization: true yields third argument</td>
 </tr>
 <tr>
 <td>class</td>
@@ -622,7 +622,7 @@
 </tr>
 <tr>
 <td>struct</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/">datatypes::utils::DisposeVectorTypeFactory</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/">datatypes::utils::DisposeVectorTypeFactory</a></strong> <br>Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types.</td>
 </tr>
 <tr>
 <td>class</td>
@@ -630,7 +630,7 @@
 </tr>
 <tr>
 <td>class</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/">datatypes::utils::StringProcessing</a></strong></td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/">datatypes::utils::StringProcessing</a></strong> <br>Helper class with string processing related functions. These emulate methods found in other languages such as C#, R, etc.</td>
 </tr>
 </tbody>
 </table>
@@ -661,23 +661,23 @@
 </tr>
 <tr>
 <td>template &lt;typename Source &gt; <br>string</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-tostring">ToString</a></strong>(const Source &amp; value)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-tostring">ToString</a></strong>(const Source &amp; value)<br>Wraps boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message.</td>
 </tr>
 <tr>
 <td>template &lt;class TTo &gt; <br>TTo *</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-converttoarray">ConvertToArray</a></strong>(const vector&lt; string &gt; &amp; src)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-converttoarray">ConvertToArray</a></strong>(const vector&lt; string &gt; &amp; src)<br>Converts string items to an array, casting strings. Wraps calls to boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message.</td>
 </tr>
 <tr>
 <td>template &lt;class TFrom ,class TTo &gt; <br>TTo *</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-converttoarray">ConvertToArray</a></strong>(const vector&lt; TFrom &gt; &amp; src)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-converttoarray">ConvertToArray</a></strong>(const vector&lt; TFrom &gt; &amp; src)<br>Converts string items to an array, casting strings (C casts for each item). rethrows an exception that inherits from std::exception and a more useful error message for the end user (better C API support).</td>
 </tr>
 <tr>
 <td>template &lt;class TFrom ,class TTo &gt; <br>vector&lt; TTo &gt;</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-convert">Convert</a></strong>(const vector&lt; TFrom &gt; &amp; src)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-convert">Convert</a></strong>(const vector&lt; TFrom &gt; &amp; src)<br>Converts each vector items from one type to another. rethrows an exception that inherits from std::exception and a more useful error message for the end user (better C API support).</td>
 </tr>
 <tr>
 <td>template &lt;class TTo &gt; <br>vector&lt; TTo &gt;</td>
-<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-convert">Convert</a></strong>(const vector&lt; string &gt; &amp; src)</td>
+<td><strong><a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/#function-convert">Convert</a></strong>(const vector&lt; string &gt; &amp; src)<br>Converts string items to an array, casting strings. Wraps calls to boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message.</td>
 </tr>
 <tr>
 <td>template &lt;typename T  =boost::posix_time::ptime&gt; <br>T</td>
@@ -719,12 +719,14 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Source</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<p>Wraps boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message. </p>
 <h3 id="function-converttoarray">function ConvertToArray<a class="headerlink" href="#function-converttoarray" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">static</span><span class="w"> </span><span class="n">TTo</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ConvertToArray</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src</span><span class="w"></span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<p>Converts string items to an array, casting strings. Wraps calls to boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message. </p>
 <h3 id="function-converttoarray_1">function ConvertToArray<a class="headerlink" href="#function-converttoarray_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TFrom</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
@@ -732,6 +734,7 @@
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TFrom</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src</span><span class="w"></span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<p>Converts string items to an array, casting strings (C casts for each item). rethrows an exception that inherits from std::exception and a more useful error message for the end user (better C API support). </p>
 <h3 id="function-convert">function Convert<a class="headerlink" href="#function-convert" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TFrom</span><span class="w"> </span><span class="p">,</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
@@ -739,12 +742,14 @@
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TFrom</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src</span><span class="w"></span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<p>Converts each vector items from one type to another. rethrows an exception that inherits from std::exception and a more useful error message for the end user (better C API support). </p>
 <h3 id="function-convert_1">function Convert<a class="headerlink" href="#function-convert_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TTo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Convert</span><span class="p">(</span><span class="w"></span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">src</span><span class="w"></span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
+<p>Converts string items to an array, casting strings. Wraps calls to boost::lexical_cast with a try/catch; rethrows an exception that inherits from std::exception and a more useful error message. </p>
 <h3 id="function-createtime">function CreateTime<a class="headerlink" href="#function-createtime" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w">  </span><span class="o">=</span><span class="n">boost</span><span class="o">::</span><span class="n">posix_time</span><span class="o">::</span><span class="n">ptime</span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">T</span><span class="w"> </span><span class="n">CreateTime</span><span class="p">(</span><span class="w"></span>
@@ -757,7 +762,7 @@
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
+<p>Updated on 2022-08-21 at 18:10:33 +1000</p>
 
               
             </article>

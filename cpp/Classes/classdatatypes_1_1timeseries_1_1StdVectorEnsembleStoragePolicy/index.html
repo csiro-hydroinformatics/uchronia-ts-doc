@@ -718,7 +718,7 @@
 
 
 <h1 id="datatypestimeseriesstdvectorensemblestoragepolicy">datatypes::timeseries::StdVectorEnsembleStoragePolicy<a class="headerlink" href="#datatypestimeseriesstdvectorensemblestoragepolicy" title="Permanent link">&para;</a></h1>
-<p><a href="#detailed-description">More...</a></p>
+<p>std::vector based storage policy  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;time_series_strategies.hpp&gt;</code></p>
 <p>Inherits from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/">datatypes::timeseries::EnsembleStoragePolicy&lt; TsType &gt;</a></p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
@@ -866,6 +866,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">TsType</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">StdVectorEnsembleStoragePolicy</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>std::vector based storage policy </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>TsType</strong> item type for this ensemble storage, e.g. <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries">TimeSeries</a></li>
+</ul>
 <h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="typedef-type">typedef Type<a class="headerlink" href="#typedef-type" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="n">TsType</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">StdVectorEnsembleStoragePolicy</span><span class="o">&lt;</span><span class="w"> </span><span class="n">TsType</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">Type</span><span class="p">;</span><span class="w"></span>
@@ -983,7 +988,7 @@
 </code></pre></div>
 <p><strong>Reimplements</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#function-operatorequalimpl">datatypes::timeseries::EnsembleStoragePolicy::OperatorEqualImpl</a></p>
 <hr />
-<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
+<p>Updated on 2022-08-21 at 18:10:33 +1000</p>
 
               
             </article>

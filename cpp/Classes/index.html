@@ -506,7 +506,7 @@
 </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1utils/">cinterop::utils</a></strong> </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/">datatypes</a></strong> <ul>
-<li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/">exceptions</a></strong> <ul>
+<li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/">exceptions</a></strong> <br>Helper function to build consistent informative error messages in exceptions with commonalities. <ul>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/">ExceptionUtilities</a></strong> </li>
 <li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/">RangeCheck</a></strong> </li>
 <li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/">RangeCheck&lt; size_t &gt;</a></strong> </li>
@@ -514,7 +514,7 @@
 </ul>
 </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1interop/">interop</a></strong> <ul>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/">MissingValueHandling</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/">MissingValueHandling</a></strong> <br>Ways for wrappers to specify to this API what special numeric value to use as 'missing value' code in time series interop. </li>
 </ul>
 </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1io/">io</a></strong> <ul>
@@ -534,14 +534,14 @@
 </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/">timeseries</a></strong> <ul>
 <li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/">CommonTypes</a></strong> <br>Typical ensemble and time series data types derived from a fundamental data type for each data item. </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">DataDescriptor</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/">DataDimensionDescriptor</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">DataDescriptor</a></strong> <br>Minimalist descriptor for a multidimensional time series. </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/">DataDimensionDescriptor</a></strong> <br>Basic descriptor for a named dimension of a data structure (time series). </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/">DataGeometryProvider</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/">DefaultMissingFloatingPointPolicy</a></strong> </li>
 <li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/">DefaultMissingValuePolicyTypeFactory</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/">DimensionsDefinitions</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/">EagerWriter</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/">EnsembleStoragePolicy</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/">EnsembleStoragePolicy</a></strong> <br>An interface for classes that can handle the storage of data for ensemble time series. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/">EnsembleTimeSeriesStore</a></strong> <br>Interface definition for storages of ensembles of univariate time series. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/">GlobalAttributes</a></strong> <br>A class to hold the global attributes of a file stored in the SWIFT netCDF format. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">IdentifiersProvider</a></strong> <br>An interface definition for objects that can provide hierarchical identification. </li>
@@ -552,7 +552,7 @@
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/">MultiFileTimeSeriesEnsembleTimeSeriesStore</a></strong> <br>An implementation of <a href="">TimeSeriesEnsembleTimeSeriesStore</a> such that the content of a time series is spread amongst several files. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/">MultiFileTsStorage</a></strong> <br>An implementation of <a href="">StoragePolicy</a> such that the content of a time series is spread amongst several files. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/">MultiTimeSeries</a></strong> <br>Template for time series with multiple values at time point; e.g. to hold multiple realizations of time series in an ensemble. </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/">NegativeIsMissingFloadingPointPolicy</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloatingPointPolicy/">NegativeIsMissingFloatingPointPolicy</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/">NetCdfEnsembleTimeSeriesStore</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/">NetCdfSingleSeriesStore</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/">NetCdfSourceInfo</a></strong> </li>
@@ -565,8 +565,8 @@
 </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleNetCdfFileStore/">SingleNetCdfFileStore</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/">SingleTimeSeriesStore</a></strong> <br>Interface definition for storages of single, univariate time series. </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/">StdVectorEnsembleStoragePolicy</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/">StlVectorStorage</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/">StdVectorEnsembleStoragePolicy</a></strong> <br>std::vector based storage policy </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/">StlVectorStorage</a></strong> <br>Storage policy; data items are stored in standard template library std::vector. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/">StoragePolicy</a></strong> <br>An interface for classes that can handle the storage of data for time series. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SwiftNetcdfStoreFactory/">SwiftNetcdfStoreFactory</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/">TTimeSeries</a></strong> <br>A template for univariate, single realisasion time series. </li>
@@ -589,7 +589,7 @@
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/">TimeWindow</a></strong> <br>An object that represents a time window, defining subset/trim operations on time series. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/">VariableAttributes</a></strong> <br>A class to hold the attributes of a netCDF variable stored in the SWIFT netCDF format. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/">VariableDefinition</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/">WritableTimeSeriesEnsembleTimeSeriesStore</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/">WritableTimeSeriesEnsembleTimeSeriesStore</a></strong> <br>Interface definition for writeable storages of time series of ensembles of time series. </li>
 <li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1ensemble__of/">ensemble_of</a></strong> </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries_1_1io/">io</a></strong> <ul>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/">ConfigFileHelper</a></strong> </li>
@@ -606,16 +606,16 @@
 </ul>
 </li>
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/">utils</a></strong> <ul>
-<li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/">DisposeVectorTypeFactory</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/">IfThenElse</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/">IfThenElse&lt; false, Ta, Tb &gt;</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/">IfThenElse&lt; true, Ta, Tb &gt;</a></strong> </li>
+<li><strong>struct <a href="/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/">DisposeVectorTypeFactory</a></strong> <br>Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types. </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/">IfThenElse</a></strong> <br>Yield second or third argument depending on first argument. Could not find an easy to use if_then_else in the STL or Boost. <a href="">IfThenElse</a> will probably be replaced. Primary template: yield second or third argument depending on first argument. </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/">IfThenElse&lt; false, Ta, Tb &gt;</a></strong> <br>partial specialization: true yields third argument </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/">IfThenElse&lt; true, Ta, Tb &gt;</a></strong> <br>partial specialization: true yields second argument </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/">PointerTypeVectorDispose</a></strong> </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/">STLHelper</a></strong> <ul>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/">STLHelper</a></strong> <br>Helper functions with features found in other languages but not found in the C++ standard template library. Many of these features are not used in this library (uchronia) as such, but are here as a place of convenience for dependent modelling libraries. <ul>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/">Comparer</a></strong> </li>
 </ul>
 </li>
-<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/">StringProcessing</a></strong> </li>
+<li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/">StringProcessing</a></strong> <br>Helper class with string processing related functions. These emulate methods found in other languages such as C#, R, etc. </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/">ValueTypeVectorDispose</a></strong> </li>
 <li><strong>class <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1bad__lexical__cast/">bad_lexical_cast</a></strong> <br>A <a href="">bad_lexical_cast</a> that inherits from std::exception, unlike Boost's. Needed for graceful C API interop. </li>
 </ul>
@@ -629,7 +629,7 @@
 <li><strong>namespace <a href="/uchronia-ts-doc/cpp/Namespaces/namespacestd/">std</a></strong> </li>
 </ul>
 <hr />
-<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
+<p>Updated on 2022-08-21 at 18:10:33 +1000</p>
 
               
             </article>

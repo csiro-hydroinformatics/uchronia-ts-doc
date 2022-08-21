@@ -663,7 +663,7 @@
 
 
 <h1 id="datatypestimeserieswritabletimeseriesensembletimeseriesstore">datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore<a class="headerlink" href="#datatypestimeserieswritabletimeseriesensembletimeseriesstore" title="Permanent link">&para;</a></h1>
-<p><a href="#detailed-description">More...</a></p>
+<p>Interface definition for writeable storages of time series of ensembles of time series.  <a href="#detailed-description">More...</a></p>
 <p><code>#include &lt;time_series_store.hpp&gt;</code></p>
 <p>Inherits from <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/">datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore&lt; T &gt;</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/">datatypes::timeseries::IdentifiersProvider</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/">datatypes::timeseries::TimeSeriesInfoProvider</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/">datatypes::timeseries::DataDescriptor</a></p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
@@ -889,6 +889,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">WritableTimeSeriesEnsembleTimeSeriesStore</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
+<p>Interface definition for writeable storages of time series of ensembles of time series. </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> The element type of the time series dealt with, typically double or float. </li>
+</ul>
 <h2 id="public-types-documentation">Public Types Documentation<a class="headerlink" href="#public-types-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="using-seriestype">using SeriesType<a class="headerlink" href="#using-seriestype" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">datatypes</span><span class="o">::</span><span class="n">timeseries</span><span class="o">::</span><span class="n">WritableTimeSeriesEnsembleTimeSeriesStore</span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">SeriesType</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="k">typename</span><span class="w"> </span><span class="nc">CommonTypes</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">SeriesType</span><span class="p">;</span><span class="w"></span>
@@ -977,7 +982,7 @@
 </code></pre></div>
 <p><strong>Reimplemented by</strong>: <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesEnsembleTimeSeriesStore/#function-settimestep">datatypes::tests::TestTimeSeriesEnsembleTimeSeriesStore::SetTimeStep</a>, <a href="/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/#function-settimestep">datatypes::timeseries::NetCdfTimeSeriesEnsembleTimeSeriesStore::SetTimeStep</a></p>
 <hr />
-<p>Updated on 2022-08-20 at 19:28:22 +1000</p>
+<p>Updated on 2022-08-21 at 18:10:33 +1000</p>
 
               
             </article>
