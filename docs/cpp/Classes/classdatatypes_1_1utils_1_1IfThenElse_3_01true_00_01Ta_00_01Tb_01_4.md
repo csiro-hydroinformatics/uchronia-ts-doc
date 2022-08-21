@@ -1,5 +1,6 @@
 ---
 title: datatypes::utils::IfThenElse< true, Ta, Tb >
+summary: partial specialization: true yields second argument 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::utils::IfThenElse< true, Ta, Tb >
 
 
 
- [More...](#detailed-description)
+partial specialization: true yields second argument  [More...](#detailed-description)
 
 
 `#include <common.h>`
@@ -26,6 +27,7 @@ typename Tb >
 class datatypes::utils::IfThenElse< true, Ta, Tb >;
 ```
 
+partial specialization: true yields second argument 
 ## Public Types Documentation
 
 ### typedef ResultT
@@ -37,4 +39,4 @@ typedef Ta datatypes::utils::IfThenElse< true, Ta, Tb >::ResultT;
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

@@ -1,5 +1,6 @@
 ---
 title: datatypes::utils::DisposeVectorTypeFactory
+summary: Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::utils::DisposeVectorTypeFactory
 
 
 
- [More...](#detailed-description)
+Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types.  [More...](#detailed-description)
 
 
 `#include <common.h>`
@@ -25,6 +26,12 @@ template <typename T >
 struct datatypes::utils::DisposeVectorTypeFactory;
 ```
 
+Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types. 
+
+**Template Parameters**: 
+
+  * **T** type of items in the vector to clear/dispose of. 
+
 ## Public Types Documentation
 
 ### typedef type
@@ -36,4 +43,4 @@ typedef IfThenElse< std::is_pointer<T>::value, ValueTypeVectorDispose<T>, Pointe
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

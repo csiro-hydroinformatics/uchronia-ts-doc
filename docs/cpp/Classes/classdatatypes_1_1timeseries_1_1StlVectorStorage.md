@@ -1,5 +1,6 @@
 ---
 title: datatypes::timeseries::StlVectorStorage
+summary: Storage policy; data items are stored in standard template library std::vector. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::timeseries::StlVectorStorage
 
 
 
- [More...](#detailed-description)
+Storage policy; data items are stored in standard template library std::vector.  [More...](#detailed-description)
 
 
 `#include <time_series_strategies.hpp>`
@@ -62,6 +63,12 @@ Inherits from [datatypes::timeseries::StoragePolicy< double >](/uchronia-ts-doc/
 template <typename T  =double>
 class datatypes::timeseries::StlVectorStorage;
 ```
+
+Storage policy; data items are stored in standard template library std::vector. 
+
+**Template Parameters**: 
+
+  * **T** item type 
 
 ## Public Functions Documentation
 
@@ -212,4 +219,4 @@ inline virtual void SetStart(
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

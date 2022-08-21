@@ -1,5 +1,6 @@
 ---
 title: datatypes::timeseries::StdVectorEnsembleStoragePolicy
+summary: std::vector based storage policy 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::timeseries::StdVectorEnsembleStoragePolicy
 
 
 
- [More...](#detailed-description)
+std::vector based storage policy  [More...](#detailed-description)
 
 
 `#include <time_series_strategies.hpp>`
@@ -67,6 +68,12 @@ Inherits from [datatypes::timeseries::EnsembleStoragePolicy< TsType >](/uchronia
 template <typename TsType >
 class datatypes::timeseries::StdVectorEnsembleStoragePolicy;
 ```
+
+std::vector based storage policy 
+
+**Template Parameters**: 
+
+  * **TsType** item type for this ensemble storage, e.g. [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries)
 
 ## Public Types Documentation
 
@@ -305,4 +312,4 @@ inline virtual void OperatorEqualImpl(
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

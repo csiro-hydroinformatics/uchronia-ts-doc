@@ -21,15 +21,15 @@ title: datatypes/common.h
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[datatypes::utils::STLHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/)**  |
-| class | **[datatypes::utils::IfThenElse< true, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/)**  |
-| class | **[datatypes::utils::IfThenElse< false, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/)**  |
+| class | **[datatypes::utils::STLHelper](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/)** <br>Helper functions with features found in other languages but not found in the C++ standard template library. Many of these features are not used in this library (uchronia) as such, but are here as a place of convenience for dependent modelling libraries.  |
+| class | **[datatypes::utils::IfThenElse< true, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/)** <br>partial specialization: true yields second argument  |
+| class | **[datatypes::utils::IfThenElse< false, Ta, Tb >](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/)** <br>partial specialization: true yields third argument  |
 | class | **[datatypes::utils::ValueTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/)**  |
 | class | **[datatypes::utils::PointerTypeVectorDispose](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/)**  |
-| struct | **[datatypes::utils::DisposeVectorTypeFactory](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/)**  |
+| struct | **[datatypes::utils::DisposeVectorTypeFactory](/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/)** <br>Template program; Type type is a class suitable to dispose of object T, whether it is a vector of value types, or a vector where items are pointers requiring the delete operator. Used to dispose of items in a templated time series, with items of either value or pointer types.  |
 | class | **[datatypes::utils::bad_lexical_cast](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1bad__lexical__cast/)** <br>A [bad_lexical_cast]() that inherits from std::exception, unlike Boost's. Needed for graceful C API interop.  |
-| class | **[datatypes::utils::StringProcessing](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/)**  |
-| class | **[datatypes::interop::MissingValueHandling](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)**  |
+| class | **[datatypes::utils::StringProcessing](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/)** <br>Helper class with string processing related functions. These emulate methods found in other languages such as C#, R, etc.  |
+| class | **[datatypes::interop::MissingValueHandling](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/)** <br>Ways for wrappers to specify to this API what special numeric value to use as 'missing value' code in time series interop.  |
 
 ## Defines
 
@@ -59,8 +59,8 @@ title: datatypes/common.h
 |  | **[ENSEMBLE_SERIES_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-ensemble-series-type-id)** <br>A string identifier for ensemble of time series (e.g. ensemble forecasts for one lead time)  |
 |  | **[TIME_SERIES_ENSEMBLE_SERIES_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-time-series-ensemble-series-type-id)** <br>A string identifier for time series of ensemble of time series (e.g. ensemble forecasts time series)  |
 |  | **[TIME_SERIES_SERIES_COLLECTION_TYPE_ID](/uchronia-ts-doc/cpp/Files/common_8h/#define-time-series-series-collection-type-id)** <br>A string identifier for time series of collection of time series (e.g. forecasts for multiple sites)  |
-|  | **[STORAGE_TYPE_SINGLE_NETCDF_FILE](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-single-netcdf-file)**  |
-|  | **[STORAGE_TYPE_MULTIPLE_NETCDF_FILES](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-multiple-netcdf-files)**  |
+|  | **[STORAGE_TYPE_SINGLE_NETCDF_FILE](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-single-netcdf-file)** <br>A string identifier for time series stored in a single netcdf file.  |
+|  | **[STORAGE_TYPE_MULTIPLE_NETCDF_FILES](/uchronia-ts-doc/cpp/Files/common_8h/#define-storage-type-multiple-netcdf-files)** <br>A string identifier for time series stored in a multiple netcdf files with a date pattern.  |
 
 
 
@@ -249,6 +249,7 @@ A string identifier for time series of collection of time series (e.g. forecasts
 #define STORAGE_TYPE_SINGLE_NETCDF_FILE "single_nc_file"
 ```
 
+A string identifier for time series stored in a single netcdf file. 
 
 ### define STORAGE_TYPE_MULTIPLE_NETCDF_FILES
 
@@ -256,6 +257,7 @@ A string identifier for time series of collection of time series (e.g. forecasts
 #define STORAGE_TYPE_MULTIPLE_NETCDF_FILES "multiple_nc_files_filename_date_pattern"
 ```
 
+A string identifier for time series stored in a multiple netcdf files with a date pattern. 
 
 ## Source code
 
@@ -338,6 +340,7 @@ using namespace boost::gregorian;
 #define TIME_SERIES_SERIES_COLLECTION_TYPE_ID  "ts_ts_collection"
 
 #define STORAGE_TYPE_SINGLE_NETCDF_FILE        "single_nc_file"
+
 #define STORAGE_TYPE_MULTIPLE_NETCDF_FILES     "multiple_nc_files_filename_date_pattern"
 
 
@@ -377,7 +380,6 @@ namespace datatypes
             {
                 return(dict.find(key) != dict.end());
             }
-
             template<typename K = string, typename V = string>
             static vector<K> GetKeys(const map<K, V>& dict)
             {
@@ -512,22 +514,18 @@ namespace datatypes
             return data;
         }
 
-        // Could not find an easy if_then_else in the STL or Boost. IfThenElse will probably be replaced.
-        // primary template: yield second or third argument depending on first argument
+        // Template metaprogramming
+        
+
         template<bool C, typename Ta, typename Tb>
         class IfThenElse;
-        // Credits:
-        // C++ templates : the complete guide / David Vandevoorde, Nicolai M. Josuttis.
-        //              ISBN 0 - 201 - 73484 - 2 (alk.paper)
 
-        // partial specialization: true yields second argument
         template<typename Ta, typename Tb>
         class IfThenElse < true, Ta, Tb > {
         public:
             typedef Ta ResultT;
         };
 
-        // partial specialization: false yields third argument
         template<typename Ta, typename Tb>
         class IfThenElse < false, Ta, Tb > {
         public:
@@ -734,8 +732,6 @@ namespace datatypes
         class DATATYPES_DLL_LIB MissingValueHandling
         {
             // https://jira.csiro.au/browse/WIRADA-416
-            // Ways for wrappers to specify to this API what special numeric value to use 
-            // as 'missing value' code in time series interop.
         public:
             static std::atomic<double> TimeSeriesMissingValueValue;
         };
@@ -747,4 +743,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

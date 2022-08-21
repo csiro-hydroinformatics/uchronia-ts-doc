@@ -1,5 +1,6 @@
 ---
 title: datatypes::utils::StringProcessing
+summary: Helper class with string processing related functions. These emulate methods found in other languages such as C#, R, etc. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::utils::StringProcessing
 
 
 
-
+Helper class with string processing related functions. These emulate methods found in other languages such as C#, R, etc. 
 
 
 `#include <common.h>`
@@ -267,4 +268,4 @@ static const string kElementSeparatorToken;
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

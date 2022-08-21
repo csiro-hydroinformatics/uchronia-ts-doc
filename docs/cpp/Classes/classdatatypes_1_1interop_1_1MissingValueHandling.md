@@ -1,5 +1,6 @@
 ---
 title: datatypes::interop::MissingValueHandling
+summary: Ways for wrappers to specify to this API what special numeric value to use as 'missing value' code in time series interop. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::interop::MissingValueHandling
 
 
 
-
+Ways for wrappers to specify to this API what special numeric value to use as 'missing value' code in time series interop. 
 
 
 `#include <common.h>`
@@ -30,4 +31,4 @@ The time series missing value.
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

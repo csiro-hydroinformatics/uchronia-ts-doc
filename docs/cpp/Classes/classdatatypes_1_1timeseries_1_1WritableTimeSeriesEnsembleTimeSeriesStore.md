@@ -1,5 +1,6 @@
 ---
 title: datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore
+summary: Interface definition for writeable storages of time series of ensembles of time series. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore
 
 
 
- [More...](#detailed-description)
+Interface definition for writeable storages of time series of ensembles of time series.  [More...](#detailed-description)
 
 
 `#include <time_series_store.hpp>`
@@ -91,6 +92,12 @@ Inherits from [datatypes::timeseries::TimeSeriesEnsembleTimeSeriesStore< T >](/u
 template <typename T >
 class datatypes::timeseries::WritableTimeSeriesEnsembleTimeSeriesStore;
 ```
+
+Interface definition for writeable storages of time series of ensembles of time series. 
+
+**Template Parameters**: 
+
+  * **T** The element type of the time series dealt with, typically double or float. 
 
 ## Public Types Documentation
 
@@ -269,4 +276,4 @@ virtual void SetTimeStep(
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

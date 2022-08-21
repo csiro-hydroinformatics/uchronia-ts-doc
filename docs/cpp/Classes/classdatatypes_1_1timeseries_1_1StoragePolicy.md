@@ -75,7 +75,7 @@ An interface for classes that can handle the storage of data for time series.
      or Policy. The word "policy" is more of a legacy (time series storage used to be 
      template-arguments for time series). The purpose is to delegate the details of the 
      data handling (memory, file, and data caching between different types of storages.) 
-     out of TTimeSeries objects.
+     out of the \ref TTimeSeries objects.
 ```
 
 ## Public Functions Documentation
@@ -272,4 +272,4 @@ inline StoragePolicy()
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

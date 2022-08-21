@@ -17,26 +17,26 @@ title: datatypes/interop_conversions.h
 
 |                | Name           |
 | -------------- | -------------- |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(double * values, const regular_time_series_geometry & g) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(double * values, [TS_GEOMETRY_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr) geom) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(const multi_regular_time_series_data & g) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > | **[ToTimeSeriesEnsemble](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesensemble)**(const multi_regular_time_series_data & rawData) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > * | **[ToTimeSeriesEnsemblePtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesensembleptr)**(const multi_regular_time_series_data & rawData) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) multi_regular_time_series_data * | **[ToMultiTimeSeriesDataPtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-tomultitimeseriesdataptr)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) multi_regular_time_series_data * | **[ToMultiTimeSeriesDataPtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-tomultitimeseriesdataptr)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) * | **[SingleTsPtrFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-singletsptrfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > * | **[MultiTsPtrFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-multitsptrfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[SingleTsFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-singletsfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib)[TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > | **[MultiTsFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-multitsfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) time_series_dimensions_description * | **[ToTimeSeriesDimensionDescriptions](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesdimensiondescriptions)**(vector< [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) > & mts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[CopyToMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copytomultitimeseriesdata)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts, multi_regular_time_series_data & result) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[CopyToMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copytomultitimeseriesdata)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts, multi_regular_time_series_data & result) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[CopyFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copyfrommultitimeseriesdata)**(const multi_regular_time_series_data & interopdata, [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[CopyFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copyfrommultitimeseriesdata)**(const multi_regular_time_series_data & interopdata, [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) double ** | **[ToRawData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-torawdata)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) double * | **[ToRawData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-torawdata)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[DisposeMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-disposemultitimeseriesdata)**(multi_regular_time_series_data * d) |
-| [DATATYPES_DLL_LIB](/uchronia-ts-doc/cpp/Files/setup__exports_8h/#define-datatypes-dll-lib) void | **[DisposeTimeSeriesDimensionDescriptions](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-disposetimeseriesdimensiondescriptions)**(time_series_dimensions_description * d) |
+| [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(double * values, const regular_time_series_geometry & g)<br>Helper function for C API interop conversions.  |
+| [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(double * values, [TS_GEOMETRY_PTR](/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/#define-ts-geometry-ptr) geom)<br>Helper function for C API interop conversions.  |
+| [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[CreateTimeSeries](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-createtimeseries)**(const multi_regular_time_series_data & g)<br>Helper function for C API interop conversions.  |
+| [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > | **[ToTimeSeriesEnsemble](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesensemble)**(const multi_regular_time_series_data & rawData)<br>Helper function for C API interop conversions.  |
+| [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > * | **[ToTimeSeriesEnsemblePtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesensembleptr)**(const multi_regular_time_series_data & rawData)<br>Helper function for C API interop conversions.  |
+| multi_regular_time_series_data * | **[ToMultiTimeSeriesDataPtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-tomultitimeseriesdataptr)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts)<br>Helper function for C API interop conversions.  |
+| multi_regular_time_series_data * | **[ToMultiTimeSeriesDataPtr](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-tomultitimeseriesdataptr)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts)<br>Helper function for C API interop conversions.  |
+| [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) * | **[SingleTsPtrFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-singletsptrfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts)<br>Helper function for C API interop conversions.  |
+| [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > * | **[MultiTsPtrFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-multitsptrfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts)<br>Helper function for C API interop conversions.  |
+| [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) | **[SingleTsFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-singletsfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts)<br>Helper function for C API interop conversions.  |
+| [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > | **[MultiTsFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-multitsfrommultitimeseriesdata)**(const multi_regular_time_series_data & ts)<br>Helper function for C API interop conversions.  |
+| time_series_dimensions_description * | **[ToTimeSeriesDimensionDescriptions](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-totimeseriesdimensiondescriptions)**(vector< [DataDimensionDescriptor](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/) > & mts)<br>Helper function for C API interop conversions.  |
+| void | **[CopyToMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copytomultitimeseriesdata)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts, multi_regular_time_series_data & result)<br>Helper function for C API interop conversions.  |
+| void | **[CopyToMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copytomultitimeseriesdata)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts, multi_regular_time_series_data & result)<br>Helper function for C API interop conversions.  |
+| void | **[CopyFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copyfrommultitimeseriesdata)**(const multi_regular_time_series_data & interopdata, [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts)<br>Helper function for C API interop conversions.  |
+| void | **[CopyFromMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-copyfrommultitimeseriesdata)**(const multi_regular_time_series_data & interopdata, [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts)<br>Helper function for C API interop conversions.  |
+| double ** | **[ToRawData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-torawdata)**(const [TimeSeriesEnsemble](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#using-timeseriesensemble)< [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) > & mts)<br>Helper function for C API interop conversions.  |
+| double * | **[ToRawData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-torawdata)**(const [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) & ts)<br>Helper function for C API interop conversions.  |
+| void | **[DisposeMultiTimeSeriesData](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-disposemultitimeseriesdata)**(multi_regular_time_series_data * d)<br>Helper function for C API interop conversions.  |
+| void | **[DisposeTimeSeriesDimensionDescriptions](/uchronia-ts-doc/cpp/Files/interop__conversions_8h/#function-disposetimeseriesdimensiondescriptions)**(time_series_dimensions_description * d)<br>Helper function for C API interop conversions.  |
 
 
 ## Functions Documentation
@@ -44,188 +44,208 @@ title: datatypes/interop_conversions.h
 ### function CreateTimeSeries
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeries CreateTimeSeries(
+TimeSeries CreateTimeSeries(
     double * values,
     const regular_time_series_geometry & g
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CreateTimeSeries
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeries CreateTimeSeries(
+TimeSeries CreateTimeSeries(
     double * values,
     TS_GEOMETRY_PTR geom
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CreateTimeSeries
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeries CreateTimeSeries(
+TimeSeries CreateTimeSeries(
     const multi_regular_time_series_data & g
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToTimeSeriesEnsemble
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeriesEnsemble< TimeSeries > ToTimeSeriesEnsemble(
+TimeSeriesEnsemble< TimeSeries > ToTimeSeriesEnsemble(
     const multi_regular_time_series_data & rawData
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToTimeSeriesEnsemblePtr
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeriesEnsemble< TimeSeries > * ToTimeSeriesEnsemblePtr(
+TimeSeriesEnsemble< TimeSeries > * ToTimeSeriesEnsemblePtr(
     const multi_regular_time_series_data & rawData
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToMultiTimeSeriesDataPtr
 
 ```cpp
-DATATYPES_DLL_LIB multi_regular_time_series_data * ToMultiTimeSeriesDataPtr(
+multi_regular_time_series_data * ToMultiTimeSeriesDataPtr(
     const TimeSeriesEnsemble< TimeSeries > & mts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToMultiTimeSeriesDataPtr
 
 ```cpp
-DATATYPES_DLL_LIB multi_regular_time_series_data * ToMultiTimeSeriesDataPtr(
+multi_regular_time_series_data * ToMultiTimeSeriesDataPtr(
     const TimeSeries & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function SingleTsPtrFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeries * SingleTsPtrFromMultiTimeSeriesData(
+TimeSeries * SingleTsPtrFromMultiTimeSeriesData(
     const multi_regular_time_series_data & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function MultiTsPtrFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeriesEnsemble< TimeSeries > * MultiTsPtrFromMultiTimeSeriesData(
+TimeSeriesEnsemble< TimeSeries > * MultiTsPtrFromMultiTimeSeriesData(
     const multi_regular_time_series_data & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function SingleTsFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeries SingleTsFromMultiTimeSeriesData(
+TimeSeries SingleTsFromMultiTimeSeriesData(
     const multi_regular_time_series_data & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function MultiTsFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIBTimeSeriesEnsemble< TimeSeries > MultiTsFromMultiTimeSeriesData(
+TimeSeriesEnsemble< TimeSeries > MultiTsFromMultiTimeSeriesData(
     const multi_regular_time_series_data & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToTimeSeriesDimensionDescriptions
 
 ```cpp
-DATATYPES_DLL_LIB time_series_dimensions_description * ToTimeSeriesDimensionDescriptions(
+time_series_dimensions_description * ToTimeSeriesDimensionDescriptions(
     vector< DataDimensionDescriptor > & mts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CopyToMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIB void CopyToMultiTimeSeriesData(
+void CopyToMultiTimeSeriesData(
     const TimeSeriesEnsemble< TimeSeries > & mts,
     multi_regular_time_series_data & result
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CopyToMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIB void CopyToMultiTimeSeriesData(
+void CopyToMultiTimeSeriesData(
     const TimeSeries & ts,
     multi_regular_time_series_data & result
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CopyFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIB void CopyFromMultiTimeSeriesData(
+void CopyFromMultiTimeSeriesData(
     const multi_regular_time_series_data & interopdata,
     TimeSeries & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function CopyFromMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIB void CopyFromMultiTimeSeriesData(
+void CopyFromMultiTimeSeriesData(
     const multi_regular_time_series_data & interopdata,
     TimeSeriesEnsemble< TimeSeries > & mts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToRawData
 
 ```cpp
-DATATYPES_DLL_LIB double ** ToRawData(
+double ** ToRawData(
     const TimeSeriesEnsemble< TimeSeries > & mts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function ToRawData
 
 ```cpp
-DATATYPES_DLL_LIB double * ToRawData(
+double * ToRawData(
     const TimeSeries & ts
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function DisposeMultiTimeSeriesData
 
 ```cpp
-DATATYPES_DLL_LIB void DisposeMultiTimeSeriesData(
+void DisposeMultiTimeSeriesData(
     multi_regular_time_series_data * d
 )
 ```
 
+Helper function for C API interop conversions. 
 
 ### function DisposeTimeSeriesDimensionDescriptions
 
 ```cpp
-DATATYPES_DLL_LIB void DisposeTimeSeriesDimensionDescriptions(
+void DisposeTimeSeriesDimensionDescriptions(
     time_series_dimensions_description * d
 )
 ```
 
+Helper function for C API interop conversions. 
 
 
 
@@ -267,4 +287,4 @@ DATATYPES_DLL_LIB void DisposeTimeSeriesDimensionDescriptions(time_series_dimens
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

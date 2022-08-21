@@ -1,5 +1,6 @@
 ---
 title: datatypes::utils::STLHelper
+summary: Helper functions with features found in other languages but not found in the C++ standard template library. Many of these features are not used in this library (uchronia) as such, but are here as a place of convenience for dependent modelling libraries. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::utils::STLHelper
 
 
 
-
+Helper functions with features found in other languages but not found in the C++ standard template library. Many of these features are not used in this library (uchronia) as such, but are here as a place of convenience for dependent modelling libraries. 
 
 
 `#include <common.h>`
@@ -16,17 +17,17 @@ title: datatypes::utils::STLHelper
 
 |                | Name           |
 | -------------- | -------------- |
-| template <typename K  =string,typename V  =string\> <br>bool | **[HasKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-haskey)**(const map< K, V > & dict, const string & key) |
-| template <typename K  =string,typename V  =string\> <br>vector< K > | **[GetKeys](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getkeys)**(const map< K, V > & dict) |
-| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Remap](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-remap)**(const map< K, V > & dict, const map< K, K > & newKeys) |
+| template <typename K  =string,typename V  =string\> <br>bool | **[HasKey](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-haskey)**(const map< K, V > & dict, const string & key)<br>is a key present in a dictionary (map)  |
+| template <typename K  =string,typename V  =string\> <br>vector< K > | **[GetKeys](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getkeys)**(const map< K, V > & dict)<br>Gets the keys present in a dictionary (map)  |
+| template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Remap](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-remap)**(const map< K, V > & dict, const map< K, K > & newKeys)<br>Change the keys of a dictionary with new keys, remaping.  |
 | template <typename K  =string,typename V  =string\> <br>map< K, V > | **[Zip](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-zip)**(const vector< K > & key, const vector< V > & values) |
-| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict) |
-| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict, const vector< K > & keys) |
+| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict)<br>Gets the values of a dictionary (map)  |
+| template <typename K  =string,typename V  =string\> <br>vector< V > | **[GetValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-getvalues)**(const map< K, V > & dict, const vector< K > & keys)<br>Gets the values of a dictionary (map), for a set of keys.  |
 | template <typename U \> <br>bool | **[LessThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)**(const U & first, const U & second) |
 | template <typename U \> <br>bool | **[MoreThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-morethan)**(const U & first, const U & second) |
-| template <typename K ,typename V \> <br>vector< V > | **[SortValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortvalues)**(const std::map< K, V > & in, const vector< K > & order) |
-| template <typename T \> <br>vector< T > | **[Serialize](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-serialize)**(const vector< vector< T >> & series) |
-| template <typename T ,typename U \> <br>vector< T > | **[SortFromRef](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortfromref)**(const vector< T > & in, const vector< U > & reference, std::function< bool(const U &, const U &)> comparer =[STLHelper::LessThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)< U >) |
+| template <typename K ,typename V \> <br>vector< V > | **[SortValues](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortvalues)**(const std::map< K, V > & in, const vector< K > & order)<br>Gets the values of a dictionary (map), in the order specified by a set of keys.  |
+| template <typename T \> <br>vector< T > | **[Serialize](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-serialize)**(const vector< vector< T >> & series)<br>Flatten jagged vectors to a one dimension vector.  |
+| template <typename T ,typename U \> <br>vector< T > | **[SortFromRef](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-sortfromref)**(const vector< T > & in, const vector< U > & reference, std::function< bool(const U &, const U &)> comparer =[STLHelper::LessThan](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/#function-lessthan)< U >)<br>Reorder the values in one vector, based on the sorting of a second vector, using a specified comparer. Acknowledgements: derived from [http://stackoverflow.com/a/236199/2752565](http://stackoverflow.com/a/236199/2752565), Konrad Rudolph.  |
 
 ## Public Functions Documentation
 
@@ -41,6 +42,7 @@ static inline bool HasKey(
 )
 ```
 
+is a key present in a dictionary (map) 
 
 ### function GetKeys
 
@@ -52,6 +54,7 @@ static inline vector< K > GetKeys(
 )
 ```
 
+Gets the keys present in a dictionary (map) 
 
 ### function Remap
 
@@ -64,6 +67,21 @@ static inline map< K, V > Remap(
 )
 ```
 
+Change the keys of a dictionary with new keys, remaping. 
+
+**Parameters**: 
+
+  * **dict** 
+  * **newKeys** 
+
+
+**Template Parameters**: 
+
+  * **K** key type 
+  * **V** value type 
+
+
+**Return**: map<K, V> 
 
 ### function Zip
 
@@ -87,6 +105,7 @@ static inline vector< V > GetValues(
 )
 ```
 
+Gets the values of a dictionary (map) 
 
 ### function GetValues
 
@@ -99,6 +118,7 @@ static inline vector< V > GetValues(
 )
 ```
 
+Gets the values of a dictionary (map), for a set of keys. 
 
 ### function LessThan
 
@@ -133,6 +153,7 @@ static inline vector< V > SortValues(
 )
 ```
 
+Gets the values of a dictionary (map), in the order specified by a set of keys. 
 
 ### function Serialize
 
@@ -143,6 +164,7 @@ static inline vector< T > Serialize(
 )
 ```
 
+Flatten jagged vectors to a one dimension vector. 
 
 ### function SortFromRef
 
@@ -156,7 +178,8 @@ static inline vector< T > SortFromRef(
 )
 ```
 
+Reorder the values in one vector, based on the sorting of a second vector, using a specified comparer. Acknowledgements: derived from [http://stackoverflow.com/a/236199/2752565](http://stackoverflow.com/a/236199/2752565), Konrad Rudolph. 
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

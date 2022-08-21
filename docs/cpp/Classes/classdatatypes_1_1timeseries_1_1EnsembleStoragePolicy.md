@@ -1,5 +1,6 @@
 ---
 title: datatypes::timeseries::EnsembleStoragePolicy
+summary: An interface for classes that can handle the storage of data for ensemble time series. 
 
 ---
 
@@ -7,7 +8,7 @@ title: datatypes::timeseries::EnsembleStoragePolicy
 
 
 
- [More...](#detailed-description)
+An interface for classes that can handle the storage of data for ensemble time series.  [More...](#detailed-description)
 
 
 `#include <time_series_strategies.hpp>`
@@ -18,9 +19,9 @@ Inherited by [datatypes::timeseries::StdVectorEnsembleStoragePolicy< TsType >](/
 
 |                | Name           |
 | -------------- | -------------- |
-| typedef std::remove_pointer< TsType >::type | **[Type](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-type)**  |
-| typedef std::add_pointer< [Type](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-type) >::type | **[PtrType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-ptrtype)**  |
-| typedef Type::ElementType | **[ElementType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-elementtype)**  |
+| typedef std::remove_pointer< TsType >::type | **[Type](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-type)** <br>The value type of the items stored, e.g. TimeSeries.  |
+| typedef std::add_pointer< [Type](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-type) >::type | **[PtrType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-ptrtype)** <br>The pointer type of the items stored, e.g. TimeSeries*.  |
+| typedef Type::ElementType | **[ElementType](/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/#typedef-elementtype)** <br>The type of each element in the time series items stored by this storage; e.g. if this stores a series of TimeSeries, ElementType is 'double'.  |
 
 ## Public Functions
 
@@ -56,6 +57,23 @@ template <typename TsType >
 class datatypes::timeseries::EnsembleStoragePolicy;
 ```
 
+An interface for classes that can handle the storage of data for ensemble time series. 
+
+**Template Parameters**: 
+
+  * **T** The type of each data item this can handle, e.g. a [TimeSeries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/#typedef-timeseries) value or pointer. 
+
+
+
+
+```
+     The storage of ensemble time series data is using a software pattern usually named Strategy,
+     or Policy. The word "policy" is more of a legacy (time series storage used to be 
+     template-arguments for time series). The purpose is to delegate the details of the 
+     data handling (memory, file, and data caching between different types of storages.) 
+     out of the \ref TTimeSeries objects.
+```
+
 ## Public Types Documentation
 
 ### typedef Type
@@ -64,6 +82,7 @@ class datatypes::timeseries::EnsembleStoragePolicy;
 typedef std::remove_pointer<TsType>::type datatypes::timeseries::EnsembleStoragePolicy< TsType >::Type;
 ```
 
+The value type of the items stored, e.g. TimeSeries. 
 
 ### typedef PtrType
 
@@ -71,6 +90,7 @@ typedef std::remove_pointer<TsType>::type datatypes::timeseries::EnsembleStorage
 typedef std::add_pointer<Type>::type datatypes::timeseries::EnsembleStoragePolicy< TsType >::PtrType;
 ```
 
+The pointer type of the items stored, e.g. TimeSeries*. 
 
 ### typedef ElementType
 
@@ -78,6 +98,7 @@ typedef std::add_pointer<Type>::type datatypes::timeseries::EnsembleStoragePolic
 typedef Type::ElementType datatypes::timeseries::EnsembleStoragePolicy< TsType >::ElementType;
 ```
 
+The type of each element in the time series items stored by this storage; e.g. if this stores a series of TimeSeries, ElementType is 'double'. 
 
 ## Public Functions Documentation
 
@@ -275,4 +296,4 @@ virtual void OperatorEqualImpl(
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

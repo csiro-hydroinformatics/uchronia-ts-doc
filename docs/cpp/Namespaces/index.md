@@ -15,7 +15,7 @@ title: Namespaces
     * **namespace [timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1timeseries/)** 
 * **namespace [cinterop::utils](/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1utils/)** 
 * **namespace [datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)** 
-    * **namespace [exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)** 
+    * **namespace [exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)** <br>Helper function to build consistent informative error messages in exceptions with commonalities. 
     * **namespace [interop](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1interop/)** 
     * **namespace [io](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1io/)** 
     * **namespace [tests](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1tests/)** 
@@ -29,4 +29,4 @@ title: Namespaces
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000

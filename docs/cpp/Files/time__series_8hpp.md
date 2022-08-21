@@ -13,7 +13,7 @@ title: datatypes/time_series.hpp
 | -------------- |
 | **[datatypes](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/)**  |
 | **[datatypes::timeseries](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/)**  |
-| **[datatypes::exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)**  |
+| **[datatypes::exceptions](/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/)** <br>Helper function to build consistent informative error messages in exceptions with commonalities.  |
 
 ## Classes
 
@@ -1358,4 +1358,4 @@ namespace datatypes
 
 -------------------------------
 
-Updated on 2022-08-20 at 19:28:22 +1000
+Updated on 2022-08-21 at 18:10:33 +1000
