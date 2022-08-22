@@ -2,742 +2,787 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classIdentifiersProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classSingleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classTestTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classTimeSeriesInfoProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classTimeStep/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classbad__lexical__cast/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1ExceptionUtilities/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1exceptions_1_1TimeSeriesChecks/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1interop_1_1MissingValueHandling/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1io_1_1IoHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1DataTestHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1FileSystemHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TempFileCleaner/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestDataLocationHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestSingleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1tests_1_1TestTimeSeriesStoreFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDescriptor/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataDimensionDescriptor/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DataGeometryProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DefaultMissingFloatingPointPolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1DimensionsDefinitions/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EagerWriter/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleStoragePolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1EnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1GlobalAttributes/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IdentifiersProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1IrregularTimeStepImplementation/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MemoryCachingStorageWriter/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MissingValuePolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MonthlyQppTimeStepImplementation/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiFileTsStorage/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1MultiTimeSeries/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloadingPointPolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NegativeIsMissingFloatingPointPolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSingleSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfSourceInfo/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NetCdfTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1NullPointerIsMissingPolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1RegularTimeStepImplementation/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SharedVectorStorage_1_1SharedData/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleNetCdfFileStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SingleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StdVectorEnsembleStoragePolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StlVectorStorage/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1StoragePolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1SwiftNetcdfStoreFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeries/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TTimeSeriesLibrary/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStoragePolicy/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesIOHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesInfoProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibrary/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryDescription/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesLibraryFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesOperations/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesProvider/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfo/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoBuilder/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesSourceInfoImpl/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeSeriesStoreFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStep/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeStepImplementation/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1TimeWindow/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableAttributes/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1VariableDefinition/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1WritableTimeSeriesEnsembleTimeSeriesStore/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1ConfigFileHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFAccess/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01double_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01float_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01int_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1timeseries_1_1io_1_1SwiftNetCDFVariablePersister_3_01long_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01false_00_01Ta_00_01Tb_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1IfThenElse_3_01true_00_01Ta_00_01Tb_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1PointerTypeVectorDispose/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1STLHelper_1_1Comparer/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1StringProcessing/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1ValueTypeVectorDispose/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/classdatatypes_1_1utils_1_1bad__lexical__cast/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1exceptions_1_1RangeCheck_3_01size__t_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1CommonTypes/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1DefaultMissingValuePolicyTypeFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1ensemble__of/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1item__type__of/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1timeseries_1_1time__series__of/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structdatatypes_1_1utils_1_1DisposeVectorTypeFactory/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Classes/structmoirai_1_1known__conversions_3_01TimeSeriesProvider_3_01double_01_4_01_4/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Examples/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/common_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/datatypes__test__helpers_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/datatypes__test__helpers_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/dir_0c0283090ae1ae91fb4631a97d59a09f/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/dir_18b6d35ebdb182d50a05341eac4c9c15/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/dir_1b70f9f628d353f28779bff85cfc8047/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/dir_3916de72b8b95e910c6a3b58752f61a8/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/exception__utilities_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/extern__c__api_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/extern__c__api__as__opaque_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/extern__c__api__as__transparent_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/extern__c__api__transparent__pointers_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/internals__c__api_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/interop__conversions_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/interop__conversions_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/interop__struct_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/io__helper_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/setup__exports_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/shared__pointer__conversions_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__series_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__series__io_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__series__store_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__series__strategies_8hpp/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__step_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Files/time__step__implementation_8h/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Modules/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespaceboost_1_1gregorian/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespaceboost_1_1posix__time/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacecinterop/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1statistics/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1timeseries/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacecinterop_1_1utils/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1exceptions/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1interop/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1io/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1tests/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1timeseries_1_1io/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacedatatypes_1_1utils/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacemoirai/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Namespaces/namespacestd/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/cpp/Pages/</loc>
-         <lastmod>2022-08-21</lastmod>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/classes-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/const-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/data_set-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/internals-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/sample_data-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/tech_notes/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/time_series-module/</loc>
+         <lastmod>2022-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://csiro-hydroinformatics.github.io/uchronia-ts-doc/python/utils-module/</loc>
+         <lastmod>2022-08-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
