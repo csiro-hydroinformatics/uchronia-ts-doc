@@ -134,3 +134,12 @@ nav:
     - Modules: cpp/Modules/index.md
     - Namespaces: cpp/Namespaces/index.md
     - Pages: cpp/Pages/index.md
+  - Python:
+    - Home: python/index.md
+    - Module classes: python/classes-module.md
+    - Module const: python/const-module.md
+    - Module data_set: python/data_set-module.md
+    - Module internals: python/internals-module.md
+    - Module sample_data: python/sample_data-module.md
+    - Module time_series: python/time_series-module.md
+    - Module utils: python/utils-module.md

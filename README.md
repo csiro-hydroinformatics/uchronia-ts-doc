@@ -6,6 +6,8 @@ This site is an attempt to host jointly several generated API documentations.
 
 Uchronia is a C++ library designed to handle multidimensional time series and ensemble thereof. [Uchronia](https://en.wikipedia.org/wiki/Uchronia) is a literary neologism for a hypothetical or fictional time-period of our world. This seems a suitable name for a library primarily designed notably to handle retrospective ensemble forecast time series.
 
+See also a [blog post on this case study](https://jmp75.github.io/work-blog/documentation/c++/python/mkdocs/2022/08/22/doxygen-doxybook-mkdocs.html)
+
 ## Draft notes
 
 `sudo apt install doxygen`
@@ -39,14 +41,17 @@ MkDocs + Material theme - example/mkdocs-material/.doxybook/config.json adapted.
 
 cpp relative url because we aim to host not only cpp. Try, at least.
 
-config-doxybook2.json has `  "baseUrl": "/cpp/",`
+config-doxybook2.json has ` "baseUrl": "/cpp/",`
 
 Doxyfile:
 
-don't want full machine-specific paths shown:
+don't want full machine-specific paths shown, and C API pattern marker
 
 ```text
 FULL_PATH_NAMES        = NO
+
+INPUT_FILTER           = "sed 's/DATATYPES_API//'"
+
 ```
 
 Note: perhaps `STRIP_FROM_PATH` instead?
